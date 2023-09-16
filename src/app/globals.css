@@ -18,10 +18,74 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer-Light.otf');
+}
+
+@font-face {
+  font-family: 'Itim';
+  src: url('../fonts/Itim-Regular.ttf');
+}
+
+.custom-bg {
+  background-image: url('../assets/svg/bg_wait.svg');
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center center;
+}
+
+@keyframes fly-in-from-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fly-in-from-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fly-in-from-top {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card-fly-left {
+  animation: fly-in-from-left 1s ease-in-out forwards;
+}
+
+.card-fly-right {
+  animation: fly-in-from-right 1s ease-in-out forwards;
+}
+
+.card-fly-top {
+  animation: fly-in-from-top 1s ease-in-out forwards;
+}
+
+.coming_soon {
+  width: 170px;
+  height: 44px;
+  top: 139.25px;
+  left: 653px;
+  padding: 10px 25px 10px 25px;
+  border-radius: 9px;
+  gap: 10px;
+  background: #fdc500;
+  transform: skewY(-5deg);
 }
