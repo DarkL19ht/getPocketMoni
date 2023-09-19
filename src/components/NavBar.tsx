@@ -24,7 +24,7 @@ function Navbar() {
 
   return (
     <nav className="bg-blue-500 p-4">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center relative">
         <div className="flex justify-between items-center">
           <Image
             src="/logo.svg"
@@ -35,18 +35,32 @@ function Navbar() {
             priority
           />
           {/* Mobile Menu Button (Hamburger) */}
-          <div className="md:hidden">
-            <button onClick={toggleMobileMenu} className="text-black focus:outline-none">
-              {/* ... Hamburger icon code ... */}
-            </button>
+          <div className="flex justify-end items-end right-20 ">
+            <div className="md:hidden">
+              <button onClick={toggleMobileMenu} className="text-black focus:outline-none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
+
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-4 pl-6">
             {/* ... Menu items ... */}
             <li className="relative group">
               <a
                 href="#"
-                className={`text-black ${dropdownOpen ? 'text-yellow-300' : ''}`}
+                className={`text-black ${dropdownOpen ? 'text-navy-300' : ''}`}
                 onClick={toggleDropdown}
               >
                 About Us
@@ -68,14 +82,15 @@ function Navbar() {
                     </svg>
                   ) : (
                     <svg
-                      className="h-6 w-8 inline-block transform"
-                      viewBox="0 0 20 20"
-                      fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-6 w-8 inline-block transform"
                     >
                       <path
-                        d="M5.99977 8.40031C5.64977 8.40031 5.29977 8.26531 5.03477 8.00031L1.77477 4.74031C1.62977 4.59531 1.62977 4.35531 1.77477 4.21031C1.91977 4.06531 2.15977 4.06531 2.30477 4.21031L5.56477 7.47031C5.80477 7.71031 6.19477 7.71031 6.43477 7.47031L9.69477 4.21031C9.83977 4.06531 10.0798 4.06531 10.2248 4.21031C10.3698 4.35531 10.3698 4.59531 10.2248 4.74031L6.96477 8.00031C6.69977 8.26531 6.34977 8.40031 5.99977 8.40031Z"
-                        fill="#292D32"
+                        fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd"
                       />
                     </svg>
                   )}
@@ -83,7 +98,7 @@ function Navbar() {
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 pr-20 pl-6 space-y-2 bg-blue-500 text-black shadow-lg  ${
+                className={`absolute left-0 mt-2 pr-20 pl-6 space-y-2 bg-navy-500 text-black shadow-lg  ${
                   dropdownOpen ? 'block' : 'hidden'
                 }`}
               >
@@ -112,7 +127,7 @@ function Navbar() {
             <li className="relative group pl-6">
               <a
                 href="#"
-                className={`text-black ${dropdownOpen ? 'text-yellow-300' : ''}`}
+                className={`text-black ${dropdownOpen ? 'text-navy-300' : ''}`}
                 onClick={toggleDropdown1}
               >
                 Suport
@@ -139,17 +154,25 @@ function Navbar() {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path
-                        d="M5.99977 8.40031C5.64977 8.40031 5.29977 8.26531 5.03477 8.00031L1.77477 4.74031C1.62977 4.59531 1.62977 4.35531 1.77477 4.21031C1.91977 4.06531 2.15977 4.06531 2.30477 4.21031L5.56477 7.47031C5.80477 7.71031 6.19477 7.71031 6.43477 7.47031L9.69477 4.21031C9.83977 4.06531 10.0798 4.06531 10.2248 4.21031C10.3698 4.35531 10.3698 4.59531 10.2248 4.74031L6.96477 8.00031C6.69977 8.26531 6.34977 8.40031 5.99977 8.40031Z"
-                        fill="#292D32"
-                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-6 w-8 inline-block transform"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
                     </svg>
                   )}
                 </span>
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 space-y-2 bg-blue-500 text-black shadow-lg ${
+                className={`absolute left-0 mt-2 space-y-2 bg-navy-500 text-black shadow-lg ${
                   dropdownOpen1 ? 'block' : 'hidden'
                 }`}
               >
@@ -172,10 +195,23 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="flex gap-3">
-          <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" />
-          <Button label=" Become an Agent" style="bg-navy-100" text="text-navy-200" />
+        <div className="hidden md:block space-x-4">
+          <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
+          <Button label=" Become an Agent" style="bg-navy-100" text="text-navy-200" width="w-40" />
         </div>
+        {mobileMenuOpen && (
+          <div className=" text-center space-y-2 shadow-2xl bg-black">
+            <div className="mobile_menu space-x-4 absolute top-28 left-0 right-0 bottom-0 z-50 bg-navy-300">
+              <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
+              <Button
+                label=" Become an Agent"
+                style="bg-navy-100"
+                text="text-navy-200"
+                width="w-40"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

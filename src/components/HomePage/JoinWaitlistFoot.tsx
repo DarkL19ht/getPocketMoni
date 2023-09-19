@@ -1,0 +1,41 @@
+import React from 'react';
+import Image from 'next/image';
+import Button from '../Button';
+
+const JoinWaitlistFoot = () => {
+  return (
+    <div className="container mx-auto md:flex md:justify-between md:mt-32 -mt-24 w-full md:pl-20">
+      <section className=" md:w-1/2 md:mb-0 mb-24">
+        <div className="flex md:items-center items-center justify-center h-screen">
+          <div className="-mt-32">
+            <p className="font-switzer font-light text-3xl">Join our</p>
+            <h2 className="font-switzer font-bold text-8xl"> Waitlist </h2>
+            <div className="md:flex gap-3 mt-10">
+              <input
+                type="email"
+                name="waitlist"
+                id=""
+                placeholder="Enter your email to get notified when we launch"
+                className="px-3 py-2 bg-white w-full mb-3 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
+                style={{ height: '50px', borderRadius: '10px' }}
+              />
+              <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-full" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="hidden md:block md:w-1/2 ">
+        <Image
+          src="/mobile.svg"
+          alt="Mobile"
+          className="relative mx-auto inset-0 dark:invert"
+          width={500}
+          height={2}
+          priority
+        />
+      </section>
+    </div>
+  );
+};
+
+export default JoinWaitlistFoot;

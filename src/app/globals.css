@@ -89,3 +89,7 @@ body {
   background: #fdc500;
   transform: skewY(-5deg);
 }
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}

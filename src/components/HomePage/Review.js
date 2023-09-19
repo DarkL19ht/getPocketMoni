@@ -1,5 +1,6 @@
 'use client'
 import UserData from '@/utils/UserData';
+import Image from 'next/image';
 import { AiFillStar } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
 import { register } from 'swiper/element/bundle';
@@ -27,7 +28,7 @@ const Review = () => {
   
     useEffect(() => {
       // Assign it to swiper element
-      Object?.assign(swiperRef.current, swiperParams);
+      Object.assign(swiperRef?.current, swiperParams);
   
       // Initialize swiper
       swiperRef.current.initialize();
@@ -40,25 +41,44 @@ const Review = () => {
     }, []);
   return (
     <div className="container mx-auto text-center">
-      <h3 className="font-bold font-switzer text-6xl">
+      <h3 className="font-bold font-switzer text-6xl hidden md:block">
         See What Our <span className="text-navy-300">Users Are Saying</span>
       </h3>
-      {/* {UserData.usersImages.map((item)=>{
-        return (
-          <div className="flex">
-           <img key={item.id} src={item.img} alt="users" className="w-[100px]"/>
-          </div>
-        )
-      })} */}
+      <div className="hidden md:block">
+        <div className="flex items-center justify-center mt-10 gap-2">
+      {UserData.usersImages.map((item)=>(
+            <Image
+              src={item.img}
+              alt="Picture of the author"
+              width={100} 
+              height={50} 
+              className="flex w-[40px] h-[40px] rounded-full"
+          />
+        ))}
+      </div>
+      <div className="flex items-center justify-center gap-2">
+      {UserData.usersImages2.map((item)=>(
+            <Image
+              src={item.img}
+              alt="Picture of the author"
+              width={100} 
+              height={50} 
+              className="flex w-[40px] h-[40px] rounded-full"
+          />
+        ))}
+      </div>
+      </div>
+      
       {/* testimonials */}
-      <div className='flex items-center justify-center mt-10 mb-24'>
+      <div className='flex items-center justify-center mt-56 md:mt-20 mb-24'>
       <div className='flex items-center justify-center w-4/5 sm:w-5/6 xl:w-full max-w-5xl'>
         {/* Prev slide button */}
         <button
           onClick={() => {
             swiperRef.current.swiper.slidePrev();
           }}
-          className={`${swiperProgress == 0 ? 'fill-navy-200' : 'fill-navy-600'}`}
+          // className={`${swiperProgress == 0 ? 'fill-navy-200 text-navy-200 font-extrabold text-5xl md:mr-20' : 'fill-navy-600'}`}
+          className='fill-navy-200 text-navy-200 font-extrabold text-5xl md:mr-16'
         >
          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
@@ -96,6 +116,7 @@ const Review = () => {
           onClick={() => {
             swiperRef.current.swiper.slideNext();
           }}
+          className='text-navy-200 font-extrabold'
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />

@@ -3,7 +3,10 @@ import JoinWaitlist from '@/components/HomePage/JoinWaitlist';
 import TransAgent from '@/components/HomePage/TransAgent';
 import PaymentExperience from '@/components/HomePage/PaymentExperience';
 import Review from '@/components/HomePage/Review';
-// import PKMExperience from "@/components/HomePage/PKMExperience"
+import BecomeAgent from '@/components/HomePage/BecomeAgent';
+import FAQ from '@/components/HomePage/FAQ';
+import JoinWaitlistFoot from '@/components/HomePage/JoinWaitlistFoot';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -12,8 +15,12 @@ export default function Home() {
       <JoinWaitlist />
       <TransAgent />
       <PaymentExperience />
-      {/* <PKMExperience /> */}
       <Review />
+      {/* <ReviewModel /> */}
+      <BecomeAgent />
+      <FAQ />
+      <JoinWaitlistFoot />
+      <Footer />
     </div>
   );
 }

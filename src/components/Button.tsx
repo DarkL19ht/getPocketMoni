@@ -5,12 +5,13 @@ interface ButtonProps {
   onClick?: () => void;
   style?: string;
   text?: string;
+  width: string;
   children?: ReactNode;
 }
 
-function Button({ label, onClick, style, text, children }: ButtonProps) {
+function Button({ label, onClick, style, text, width, children }: ButtonProps) {
   return (
-    <button className={`${style} ${text} w-40  h-12 rounded-lg text-sm`} onClick={onClick}>
+    <button className={`${style} ${text} ${width} h-12 rounded-lg text-sm`} onClick={onClick}>
       {label}
       {children}
     </button>

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+// import tailwindDebugScreen from "tailwindcss-debug-screens";
 
 const config: Config = {
   content: [
@@ -27,6 +28,7 @@ const config: Config = {
       white: '#fff',
       grey:'#D9D9D9',
       yellow:'#FFCB45',
+      gray2:'#E3E3E3',
       navy: {
         100: '#D8F1FF',
         200: '#017AFF',

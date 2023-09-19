@@ -1,0 +1,64 @@
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+const Footer = () => {
+  return (
+    <div className="w-full -mt-96 md:h-96 bg-navy-600 text-white text-center">
+      <div className="md:flex md:justify-between p-20 font-switzer">
+        <section className=" pb-6">
+          <Image
+            src="/logoEtr.svg"
+            alt="Mobile"
+            className="mb-4 dark:invert"
+            width={200}
+            height={10}
+            priority
+          />
+          <div className="font-light">
+            <p>Want to connect with us? </p>
+            <p>Find us on social media.</p>
+          </div>
+        </section>
+        <section className="pb-6">
+          <h3 className="font-bold text-2xl">Products</h3>
+          <div className="flex flex-col gap-5 md:mt-4 mt-2 font-light">
+            <Link href="">Discover</Link>
+            <Link href="">Safety</Link>
+            <Link href="">Support</Link>
+            <Link href="">Careers</Link>
+          </div>
+        </section>
+        <section className="pb-6">
+          <h3 className="font-bold text-2xl">Resources</h3>
+          <div className="flex flex-col gap-5 mt-4  font-light">
+            <Link href="">Team</Link>
+            <Link href="">Contact Us</Link>
+            <Link href="">Our Story</Link>
+            <Link href="">Media Kit</Link>
+          </div>
+        </section>
+        <section className="pb-6">
+          <h3 className="font-bold text-2xl">Company</h3>
+          <div className="flex flex-col gap-5 mt-2 md:mt-4 font-light">
+            <Link href="">Team</Link>
+            <Link href="">Contact Us</Link>
+            <Link href="">Our Story</Link>
+            <Link href="">Media Kit</Link>
+          </div>
+        </section>
+        <section className="">
+          <h3 className="font-bold mb-4 text-2xl">Company</h3>
+          <div className="font-light">
+            <p>4th & 5th Floor Fortune</p>
+            <p>Towers, 27/29 Adeyemo</p>
+            <p>Alakija Street, Victoria Island</p>
+            <p>Lagos, Nigeria</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
