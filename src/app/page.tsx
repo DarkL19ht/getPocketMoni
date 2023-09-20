@@ -7,6 +7,7 @@ import BecomeAgent from '@/components/HomePage/BecomeAgent';
 import FAQ from '@/components/HomePage/FAQ';
 import JoinWaitlistFoot from '@/components/HomePage/JoinWaitlistFoot';
 import Footer from '@/components/Footer';
+import PocketmoniXperience from '@/components/HomePage/userExperience/page';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <JoinWaitlist />
       <TransAgent />
       <PaymentExperience />
+      <PocketmoniXperience />
       <Review />
       {/* <ReviewModel /> */}
       <BecomeAgent />
