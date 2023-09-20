@@ -37,13 +37,13 @@ export default function PocketmoniXperience() {
         width={screenWidth}
         height="200"
         style={{ marginBottom: -120, marginLeft: -10, position: 'relative', zIndex: 2 }}
-        className="z-10"
+        className="z-10 mb-2"
       >
         <path
           d={`M10 80 Q${controlPointXBottom} ${controlPointYBottom} ${endPointX} 80`}
           fill="white"
           stroke="white"
-          strokeWidth="5"
+          strokeWidth="15"
         />
       </svg>
       <Swiper

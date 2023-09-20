@@ -71,7 +71,7 @@ const Modal = () => {
           </p>
         </swiper-slide>
       </swiper-container>
-      <div className='flex justify-between w-2/6 mx-auto -mt-7' style={{position: "relative", zIndex: 6}}>
+      <div className='flex justify-between w-3/6 mx-auto -mt-7' style={{position: "relative", zIndex: 6}}>
         <button
           onClick={() => {
             swiperRef.current.swiper.slidePrev();
