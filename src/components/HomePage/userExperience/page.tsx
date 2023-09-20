@@ -29,15 +29,15 @@ export default function PocketmoniXperience() {
   const endPointX = screenWidth; // X coordinate of the end point
 
   return (
-    <main className="overflow-hidden mb-28" style={{ overflow: 'hidden' }}>
+    <main className="overflow-hidden container w-full mx-auto mb-28" style={{ overflow: 'hidden' }}>
       <div className="h-10 w-full text-4xl font-normal text-center mt-0 -mb-16">
-        The <span className="text-blue-600 ">Pocketmoni</span> Experience
+        The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
       <svg
         width={screenWidth}
         height="200"
         style={{ marginBottom: -120, marginLeft: -10, position: 'relative', zIndex: 2 }}
-        className="z-10 "
+        className="z-10"
       >
         <path
           d={`M10 80 Q${controlPointXBottom} ${controlPointYBottom} ${endPointX} 80`}
@@ -47,7 +47,7 @@ export default function PocketmoniXperience() {
         />
       </svg>
       <Swiper
-        className="bg-white h-3/6 z-0"
+        className="bg-white w-full h-3/6 z-0"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={10}
         slidesPerView={3}
@@ -80,14 +80,14 @@ export default function PocketmoniXperience() {
       <svg
         width={screenWidth}
         height="200"
-        style={{ marginLeft: -10, position: 'relative', zIndex: 2 }}
-        className=""
+        style={{ marginLeft: -20, position: 'relative', zIndex: 2 }}
+        className="mt-2"
       >
         <path
           d={`M10 80 Q${controlPointXTop} ${controlPointYTop} ${endPointX} 80`}
           fill="white"
           stroke="white"
-          strokeWidth="5"
+          strokeWidth="15"
         />
       </svg>
       <div
