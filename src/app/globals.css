@@ -32,6 +32,11 @@ body {
   src: url('../fonts/Itim-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Caveat';
+  src: url('../fonts/Caveat-Regular.ttf');
+}
+
 .custom-bg {
   background-image: url('../assets/svg/bg_wait.svg');
   background-repeat: no-repeat;

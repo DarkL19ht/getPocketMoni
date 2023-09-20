@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import Button from './../Button';
 import AgentGroup from '../../assets/images/agent-group.png';
+import ButtonWithIcon from '../ButtonWithIcon';
+import { BsFillBellFill } from 'react-icons/bs';
 
 const BecomeAgent = () => {
   return (
@@ -65,7 +66,13 @@ const BecomeAgent = () => {
             provide exclusive pricing to super agent networks.
           </p>
         </div>
-        <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-40" />
+        <ButtonWithIcon
+          className="bg-navy-600 text-white w-40"
+          hoverEffect="hover:bg-red-300"
+          icon={<BsFillBellFill />}
+        >
+          Join Waitlist
+        </ButtonWithIcon>
       </section>
     </div>
   );

@@ -1,0 +1,28 @@
+import React, { ReactNode } from 'react'; // Example icon
+
+interface ButtonProps {
+  onClick?: () => void;
+  hoverEffect?: string;
+  icon?: ReactNode;
+  children?: ReactNode;
+  className?: string;
+}
+
+const ButtonWithIcon: React.FC<ButtonProps> = ({
+  onClick,
+  hoverEffect = 'hover:bg-blue-500',
+  icon,
+  className = '',
+  ...rest
+}) => {
+  const classNames = `h-12 rounded-lg text-sm flex gap-3 items-center justify-center  ${hoverEffect} ${className}`;
+
+  return (
+    <button className={classNames} onClick={onClick} {...rest}>
+      {rest.children}
+      {icon && <span className="text-gold">{icon}</span>}
+    </button>
+  );
+};
+
+export default ButtonWithIcon;

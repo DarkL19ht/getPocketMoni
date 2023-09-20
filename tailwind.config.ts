@@ -26,9 +26,12 @@ const config: Config = {
       current: 'currentColor',
       black: '#000',
       white: '#fff',
-      grey:'#D9D9D9',
-      yellow:'#FFCB45',
-      gray2:'#E3E3E3',
+      grey: '#D9D9D9',
+      yellow: '#FFCB45',
+      gray2: '#E3E3E3',
+      grey2: '#3F3F3F',
+      blade: '#232323',
+      gold: '#DAA520',
       navy: {
         100: '#D8F1FF',
         200: '#017AFF',
@@ -43,6 +46,7 @@ const config: Config = {
     fontFamily: {
       switzer: ['Switzer', 'cursive'],
       itim: ['Itim', 'cursive'],
+      caveat: ['Caveat', 'cursive'],
     },
   },
   plugins: [],
