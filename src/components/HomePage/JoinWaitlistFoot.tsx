@@ -33,14 +33,26 @@ const JoinWaitlistFoot = () => {
         </div>
       </section>
       <section className="hidden md:block md:w-1/2 ">
-        <Image
-          src="/mobile.svg"
-          alt="Mobile"
-          className="relative mx-auto inset-0 dark:invert"
-          width={500}
-          height={2}
-          priority
-        />
+        <div className="flex justify-between">
+          <div>
+            <Image
+              src="/vertical389.svg"
+              alt="dial code"
+              className="dark:invert mx-auto inset-0 -mr-20"
+              width={500}
+              height={2}
+              priority
+            />
+          </div>
+          <Image
+            src="/mobile.svg"
+            alt="Mobile"
+            className="relative mx-auto inset-0 dark:invert -ml-10"
+            width={500}
+            height={2}
+            priority
+          />
+        </div>
       </section>
     </div>
   );
