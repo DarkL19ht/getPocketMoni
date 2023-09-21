@@ -2,5 +2,5 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.fontSize": 14,
-    "terminal.integrated.fontSize": 16
+    "terminal.integrated.fontSize": 13
 }
