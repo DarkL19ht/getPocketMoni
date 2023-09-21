@@ -11,11 +11,29 @@ type Inputs = {
 };
 
 const JoinWaitlist = () => {
-  const { handleSubmit } = useForm<Inputs>();
+  const { handleSubmit, register, reset } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (values) => {
+    try {
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+      console.log('subitted Response', data);
+
+      reset();
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
   const [isFocused, setIsFocused] = useState(false);
+
   const handleButtonClick = () => {
     setIsFocused(true);
     setTimeout(() => {
@@ -77,16 +95,18 @@ const JoinWaitlist = () => {
       />
       <div className="hidden md:block">
         <div className="text-center">
-          <div className="md:flex gap-3">
+          <form className="md:flex gap-3" onSubmit={handleSubmit(onSubmit)}>
             <input
               type="email"
-              name="waitlist"
+              {...register('email')}
+              name="email"
               id=""
               placeholder="Enter your email to get notified when we launch"
               className="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
               style={{ height: '50px', borderRadius: '10px' }}
             />
             <ButtonWithIcon
+              type="submit"
               className="bg-navy-600 text-white w-40"
               hoverEffect="hover:bg-red-300"
               icon={<BsFillBellFill />}
@@ -94,12 +114,12 @@ const JoinWaitlist = () => {
               Join Waitlist
             </ButtonWithIcon>
             {/* <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-40" /> */}
-          </div>
+          </form>
           <div className="md:mt-48 ">
             <Image
               src="/bg-wait.svg"
               alt="dial code"
-              className="dark:invert"
+              className="dark:invert inset-0 z-0"
               width={600}
               height={200}
               priority
