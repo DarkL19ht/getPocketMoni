@@ -41,7 +41,7 @@ const JoinWaitlist = () => {
     }, 100);
   };
   return (
-    <div className="container mx-auto md:flex justify-between md:pt-36">
+    <div className="container mx-auto md:flex justify-between w-full md:pt-44 dark:text-grey2">
       {/* FOR MOBILE SCREEN START HERE */}
       <div className="md:hidden mt-16">
         <div className="md:flex gap-3">
@@ -86,14 +86,14 @@ const JoinWaitlist = () => {
       <Image
         src="/mobile.svg"
         alt="Mobile"
-        className={`hidden md:block relative mx-auto inset-0 dark:invert ${
+        className={`hidden md:block relative mx-auto inset-0 dark:invert w-1/4 ${
           isFocused ? ' bg-navy-100 opacity-50' : ''
         }`}
         width={600}
         height={2}
         priority
       />
-      <div className="hidden md:block">
+      <div className="hidden md:block w-2/4">
         <div className="text-center">
           <form className="md:flex gap-3" onSubmit={handleSubmit(onSubmit)}>
             <input
@@ -102,12 +102,12 @@ const JoinWaitlist = () => {
               name="email"
               id=""
               placeholder="Enter your email to get notified when we launch"
-              className="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
+              className="px-3 py-2 w-full bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
               style={{ height: '50px', borderRadius: '10px' }}
             />
             <ButtonWithIcon
               type="submit"
-              className="bg-navy-600 text-white w-40"
+              className="bg-navy-400 text-white w-40"
               hoverEffect="hover:bg-red-300"
               icon={<BsFillBellFill />}
             >
@@ -115,7 +115,7 @@ const JoinWaitlist = () => {
             </ButtonWithIcon>
             {/* <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-40" /> */}
           </form>
-          <div className="md:mt-48 ">
+          <div className="md:mt-10 ">
             <Image
               src="/bg-wait.svg"
               alt="dial code"
@@ -125,7 +125,7 @@ const JoinWaitlist = () => {
               priority
             />
           </div>
-          <div className="md:mt-24">
+          <div className="md:mt-10 -mt-6">
             <div className="flex">
               <Image
                 src="/arrowleft.svg"
@@ -140,7 +140,7 @@ const JoinWaitlist = () => {
                 label="Click to see the magic"
                 style="bg-black"
                 text="text-white"
-                width="w-40"
+                width="w-full"
               />
               <Image
                 src="/arrow-up.svg"
@@ -157,7 +157,7 @@ const JoinWaitlist = () => {
       <Image
         src="/POS.svg"
         alt="Mobile"
-        className="dark:invert hidden md:block "
+        className="dark:invert hidden md:block w-1/4"
         width={500}
         height={2}
         priority

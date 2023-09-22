@@ -3,10 +3,11 @@ import Image from 'next/image';
 import AgentGroup from '../../assets/images/agent-group.png';
 import ButtonWithIcon from '../ButtonWithIcon';
 import { BsFillBellFill } from 'react-icons/bs';
+import Link from 'next/link';
 
 const BecomeAgent = () => {
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20">
+    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20 dark:text-grey2">
       <section className="hidden md:block md:w-1/2 ">
         <Image src={AgentGroup} alt="Group Agent Picture" />
       </section>
@@ -60,13 +61,15 @@ const BecomeAgent = () => {
             provide exclusive pricing to super agent networks.
           </p>
         </div>
-        <ButtonWithIcon
-          className="bg-navy-600 text-white w-40"
-          hoverEffect="hover:bg-red-300"
-          icon={<BsFillBellFill />}
-        >
-          Join Waitlist
-        </ButtonWithIcon>
+        <Link href="/">
+          <ButtonWithIcon
+            className="bg-navy-600 text-white w-40"
+            hoverEffect="hover:bg-red-300"
+            icon={<BsFillBellFill />}
+          >
+            Join Waitlist
+          </ButtonWithIcon>
+        </Link>
       </section>
     </div>
   );

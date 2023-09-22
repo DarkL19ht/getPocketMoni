@@ -23,7 +23,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-blue-500 p-4">
+    <nav className="bg-white p-4">
       <div className="container mx-auto flex justify-between items-center relative">
         <div className="flex justify-between items-center">
           <Image
@@ -45,9 +45,9 @@ function Navbar() {
                   className="w-5 h-5"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </button>
@@ -88,9 +88,9 @@ function Navbar() {
                       className="h-6 w-8 inline-block transform"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       />
                     </svg>
                   )}
@@ -98,7 +98,7 @@ function Navbar() {
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 pr-20 pl-6 space-y-2 bg-navy-500 text-black shadow-lg  ${
+                className={`absolute left-0 mt-2 pr-20 pl-6 space-y-2 bg-white text-black shadow-lg  ${
                   dropdownOpen ? 'block' : 'hidden'
                 }`}
               >
@@ -161,9 +161,9 @@ function Navbar() {
                         className="h-6 w-8 inline-block transform"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         />
                       </svg>
                     </svg>
@@ -172,7 +172,7 @@ function Navbar() {
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 space-y-2 bg-navy-500 text-black shadow-lg ${
+                className={`absolute left-0 mt-2 space-y-2 bg-white text-black shadow-lg ${
                   dropdownOpen1 ? 'block' : 'hidden'
                 }`}
               >

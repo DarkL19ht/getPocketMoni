@@ -49,10 +49,10 @@ const cardVariants: Variants = {
   },
   onscreen: {
     y: 5,
-    rotate: 5,
+    // rotate: 5,
     transition: {
       type: 'spring',
-      bounce: 0.2,
+      // bounce: 0.2,
       duration: 0.7,
     },
   },
@@ -91,7 +91,7 @@ const PaymentExperience = () => {
   };
 
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-60 md:pl-20">
+    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-60 md:pl-20 dark:text-grey2">
       <section className="md:w-1/2 md:mt-24">
         <h3 className="font-bold font-switzer text-5xl md:text-7xl text-navy-300 text-center md:text-left">
           Easy
