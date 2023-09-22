@@ -25,7 +25,7 @@ function Navbar() {
   return (
     <nav className="bg-white p-4">
       <div className="container mx-auto flex justify-between items-center relative">
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-between items-center">
           <Image
             src="/logo.svg"
             alt="PocketMoni Logo"
@@ -35,7 +35,7 @@ function Navbar() {
             priority
           />
           {/* Mobile Menu Button (Hamburger) */}
-          <div className="flex justify-end items-start relative ">
+          <div className="flex justify-end items-end right-20 ">
             <div className="md:hidden">
               <button onClick={toggleMobileMenu} className="text-black focus:outline-none">
                 <svg
@@ -201,7 +201,7 @@ function Navbar() {
         </div>
         {mobileMenuOpen && (
           <div className=" text-center space-y-2 shadow-2xl bg-black">
-            <div className="mobile_menu space-x-4 absolute top-14 h-24 items-center left-0 right-0 bottom-0 z-50 bg-white shadow-lg flex justify-between px-2">
+            <div className="mobile_menu space-x-4 absolute top-28 left-0 right-0 bottom-0 z-50 bg-navy-300">
               <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
               <Button
                 label=" Become an Agent"
