@@ -11,10 +11,13 @@
 ## API baseURL
 
 ## Project Task
-- [ ] 
+
+- [ ]
 
 ## Credits
+
 List of contributors
 
 - Ajayi Victor[frontend developer]<>
 - Olayinka Ibrahim[frontend developer]><ibrahimolayinkaa@gmail.com>
+- Olamide OLAITAN[frontend developer]><olamideolaitan111@gmail.com>
