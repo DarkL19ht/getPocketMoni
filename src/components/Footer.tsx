@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { RiInstagramLine, RiTiktokLine, RiTwitterXFill } from 'react-icons/ri';
+import { ImFacebook } from 'react-icons/im';
 
 const Footer = () => {
   return (
@@ -28,6 +30,20 @@ const Footer = () => {
           <div className="font-light">
             <p>Want to connect with us? </p>
             <p>Find us on social media.</p>
+            <div className="flex justify-evenly mt-6">
+              <Link href="/">
+                <ImFacebook />
+              </Link>
+              <Link href="/">
+                <RiTwitterXFill />
+              </Link>
+              <Link href="/">
+                <RiInstagramLine />
+              </Link>
+              <Link href="/">
+                <RiTiktokLine />
+              </Link>
+            </div>
           </div>
         </section>
         <section className="pb-6">

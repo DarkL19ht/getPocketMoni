@@ -4,6 +4,7 @@ import Image from 'next/image';
 // components/Navbar.js
 import { useState } from 'react';
 import Button from './Button';
+import ButtonWithIcon from './ButtonWithIcon';
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,25 +35,6 @@ function Navbar() {
             height={50}
             priority
           />
-          {/* Mobile Menu Button (Hamburger) */}
-          <div className="flex justify-end items-end right-20 ">
-            <div className="md:hidden">
-              <button onClick={toggleMobileMenu} className="text-black focus:outline-none">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-4 pl-6">
@@ -60,7 +42,7 @@ function Navbar() {
             <li className="relative group">
               <a
                 href="#"
-                className={`text-black ${dropdownOpen ? 'text-navy-300' : ''}`}
+                // className={`text-black ${dropdownOpen ? 'text-navy-300' : ''}`}
                 onClick={toggleDropdown}
               >
                 About Us
@@ -98,7 +80,7 @@ function Navbar() {
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 pr-20 pl-6 space-y-2 bg-white text-black shadow-lg  ${
+                className={`absolute left-0 mt-2 pr-28 pl-6 space-y-2 bg-white text-black shadow-lg  ${
                   dropdownOpen ? 'block' : 'hidden'
                 }`}
               >
@@ -127,7 +109,7 @@ function Navbar() {
             <li className="relative group pl-6">
               <a
                 href="#"
-                className={`text-black ${dropdownOpen ? 'text-navy-300' : ''}`}
+                // className={`text-black ${dropdownOpen ? 'text-navy-300' : ''}`}
                 onClick={toggleDropdown1}
               >
                 Suport
@@ -195,13 +177,44 @@ function Navbar() {
             </li>
           </ul>
         </div>
+        {/* Mobile Menu Button (Hamburger) */}
+        <div className="flex justify-end items-end ml-36">
+          <div className="md:hidden">
+            <button onClick={toggleMobileMenu} className="text-black focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
         <div className="hidden md:block space-x-4">
+          {/* <ButtonWithIcon
+            className="bg-navy-600 text-white w-40"
+            hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
+          >
+            Get PocketMoni
+          </ButtonWithIcon>
+          <ButtonWithIcon
+            className="bg-navy-100 w-40 text-navy-200"
+            hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
+          >
+            Become an Agent
+          </ButtonWithIcon> */}
           <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
           <Button label=" Become an Agent" style="bg-navy-100" text="text-navy-200" width="w-40" />
         </div>
         {mobileMenuOpen && (
-          <div className=" text-center space-y-2 shadow-2xl bg-black">
-            <div className="mobile_menu space-x-4 absolute top-28 left-0 right-0 bottom-0 z-50 bg-navy-300">
+          <div className="">
+            <div className="space-x-4 absolute top-20 left-0 pt-8 pb-8 pr-2 pl-2 bg-white shadow-2xl">
               <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
               <Button
                 label=" Become an Agent"

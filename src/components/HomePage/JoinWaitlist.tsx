@@ -54,7 +54,15 @@ const JoinWaitlist = () => {
               className="px-3 py-2 bg-white w-full mb-5 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
               style={{ height: '50px', borderRadius: '10px' }}
             />
-            <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-full" />
+            <ButtonWithIcon
+              type="submit"
+              className="bg-navy-400 text-white w-full"
+              hoverEffect="hover:bg-red-300"
+              icon={<BsFillBellFill />}
+            >
+              Join Waitlist
+            </ButtonWithIcon>
+            {/* <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-full" /> */}
           </form>
         </div>
         <div className="flex mt-10">

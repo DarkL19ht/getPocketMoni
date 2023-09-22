@@ -61,15 +61,20 @@ const BecomeAgent = () => {
             provide exclusive pricing to super agent networks.
           </p>
         </div>
-        <Link href="/">
-          <ButtonWithIcon
-            className="bg-navy-600 text-white w-40"
-            hoverEffect="hover:bg-red-300"
-            icon={<BsFillBellFill />}
-          >
-            Join Waitlist
-          </ButtonWithIcon>
-        </Link>
+        <div className="flex items-center justify-center md:justify-start">
+          <Link href="/">
+            <ButtonWithIcon
+              className="bg-navy-400 text-white w-40"
+              hoverEffect="hover:bg-red-300"
+              icon={<BsFillBellFill />}
+            >
+              Join Waitlist
+            </ButtonWithIcon>
+          </Link>
+        </div>
+      </section>
+      <section className="md:hidden md:w-1/2 mt-10">
+        <Image src={AgentGroup} alt="Group Agent Picture" />
       </section>
     </div>
   );
