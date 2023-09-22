@@ -3,28 +3,23 @@ import Image from 'next/image';
 import AgentGroup from '../../assets/images/agent-group.png';
 import ButtonWithIcon from '../ButtonWithIcon';
 import { BsFillBellFill } from 'react-icons/bs';
+import Link from 'next/link';
 
 const BecomeAgent = () => {
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20">
+    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20 dark:text-grey2">
       <section className="hidden md:block md:w-1/2 ">
-        <Image
-          src={AgentGroup}
-          alt="Group Agent Picture"
-          //   width={100}
-          //   height={50}
-          //   className="flex w-[40px] h-[40px] rounded-full"
-        />
+        <Image src={AgentGroup} alt="Group Agent Picture" />
       </section>
       <section className="md:w-1/2 text-center md:text-left">
-        <h3 className="text-6xl leading-10 font-switzer font-normal">
+        <h3 className="md:text-6xl text-4xl leading-10 font-switzer font-normal">
           Become an <span className="text-navy-300">agent</span>
         </h3>
-        <p className="mt-14 font-light text-xl">
+        <p className="md:mt-14 mt-8 font-light md:text-xl text-lg">
           PocketMoni enables wealth creation. We have created an eco-system which ensures a decent
           income for our agents to run profitable businesses.
         </p>
-        <div className="flex gap-3 mt-10">
+        <div className="flex gap-3 md:mt-10">
           <Image
             src="/Checkboxtick.svg"
             alt="Mobile"
@@ -66,13 +61,15 @@ const BecomeAgent = () => {
             provide exclusive pricing to super agent networks.
           </p>
         </div>
-        <ButtonWithIcon
-          className="bg-navy-600 text-white w-40"
-          hoverEffect="hover:bg-red-300"
-          icon={<BsFillBellFill />}
-        >
-          Join Waitlist
-        </ButtonWithIcon>
+        <Link href="/">
+          <ButtonWithIcon
+            className="bg-navy-600 text-white w-40"
+            hoverEffect="hover:bg-red-300"
+            icon={<BsFillBellFill />}
+          >
+            Join Waitlist
+          </ButtonWithIcon>
+        </Link>
       </section>
     </div>
   );

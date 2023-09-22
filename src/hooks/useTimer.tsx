@@ -44,20 +44,16 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 
   return (
     <div>
-      <div className="flex font-caveat bg-black text-white p-2 md:pt-3 md:pb-3 md:pr-4 md:pl-4 rounded-lg gap-2">
-        <h3 className="bg-grey2">
-          {timeRemaining}
-          <span className="font-caveat">Days</span>
-        </h3>
-        :
+      <div className="flex font-itim font-normal bg-black text-white p-2 md:pt-3 md:pb-3 md:pr-4 md:pl-4 rounded-lg gap-2">
+        <h3 className="font-itim">{timeRemaining}days</h3>:
         <h3>
           {hours}
-          <span className="font-caveat">Hrs</span>
+          <span className="font-caveat">hrs</span>
         </h3>
         :
         <h3>
           {minutes}
-          <span className="font-caveat">Mins</span>
+          <span className="font-caveat">mins</span>
         </h3>
         {/* :
         <h3>

@@ -5,8 +5,18 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <div className="w-full -mt-96 md:h-96 bg-navy-600 text-white text-center">
-      <div className="md:flex md:justify-between p-20 font-switzer">
-        <section className=" pb-6">
+      <div className="md:flex md:justify-between p-20 font-switzer relative">
+        <div className="absolute inset-0 z-0 -mt-10">
+          <Image
+            src="/bg-wait.svg"
+            alt="dial code"
+            className="dark:invert md:hidden"
+            width={800}
+            height={200}
+            priority
+          />
+        </div>
+        <section className="mt-6 pb-6 md:mt-0 items-center justify-center">
           <Image
             src="/logoEtr.svg"
             alt="Mobile"
