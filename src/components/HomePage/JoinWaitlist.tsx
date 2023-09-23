@@ -94,7 +94,7 @@ const JoinWaitlist = () => {
       <Image
         src="/mobile.svg"
         alt="Mobile"
-        className={`hidden md:block relative mx-auto inset-0 dark:invert w-1/4 ${
+        className={`hidden md:block relative mx-auto inset-0 dark:invert w-1/4 card-fly-left ${
           isFocused ? ' bg-navy-100 opacity-50' : ''
         }`}
         width={600}
@@ -127,7 +127,7 @@ const JoinWaitlist = () => {
             <Image
               src="/bg-wait.svg"
               alt="dial code"
-              className="dark:invert inset-0 z-0"
+              className="dark:invert inset-0 z-0 card-fly-bottom"
               width={600}
               height={200}
               priority
@@ -165,7 +165,7 @@ const JoinWaitlist = () => {
       <Image
         src="/POS.svg"
         alt="Mobile"
-        className="dark:invert hidden md:block w-1/4"
+        className="dark:invert hidden md:block w-1/4 card-fly-right"
         width={500}
         height={2}
         priority

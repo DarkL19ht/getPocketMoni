@@ -43,7 +43,7 @@ body {
   /* background-size: cover; */
   background-position: center center;
 }
-/* 
+
 @keyframes fly-in-from-left {
   0% {
     transform: translateX(-100%);
@@ -72,16 +72,16 @@ body {
 }
 
 .card-fly-left {
-  animation: fly-in-from-left 1s ease-in-out forwards;
+  animation: fly-in-from-left 2s ease-in-out forwards;
 }
 
 .card-fly-right {
-  animation: fly-in-from-right 1s ease-in-out forwards;
+  animation: fly-in-from-right 2s ease-in-out forwards;
 }
 
-.card-fly-top {
-  animation: fly-in-from-top 1s ease-in-out forwards;
-} */
+.card-fly-bottom {
+  animation: fly-in-from-bottom 2s ease-in-out forwards;
+}
 
 /* animation new design  */
 

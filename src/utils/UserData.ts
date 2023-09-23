@@ -194,6 +194,28 @@ const UserData = {
         'PocketMoni is a Mobile Money solution from eTranzact International PlC. which allows customers as well as agents to perform basic financial services from their smartphone. It is among the first licensed Mobile Money Operator (MMO)  by the Cental Bank of Nigeria (CBN)',
     },
   ],
+  pkmexperience: [
+    {
+      id: 1,
+      title: 'Accessible',
+      desc: '  PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
+    },
+    {
+      id: 2,
+      title: 'Accessible',
+      desc: '  PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
+    },
+    {
+      id: 3,
+      title: 'Accessible',
+      desc: '  PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
+    },
+    {
+      id: 4,
+      title: 'Accessible',
+      desc: '  PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
+    },
+  ],
 };
 
 export default UserData;

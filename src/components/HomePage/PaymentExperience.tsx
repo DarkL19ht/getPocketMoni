@@ -111,7 +111,7 @@ const PaymentExperience = () => {
           priority
         />
       </section>
-      <section className="md:w-1/2 md:mt-0 flex items-center justify-center">
+      <section className="md:w-1/2 md:mt-0 mt-5 flex items-center justify-center">
         <div className="">
           {cardDetails.map((item) => (
             <Card
