@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const BecomeAgent = () => {
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20 dark:text-grey2">
+    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20">
       <section className="hidden md:block md:w-1/2 ">
         <Image src={AgentGroup} alt="Group Agent Picture" />
       </section>
@@ -23,7 +23,7 @@ const BecomeAgent = () => {
           <Image
             src="/Checkboxtick.svg"
             alt="Mobile"
-            className="mt-4 dark:invert"
+            className="mt-4"
             width={30}
             height={10}
             priority
@@ -37,7 +37,7 @@ const BecomeAgent = () => {
           <Image
             src="/Checkboxtick.svg"
             alt="Mobile"
-            className="mt-4 dark:invert"
+            className="mt-4"
             width={30}
             height={10}
             priority
@@ -51,7 +51,7 @@ const BecomeAgent = () => {
           <Image
             src="/Checkboxtick.svg"
             alt="Mobile"
-            className="mt-4 dark:invert"
+            className="mt-4"
             width={30}
             height={10}
             priority

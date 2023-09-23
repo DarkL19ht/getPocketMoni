@@ -6,7 +6,7 @@ import { BsFillBellFill } from 'react-icons/bs';
 
 const JoinWaitlistFoot = () => {
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-32 md:mb-0 -mt-24 mb-40 w-full md:pl-20 dark:text-grey2">
+    <div className="container mx-auto md:flex md:justify-between md:mt-32 md:mb-0 -mt-24 mb-40 w-full md:pl-20">
       <section className=" md:w-1/2 md:mb-0 mb-24">
         <div className="flex md:items-center items-center justify-center h-screen">
           <div className="-mt-32">
@@ -38,7 +38,7 @@ const JoinWaitlistFoot = () => {
             <Image
               src="/vertical389.svg"
               alt="dial code"
-              className="dark:invert mx-auto inset-0 -mr-20"
+              className="mx-auto inset-0 -mr-20"
               width={500}
               height={2}
               priority
@@ -47,7 +47,7 @@ const JoinWaitlistFoot = () => {
           <Image
             src="/mobile.svg"
             alt="Mobile"
-            className="relative mx-auto inset-0 dark:invert -ml-10"
+            className="relative mx-auto inset-0 -ml-10"
             width={500}
             height={2}
             priority

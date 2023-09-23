@@ -12,7 +12,7 @@ const Footer = () => {
           <Image
             src="/bg-wait.svg"
             alt="dial code"
-            className="dark:invert md:hidden"
+            className="md:hidden"
             width={800}
             height={200}
             priority
@@ -22,7 +22,7 @@ const Footer = () => {
           <Image
             src="/logoEtr.svg"
             alt="Mobile"
-            className="mb-4 dark:invert"
+            className="mb-4"
             width={200}
             height={10}
             priority

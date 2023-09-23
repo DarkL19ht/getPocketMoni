@@ -41,7 +41,7 @@ const JoinWaitlist = () => {
     }, 100);
   };
   return (
-    <div className="container mx-auto md:flex justify-between w-full md:pt-44 dark:text-grey2">
+    <div className="container mx-auto md:flex justify-between w-full md:pt-44 ">
       {/* FOR MOBILE SCREEN START HERE */}
       <div className="md:hidden mt-16">
         <div className="md:flex gap-3">
@@ -69,9 +69,7 @@ const JoinWaitlist = () => {
           <Image
             src="/mobile.svg"
             alt="Mobile"
-            className={`relative mx-auto inset-0 dark:invert ${
-              isFocused ? ' bg-navy-100 opacity-50' : ''
-            }`}
+            className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
             width={200}
             height={2}
             priority
@@ -80,9 +78,7 @@ const JoinWaitlist = () => {
             <Image
               src="/POS-SMALL.svg"
               alt="Mobile"
-              className={`relative mx-auto inset-0 dark:invert ${
-                isFocused ? ' bg-navy-100 opacity-50' : ''
-              }`}
+              className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
               width={130}
               height={2}
               priority
@@ -94,7 +90,7 @@ const JoinWaitlist = () => {
       <Image
         src="/mobile.svg"
         alt="Mobile"
-        className={`hidden md:block relative mx-auto inset-0 dark:invert w-1/4 card-fly-left ${
+        className={`hidden md:block relative mx-auto inset-0 w-1/4 card-fly-left ${
           isFocused ? ' bg-navy-100 opacity-50' : ''
         }`}
         width={600}
@@ -127,7 +123,7 @@ const JoinWaitlist = () => {
             <Image
               src="/bg-wait.svg"
               alt="dial code"
-              className="dark:invert inset-0 z-0 card-fly-bottom"
+              className=" inset-0 z-0 card-fly-bottom"
               width={600}
               height={200}
               priority
@@ -135,14 +131,7 @@ const JoinWaitlist = () => {
           </div>
           <div className="md:mt-10 -mt-6">
             <div className="flex">
-              <Image
-                src="/arrowleft.svg"
-                alt="Mobile"
-                className="dark:invert"
-                width={100}
-                height={1}
-                priority
-              />
+              <Image src="/arrowleft.svg" alt="Mobile" width={100} height={1} priority />
               <Button
                 // onClick={handleButtonClick}
                 label="Click to see the magic"
@@ -150,14 +139,7 @@ const JoinWaitlist = () => {
                 text="text-white"
                 width="w-full"
               />
-              <Image
-                src="/arrow-up.svg"
-                alt="Mobile"
-                className="dark:invert"
-                width={100}
-                height={50}
-                priority
-              />
+              <Image src="/arrow-up.svg" alt="Mobile" width={100} height={50} priority />
             </div>
           </div>
         </div>
@@ -165,7 +147,7 @@ const JoinWaitlist = () => {
       <Image
         src="/POS.svg"
         alt="Mobile"
-        className="dark:invert hidden md:block w-1/4 card-fly-right"
+        className="hidden md:block w-1/4 card-fly-right"
         width={500}
         height={2}
         priority

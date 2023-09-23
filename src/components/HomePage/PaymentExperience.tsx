@@ -75,14 +75,7 @@ const PaymentExperience = () => {
             </h3>
             <p className="font-switzer font-light text-sm mt-6">{description}</p>
             <div>
-              <Image
-                src={img}
-                alt="Mobile"
-                className="mt-4 dark:invert"
-                width={200}
-                height={100}
-                priority
-              />
+              <Image src={img} alt="Mobile" className="mt-4" width={200} height={100} priority />
             </div>
           </div>
         </motion.div>
@@ -91,7 +84,7 @@ const PaymentExperience = () => {
   };
 
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-60 md:pl-20 dark:text-grey2">
+    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-60 md:pl-20">
       <section className="md:w-1/2 md:mt-24">
         <h3 className="font-bold font-switzer text-5xl md:text-7xl text-navy-300 text-center md:text-left">
           Easy
@@ -105,7 +98,7 @@ const PaymentExperience = () => {
         <Image
           src="/soon2.svg"
           alt="Mobile"
-          className="mt-4 dark:invert hidden md:block"
+          className="mt-4 hidden md:block"
           width={120}
           height={100}
           priority

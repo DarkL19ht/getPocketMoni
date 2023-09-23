@@ -27,14 +27,7 @@ function Navbar() {
     <nav className="bg-white p-4">
       <div className="container mx-auto flex justify-between items-center relative">
         <div className="flex justify-between items-center">
-          <Image
-            src="/logo.svg"
-            alt="PocketMoni Logo"
-            className="dark:invert"
-            width={200}
-            height={50}
-            priority
-          />
+          <Image src="/logo.svg" alt="PocketMoni Logo" width={200} height={50} priority />
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-4 pl-6">

@@ -23,10 +23,7 @@ const AccordionItem = ({ title, description, open, toggle }: AccordionProps) => 
         <div className="text-[30px]">{open ? <BiMinus /> : <BsPlus />}</div>
       </div>
       <Collapse isOpened={open}>
-        <div className="bg-white px-[50px] pb-[20px] text-justify dark:bg-grey2">
-          {' '}
-          {description}{' '}
-        </div>
+        <div className="bg-white px-[50px] pb-[20px] text-justify">{description}</div>
       </Collapse>
       <div className="border-b border-gray2"></div>
     </div>
