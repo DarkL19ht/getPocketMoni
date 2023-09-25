@@ -211,3 +211,24 @@ body {
   /* padding-top: 10px; */
   margin-bottom: -170px;
 }
+
+.modal {
+  width: 30%;
+}
+
+.sliderImages {
+  height: 300px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    width: 77.5%;
+    height: 20%;
+  }
+
+  .sliderImages {
+    height: 200px;
+    width: 400px;
+  }
+}

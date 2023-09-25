@@ -18,6 +18,7 @@ const swiperParams = {
   },
   pagination: true,
   
+  
 };
 
 const Modal = () => {
@@ -42,31 +43,31 @@ const Modal = () => {
       <swiper-container
         init="false"
         ref={swiperRef}
-        class='w-11/12 h-36'
+        class='w-11/12 h-36 md:h-36'
         // change the swiper bullets color to the same of the arrows
         style={{ '--swiper-pagination-color': '#3b82f6' }}
       >
         <swiper-slide className='w-[16rem] h-6/6'>
           <h2 className='text-lg font-semibold'>Accessible</h2>
-          <p className='text-justify text-xs mt-2'>PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. 
+          <p className='text-justify text-xs mt-0 m:mt-2'>PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. 
             Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria
           </p>
         </swiper-slide>
         <swiper-slide className='w-[16rem] h-3/6'>
           <h2 className='text-lg font-semibold'>Accessible</h2>
-          <p className='text-justify text-xs mt-2'>PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. 
+          <p className='text-justify text-xs mt-0 m:mt-2'>PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. 
             Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria
           </p>
         </swiper-slide>
         <swiper-slide className='w-[16rem] h-3/6'>
           <h2 className='text-lg font-semibold'>Accessible</h2>
-          <p className='text-justify text-xs mt-2'>PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. 
+          <p className='text-justify text-xs mt-0 m:mt-2'>PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. 
             Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria
           </p>
         </swiper-slide>
         <swiper-slide className='w-[16rem] h-3/6'>
           <h2 className='text-lg font-semibold'>Accessible</h2>
-          <p className='text-justify text-xs mt-2'>PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. 
+          <p className='text-justify text-xs mt-0 m:mt-2'>PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. 
             Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria
           </p>
         </swiper-slide>

@@ -29,7 +29,7 @@ export default function PocketmoniXperience() {
   const endPointX = screenWidth; // X coordinate of the end point
 
   return (
-    <main className="overflow-hidden container w-full mx-auto mb-28" style={{ overflow: 'hidden' }}>
+    <main className="overflow-hidden h-full w-full mx-auto mb-28" style={{ overflow: 'hidden' }}>
       <div className="h-10 w-full text-4xl font-normal text-center mt-0 -mb-16">
         The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
@@ -37,7 +37,7 @@ export default function PocketmoniXperience() {
         width={screenWidth}
         height="200"
         style={{ marginBottom: -120, marginLeft: -10, position: 'relative', zIndex: 2 }}
-        className="z-10 mb-2"
+        className="z-10 mb-2 "
       >
         <path
           d={`M10 80 Q${controlPointXBottom} ${controlPointYBottom} ${endPointX} 80`}
@@ -47,7 +47,7 @@ export default function PocketmoniXperience() {
         />
       </svg>
       <Swiper
-        className="bg-white w-full h-3/6 z-0"
+        className="bg-white w-full h-[200px] md:h-3/6 z-0"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={10}
         slidesPerView={3}
@@ -59,28 +59,28 @@ export default function PocketmoniXperience() {
         style={{ marginBottom: -80, zIndex: 0 }}
       >
         <SwiperSlide className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" style={{ height: 300, width: 500 }} />
+          <Image src={imageOne} alt="image1" className="sliderImages" />
         </SwiperSlide>
-        <SwiperSlide className="w-[16rem] h-3/6">
-          <Image src={imageTwo} alt="image1" style={{ height: 300, width: 500 }} />
-        </SwiperSlide>
-        <SwiperSlide style={flipHorizontalStyle} className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" style={{ height: 300, width: 500 }} />
-        </SwiperSlide>
-        <SwiperSlide className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" style={{ height: 300, width: 500 }} />
+        <SwiperSlide className="w-[16rem] h-3/6 overflow-hidden flex items-end">
+          <Image src={imageTwo} alt="image1" className="sliderImages" />
         </SwiperSlide>
         <SwiperSlide style={flipHorizontalStyle} className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" style={{ height: 300, width: 500 }} />
+          <Image src={imageOne} alt="image1" className="sliderImages" />
         </SwiperSlide>
         <SwiperSlide className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" style={{ height: 300, width: 500 }} />
+          <Image src={imageOne} alt="image1" className="sliderImages" />
+        </SwiperSlide>
+        <SwiperSlide style={flipHorizontalStyle} className="w-[16rem] h-3/6">
+          <Image src={imageOne} alt="image1" className="sliderImages" />
+        </SwiperSlide>
+        <SwiperSlide className="w-[16rem] h-3/6">
+          <Image src={imageOne} alt="image1" className="sliderImages" />
         </SwiperSlide>
       </Swiper>
       <svg
         width={screenWidth}
         height="200"
-        style={{ marginLeft: -20, position: 'relative', zIndex: 2 }}
+        style={{ marginLeft: -15, position: 'relative', zIndex: 2 }}
         className="mt-2"
       >
         <path
@@ -91,11 +91,11 @@ export default function PocketmoniXperience() {
         />
       </svg>
       <div
-        className="bg-white mx-auto text-center p-5 shadow-black -mt-56 border-b-0"
+        className="bg-white mx-auto text-center p-2 shadow-black -mt-44 m:-mt-56 border-b-0 modal"
         style={{
           position: 'relative',
           zIndex: 4,
-          width: '30%',
+          // width: '30%',
           boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
         }}
       >
