@@ -40,8 +40,8 @@ const Review = () => {
     });
   }, []);
   return (
-    <div className="container mx-auto text-center dark:text-grey2">
-      <h3 className="font-bold font-switzer text-6xl hidden md:block">
+    <div className="container mx-auto text-center mt-60 md:mt-0 ">
+      <h3 className="font-bold font-switzer md:text-6xl text-4xl ">
         See What Our <span className="text-navy-300">Users Are Saying</span>
       </h3>
       <div className="hidden md:block">
@@ -70,9 +70,34 @@ const Review = () => {
           ))}
         </div>
       </div>
-
+      <div className="md:hidden">
+        <div className="flex items-center justify-center mt-10 gap-2">
+          {UserData.usersImages.slice(0,9).map((item) => (
+            <Image
+              key={item.id}
+              src={item.img}
+              alt="Picture of the author"
+              width={100}
+              height={50}
+              className="flex w-[40px] h-[40px] rounded-full"
+            />
+          ))}
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          {UserData.usersImages.slice(0,8).map((item) => (
+            <Image
+              key={item.id}
+              src={item.img}
+              alt="Picture of the author"
+              width={100}
+              height={50}
+              className="flex w-[40px] h-[40px] rounded-full"
+            />
+          ))}
+        </div>
+      </div>
       {/* testimonials */}
-      <div className="flex items-center justify-center mt-56 md:mt-20 mb-24">
+      <div className="flex items-center justify-center mt-20 md:mt-20 mb-24">
         <div className="flex items-center justify-center w-4/5 sm:w-5/6 xl:w-full max-w-5xl">
           {/* Prev slide button */}
           <button

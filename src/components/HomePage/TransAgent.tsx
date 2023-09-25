@@ -2,7 +2,7 @@ import React from 'react';
 
 const TransAgent = () => {
   return (
-    <div className="container mx-auto md:-mt-24 mb-14 md:mb-0 dark:text-grey2">
+    <div className="container bg-gray md:bg-transparent rounded-lg mx-auto md:-mt-24 mb-14 md:mb-0 ">
       <div className="flex justify-evenly text-center">
         <section>
           <h3 className="font-bold text-3xl md:text-6xl font-switzer">N40B+</h3>

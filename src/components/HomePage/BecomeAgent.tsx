@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const BecomeAgent = () => {
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20 dark:text-grey2">
+    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20">
       <section className="hidden md:block md:w-1/2 ">
         <Image src={AgentGroup} alt="Group Agent Picture" />
       </section>
@@ -23,7 +23,7 @@ const BecomeAgent = () => {
           <Image
             src="/Checkboxtick.svg"
             alt="Mobile"
-            className="mt-4 dark:invert"
+            className="mt-4"
             width={30}
             height={10}
             priority
@@ -37,7 +37,7 @@ const BecomeAgent = () => {
           <Image
             src="/Checkboxtick.svg"
             alt="Mobile"
-            className="mt-4 dark:invert"
+            className="mt-4"
             width={30}
             height={10}
             priority
@@ -51,7 +51,7 @@ const BecomeAgent = () => {
           <Image
             src="/Checkboxtick.svg"
             alt="Mobile"
-            className="mt-4 dark:invert"
+            className="mt-4"
             width={30}
             height={10}
             priority
@@ -61,15 +61,20 @@ const BecomeAgent = () => {
             provide exclusive pricing to super agent networks.
           </p>
         </div>
-        <Link href="/">
-          <ButtonWithIcon
-            className="bg-navy-600 text-white w-40"
-            hoverEffect="hover:bg-red-300"
-            icon={<BsFillBellFill />}
-          >
-            Join Waitlist
-          </ButtonWithIcon>
-        </Link>
+        <div className="flex items-center justify-center md:justify-start">
+          <Link href="/">
+            <ButtonWithIcon
+              className="bg-navy-400 text-white w-40"
+              hoverEffect="hover:bg-red-300"
+              icon={<BsFillBellFill />}
+            >
+              Join Waitlist
+            </ButtonWithIcon>
+          </Link>
+        </div>
+      </section>
+      <section className="md:hidden md:w-1/2 mt-10">
+        <Image src={AgentGroup} alt="Group Agent Picture" />
       </section>
     </div>
   );

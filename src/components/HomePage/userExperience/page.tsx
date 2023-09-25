@@ -20,42 +20,43 @@ export default function PocketmoniXperience() {
   };
 
   //Quadratic curves
-  const screenWidth = window.innerWidth + 10;
+  const screenWidth = window.innerWidth + 15;
   // Control points calculation for a curve spanning the width of the screen
   const controlPointXTop = screenWidth / 2; // X coordinate of the control point
   const controlPointXBottom = screenWidth / 2; // X coordinate of the control point
   const controlPointYTop = 25; // Y coordinate of the control point
-  const controlPointYBottom = 140; // Y coordinate of the control point
+  const controlPointYBottom = 120; // Y coordinate of the control point
   const endPointX = screenWidth; // X coordinate of the end point
 
   return (
-    <main className="overflow-hidden h-full w-full mx-auto mb-28" style={{ overflow: 'hidden' }}>
-      <div className="h-10 w-full text-4xl font-normal text-center mt-0 -mb-16">
+    <main
+      className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
+      style={{ overflow: 'hidden' }}
+    >
+      <div className="h-full w-full text-5xl font-normal text-center mt-0 -mb-16">
         The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
       <svg
         width={screenWidth}
         height="200"
-        style={{ marginBottom: -120, marginLeft: -10, position: 'relative', zIndex: 2 }}
+        style={{ marginBottom: -118, marginLeft: -10, position: 'relative', zIndex: 2 }}
         className="z-10 mb-2 "
       >
         <path
           d={`M10 80 Q${controlPointXBottom} ${controlPointYBottom} ${endPointX} 80`}
           fill="white"
           stroke="white"
-          strokeWidth="15"
+          strokeWidth="25"
         />
       </svg>
       <Swiper
         className="bg-white w-full h-[200px] md:h-3/6 z-0"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={10}
+        spaceBetween={5}
         slidesPerView={3}
         // navigation
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
         style={{ marginBottom: -80, zIndex: 0 }}
       >
         <SwiperSlide className="w-[16rem] h-3/6">

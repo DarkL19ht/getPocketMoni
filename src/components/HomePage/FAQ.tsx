@@ -24,7 +24,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="container mx-auto text-center md:mb-20 md:mt-0 mt-10 dark:text-black">
+    <div className="container mx-auto text-center md:mb-20 md:mt-0 mt-14">
       <h3 className="font-switzer text-7xl font-normal mb-">F.A.Q</h3>
       <div className="w-full md:flex md:justify-between gap-8">
         <section className="md:w-1/2">
