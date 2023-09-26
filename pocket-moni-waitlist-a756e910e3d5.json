@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pocket-moni-waitlist",
+  "private_key_id": "a756e910e3d5bbc6588bd2f51649dcef70a84f71",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDQw1qoMgvkTk6B\n8yT0MmUgRDJn40wnPNoX3vjwX1SGeepZAqwKDQRFFhPJ4Vy/wU1jePg/Lydk5XGc\noe2CjbXdUrkIYqPr14gzc+CHdddKiPbvLllPcHuQD3SM4XySMIuoymDrFz/dGinX\nXI70GCy7ci0VCVGbJlewi4qx3Btki4BNQ+VK/tHt9gECwXjnOjcUBxwaeyVb1LV7\nDP33AGe5WlEo6i6AuC4t8lpSGKfcmYSv/5doMEeOAe87GYXZKNGnhDdAyMkJzPtT\niCglzq6OIhQAIAUxWzeL+Rrgr9jVyG7j5tYud1WKUIGGWPG/YswvU1A8QReo2Une\nhBkGZNtzAgMBAAECggEAWdzFoOIOGWQVyj1SGmW4/xcsBWkjpj48+QqLaNj4Rvyi\nwlbynE73GBAFS6DdLlO0js2LOpN/JyDW82AGn2yFrPQHXxMq0YHRCKjoLRcuKdDk\nTpfKbPYT0jK87km/uCP6chlPd9LltDSnbyNSC8N+Od/PhR8iSCFMnNusQ5xmFDRq\njn95rD3Wqa63fTV8yXj63/OYTrPQ+HYlwhQne6DvTfoopTLPd7zo1IfKFsTW1Fel\nkNVGo9B+s1mvmxMRu/1wiaLd+4opjQwqN5yEZ7f7/kHwWeMHu/xw4C1bUGXAJRac\n/fT//5tVRFuPTVPgkZvlQP5lEoOcZnSdpCOTI9DoNQKBgQD9uDPppgte2Z1rdzWj\nXHXoupI3GnfGsSy3NQyaE8ssgEdFoUjbRiTrQCcUdSqR1R7vKEqvD/AY22e4YyKT\nQ0wm4GsSEiZw2Tjg5tCDPYu9ScWlQFqPAIYRQDuv/y0Faaw7FOgyG9RreZvKGRDo\n/R77VZKdzH2n88jgj3gLbXLEfQKBgQDSo7VnKJ1gopU8ypMGnQ8Rnjl3iNk1HIFq\nPKMl0tMNr+4E+FsPByepsfRuCTALTSUhDFtJZ/1MNIsKtheLoOr37fmOLAhwFydr\nH3Z+H+rP7LSKs1g+KMXS48raQrtHXtFpvQ3grBgzWawOz+X6q6yGVdHdmdTu2x5S\naBh8xGrSrwKBgAbSRwMHJdMdArB6+gQ0Xi8tpPS6T3IWHV+nm3khAxtlL4Vdurm6\nfw+cH/Da3ZQiKLzBVpCyWwAwFe/NKobPDmMVMYvA1Su/i1nwmraMlw81xoyU2Fpz\n5ybblT88GxfEKY9FFqESQnnJQTkDx4KcG5MiT9jSQKadVU9ETDPyc115AoGADSiI\n5n7VBfpiFEAbWyhojpMxx9PWrciwFPDgyDYZVRuOZOUW2yN5SNKDEHSmea5CCYR6\nF2XVnvMRVIP3iJNu2joVgtohVM89eSWoA0z/ICoLRTba5lcptHjibSwKAvVbY52Z\nxlU51cteQjaeiUA8MNAfohZABQPPKxqxnOmwOqUCgYBd5XxQfxbuJH8Ka8tHetIc\nBtKj8OhAymgtsEru6KjGBzpgNzt2LRSUlCp7yN3ek1LSsmlGZGpbXVy24QGCRbyx\nMcsB8M74aZ2tm7YctBAFw+J0BLbTbVbV4IAHXXQAkxEJe0uSUlhu7ajDtJJGcJ/H\n6u6Kz+xhmdbkXHR1palYOg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "spreadsheet@pocket-moni-waitlist.iam.gserviceaccount.com",
+  "client_id": "100025314140103375393",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spreadsheet%40pocket-moni-waitlist.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -4,7 +4,7 @@ POCKETMONI WEBSITE
 ## About Project
 
 ## Core Technologies
-- [Next Js](https://nextjs.org/docs)
+- [Next Js "13.4.19" ](https://nextjs.org/docs)
 - [Tailwindcss](https://tailwindcss.com/docs/installation)
 - [React Hook Form](https://react-hook-form.com/)
 
@@ -21,7 +21,7 @@ POCKETMONI WEBSITE
 - [ ] client state management
 - [ ] Server state management
 - [ ] dark mode implementation
-- [ ] 
+  
 
 ## Credits
 
