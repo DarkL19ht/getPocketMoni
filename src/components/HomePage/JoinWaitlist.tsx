@@ -4,13 +4,21 @@ import React, { useState } from 'react';
 import Button from './../Button';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ButtonWithIcon from '../ButtonWithIcon';
-import { BsFillBellFill } from 'react-icons/bs';
+import { BsFillBellFill, BsFillPersonFill } from 'react-icons/bs';
+import { LiaGreaterThanSolid } from 'react-icons/lia';
+import { PiBank } from 'react-icons/pi';
 
 type Inputs = {
   email: string;
 };
 
 const JoinWaitlist = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClick = () => {
+    // Toggle the modal state when a clickable region is clicked
+    setShowModal(!showModal);
+  };
   const { handleSubmit, register, reset } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async (values) => {
@@ -65,7 +73,7 @@ const JoinWaitlist = () => {
             {/* <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-full" /> */}
           </form>
         </div>
-        <div className="flex mt-10">
+        <div className="flex mt-10 -ml-16">
           <Image
             src="/mobile.svg"
             alt="Mobile"
@@ -96,7 +104,66 @@ const JoinWaitlist = () => {
         width={600}
         height={2}
         priority
+        onClick={handleClick}
       />
+      {/* <div
+        className="clickable-region"
+        style={{ top: '600px', left: '200px', width: '50px', height: '50px' }}
+        onClick={handleClick}
+      /> */}
+      {showModal && (
+        <div className="modal-over">
+          <div className="modal-content -mt-44 w-[160px] h-[160px] shadow-lg">
+            {/* Content for your modal */}
+            <div className="flex justify-between mb-2" style={{ paddingTop: '12px' }}>
+              <p className="text-[12px] font-bold">Send Money</p>{' '}
+              <span
+                onClick={handleClick}
+                className=" text-navy-400 text-[11px] p-[1px]  cursor-pointer rounded"
+              >
+                x
+              </span>
+            </div>
+            <div className="flex gap-5 pt-1 bg-mob rounded pb-1">
+              <Image
+                src="/pkmsmall.svg"
+                alt="Mobile"
+                // className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
+                width={15}
+                height={1}
+                priority
+              />
+              <div className="mr-4">
+                <h2 className="text-[8px] font-bold">To PocketMoni</h2>
+                <p className="text-[6px]">Best Way to sed money </p>
+              </div>
+              <span className="text-[5px] flex items-center justify-center">
+                <LiaGreaterThanSolid />
+              </span>
+            </div>
+            <div className="flex gap-5 pt-4 pb-2">
+              <BsFillPersonFill />
+              <div className="mr-4">
+                <h2 className="text-[8px] font-bold">To Sub Wallet</h2>
+                <p className="text-[6px]">Best Way to sed money </p>
+              </div>
+              <span className="text-[5px] flex items-center justify-center">
+                <LiaGreaterThanSolid />
+              </span>
+            </div>
+            <div className="flex gap-5 pt-2 bg-mob rounded pb-1">
+              <PiBank />
+              <div className="mr-4">
+                <h2 className="text-[8px] font-bold">To Other Banks</h2>
+                <p className="text-[6px]">Best Way to sed money </p>
+              </div>
+              <span className="text-[5px] flex items-center justify-center">
+                <LiaGreaterThanSolid />
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="hidden md:block w-2/4">
         <div className="text-center">
           <form className="md:flex gap-3" onSubmit={handleSubmit(onSubmit)}>

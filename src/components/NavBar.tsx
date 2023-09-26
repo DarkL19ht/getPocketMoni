@@ -27,18 +27,14 @@ function Navbar() {
     <nav className="bg-white p-4">
       <div className="container mx-auto flex justify-between items-center relative">
         <div className="flex justify-between items-center">
-          <Image src="/logo.svg" alt="PocketMoni Logo" width={200} height={50} priority />
+          <Image src="/logo.svg" alt="PocketMoni Logo" width={120} height={50} priority />
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-4 pl-6">
             {/* ... Menu items ... */}
             <li className="relative group">
-              <a
-                href="#"
-                // className={`text-black ${dropdownOpen ? 'text-navy-300' : ''}`}
-                onClick={toggleDropdown}
-              >
-                About Us
+              <a href="#" className="flex" onClick={toggleDropdown}>
+                About
                 <span className="ml-2 transform transition-transform">
                   {dropdownOpen ? (
                     <svg
@@ -100,12 +96,8 @@ function Navbar() {
               </ul>
             </li>
             <li className="relative group pl-6">
-              <a
-                href="#"
-                // className={`text-black ${dropdownOpen ? 'text-navy-300' : ''}`}
-                onClick={toggleDropdown1}
-              >
-                Suport
+              <a href="#" className="flex" onClick={toggleDropdown1}>
+                Support
                 <span className="ml-2 transform transition-transform">
                   {dropdownOpen1 ? (
                     <svg
@@ -171,7 +163,7 @@ function Navbar() {
           </ul>
         </div>
         {/* Mobile Menu Button (Hamburger) */}
-        <div className="flex justify-end items-end ml-36">
+        <div className="flex justify-end items-end md:ml-0 ml-56">
           <div className="md:hidden">
             <button onClick={toggleMobileMenu} className="text-black focus:outline-none">
               <svg
@@ -190,24 +182,27 @@ function Navbar() {
           </div>
         </div>
         <div className="hidden md:block space-x-4">
-          {/* <ButtonWithIcon
-            className="bg-navy-600 text-white w-40"
-            hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
-          >
-            Get PocketMoni
-          </ButtonWithIcon>
-          <ButtonWithIcon
-            className="bg-navy-100 w-40 text-navy-200"
-            hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
-          >
-            Become an Agent
-          </ButtonWithIcon> */}
-          <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
-          <Button label=" Become an Agent" style="bg-navy-100" text="text-navy-200" width="w-40" />
+          <div className="flex gap-3">
+            <ButtonWithIcon
+              className="bg-navy-600 text-white w-40"
+              hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
+            >
+              Get PocketMoni
+            </ButtonWithIcon>
+            <ButtonWithIcon
+              className="bg-navy-100 w-40 text-navy-200"
+              hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
+            >
+              Become an Agent
+            </ButtonWithIcon>
+          </div>
+
+          {/* <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
+          <Button label=" Become an Agent" style="bg-navy-100" text="text-navy-200" width="w-40" /> */}
         </div>
         {mobileMenuOpen && (
           <div className="">
-            <div className="space-x-4 absolute top-20 left-0 pt-8 pb-8 pr-2 pl-2 bg-white shadow-2xl">
+            <div className="space-x-4 absolute top-10 left-0 pt-8 pb-8 pr-2 pl-2 bg-white shadow-2xl">
               <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
               <Button
                 label=" Become an Agent"

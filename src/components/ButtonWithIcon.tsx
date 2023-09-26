@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react'; // Example icon
+import React, { ReactNode } from 'react';
+import clsx from 'clsx';
 
 interface ButtonProps {
   onClick?: () => void;
@@ -17,7 +18,11 @@ const ButtonWithIcon: React.FC<ButtonProps> = ({
   type,
   ...rest
 }) => {
-  const classNames = `h-12 rounded-lg text-sm flex gap-3 items-center justify-center  ${hoverEffect} ${className}`;
+  const classNames = clsx(
+    'h-12 rounded-lg text-sm flex gap-3 items-center justify-center',
+    hoverEffect,
+    className
+  );
 
   return (
     <button type={type} className={classNames} onClick={onClick} {...rest}>

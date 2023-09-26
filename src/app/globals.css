@@ -80,7 +80,7 @@ body {
 }
 
 .card-fly-bottom {
-  animation: fly-in-from-bottom 2s ease-in-out forwards;
+  animation: fly-in-from-bottom 3s ease-in-out forwards;
 }
 
 /* animation new design  */
@@ -210,4 +210,53 @@ body {
   /* width: 1000px; */
   /* padding-top: 10px; */
   margin-bottom: -170px;
+}
+
+/* clickable images */
+
+.clickable-region {
+  position: absolute;
+  /* background-color: red; */
+  cursor: pointer;
+}
+
+.modal-over {
+  position: absolute;
+  margin-top: 165px;
+  margin-left: -40px;
+  /* top: 610px;
+  left: 80px; */
+  width: 400px;
+  height: 400px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 7px;
+  border-radius: 8px;
+}
+
+.modal {
+  width: 30%;
+}
+
+.sliderImages {
+  height: 300px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    width: 77.5%;
+    height: 20%;
+  }
+
+  .sliderImages {
+    height: 200px;
+    width: 400px;
+  }
 }
