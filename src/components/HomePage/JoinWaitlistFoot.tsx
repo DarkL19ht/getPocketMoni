@@ -18,12 +18,11 @@ const JoinWaitlistFoot = () => {
                 name="waitlist"
                 id=""
                 placeholder="Enter your email to get notified when we launch"
-                className="px-3 py-2 bg-white w-full mb-3 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
+                className="px-3 py-2 bg-white md:w-96 w-full mb-3 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
                 style={{ height: '50px', borderRadius: '10px' }}
               />
               <ButtonWithIcon
-                className="bg-navy-600 text-white w-full"
-                hoverEffect="hover:bg-red-300"
+                className="bg-navy-600 text-white w-full md:w-40"
                 icon={<BsFillBellFill />}
               >
                 Join Waitlist

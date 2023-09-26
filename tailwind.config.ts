@@ -29,6 +29,7 @@ const config: Config = {
       white: '#fff',
       grey: '#D9D9D9',
       gray: '#F7F7F7',
+      mob:'#F8FAFF',
       yellow: '#FFCB45',
       gray2: '#E3E3E3',
       grey2: '#3F3F3F',

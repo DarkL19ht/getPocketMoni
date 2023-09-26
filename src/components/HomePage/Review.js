@@ -40,7 +40,7 @@ const Review = () => {
     });
   }, []);
   return (
-    <div className="container mx-auto text-center mt-60 md:mt-0 ">
+    <div className="container mx-auto text-center mt-24 md:mt-0 ">
       <h3 className="font-bold font-switzer md:text-6xl text-4xl ">
         See What Our <span className="text-navy-300">Users Are Saying</span>
       </h3>
