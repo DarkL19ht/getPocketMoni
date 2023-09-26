@@ -1,6 +1,6 @@
 import React from 'react';
 import { useController, Control, FieldValues } from 'react-hook-form';
-import clsx from 'classnames';
+import clsx from 'clsx';
 
 interface TextFieldProps {
   asterik?: boolean;

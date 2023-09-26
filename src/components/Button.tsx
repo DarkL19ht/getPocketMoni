@@ -12,7 +12,7 @@ interface ButtonProps {
 function Button({ label, onClick, style, text, width, children }: ButtonProps) {
   return (
     <button
-      className={`${style} ${text} ${width} h-12 rounded-lg text-sm hover:border-black hover:border-b-4 hover:border-r-4`}
+      className={`${style} ${text} ${width} h-12 rounded-lg text-xm md:text-sm hover:border-black hover:border-b-4 hover:border-r-4`}
       onClick={onClick}
     >
       {label}

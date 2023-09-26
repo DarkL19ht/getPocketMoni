@@ -8,13 +8,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -72,18 +72,88 @@ body {
 }
 
 .card-fly-left {
-  animation: fly-in-from-left 1s ease-in-out forwards;
+  animation: fly-in-from-left 2s ease-in-out forwards;
 }
 
 .card-fly-right {
-  animation: fly-in-from-right 1s ease-in-out forwards;
+  animation: fly-in-from-right 2s ease-in-out forwards;
 }
 
-.card-fly-top {
-  animation: fly-in-from-top 1s ease-in-out forwards;
+.card-fly-bottom {
+  animation: fly-in-from-bottom 2s ease-in-out forwards;
 }
 
-.coming_soon {
+/* animation new design  */
+
+@keyframes fly-in-from-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes image-fly-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.card-fly-in {
+  animation: fly-in-from-bottom 1s ease-in-out forwards;
+}
+
+.card-fly-two {
+  animation: fly-in-from-bottom 3s ease-in-out forwards;
+}
+
+.card-fly-three {
+  animation: fly-in-from-bottom 5s ease-in-out forwards;
+}
+
+/* @keyframes fly-in-from-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes image-fly-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+
+.image-fly-in {
+  animation: fly-in-from-bottom 1s ease-in-out forwards;
+}
+.image-fly-two {
+  animation: fly-in-from-bottom 2s ease-in-out forwards;
+}
+
+.image-fly-out {
+  animation: image-fly-out 0.5s ease-in-out forwards;
+} */
+
+/* .coming_soon {
   width: 170px;
   height: 44px;
   top: 139.25px;
@@ -93,8 +163,51 @@ body {
   gap: 10px;
   background: #fdc500;
   transform: skewY(-5deg);
-}
+} */
 
 .ReactCollapse--collapse {
-  transition: height 500ms;
+  transition: height 300ms;
+}
+
+.card {
+  /* font-size: 164px; */
+  width: 320px;
+  height: 310px;
+  border: 2px solid #a7dfff;
+  padding: 1rem;
+  background: #d8f1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transform-origin: 10% 60%;
+  top: 0;
+  left: 0;
+}
+
+.card-two {
+  /* font-size: 164px; */
+  width: 320px;
+  height: 310px;
+  border: 2px solid #a7dfff;
+  padding: 1rem;
+  background: #d8f1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transform-origin: 10% 60%;
+  top: 4rem;
+  left: 4rem;
+}
+
+.card-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* width: 1000px; */
+  /* padding-top: 10px; */
+  margin-bottom: -170px;
 }

@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
+        'custom-image': "url('/public/var')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
@@ -27,6 +28,7 @@ const config: Config = {
       black: '#000',
       white: '#fff',
       grey: '#D9D9D9',
+      gray: '#F7F7F7',
       yellow: '#FFCB45',
       gray2: '#E3E3E3',
       grey2: '#3F3F3F',

@@ -8,7 +8,6 @@ const NotFoundPage = () => {
       <Image
         src="/page_not_found.svg"
         alt="Vercel Logo"
-        className="dark:invert"
         width={500}
         height={100}
         priority

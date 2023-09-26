@@ -24,7 +24,9 @@ POCKETMONI WEBSITE
 - [ ] 
 
 ## Credits
+
 List of contributors
 
-- Ajayi Victor[frontend developer]<>
+- Victor Ajayi[frontend developer]<ovajayi@gmail.com>
 - Olayinka Ibrahim[frontend developer]><ibrahimolayinkaa@gmail.com>
+- Olamide OLAITAN[frontend developer]><olamideolaitan111@gmail.com>
