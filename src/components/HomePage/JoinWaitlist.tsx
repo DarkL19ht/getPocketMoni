@@ -112,7 +112,7 @@ const JoinWaitlist = () => {
         onClick={handleClick}
       /> */}
       {showModal && (
-        <div className="modal">
+        <div className="modal-over">
           <div className="modal-content -mt-44 w-[160px] h-[160px] shadow-lg">
             {/* Content for your modal */}
             <div className="flex justify-between mb-2" style={{ paddingTop: '12px' }}>

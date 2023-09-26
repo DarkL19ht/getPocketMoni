@@ -42,14 +42,14 @@ const Modal = () => {
       <swiper-container
         init="false"
         ref={swiperRef}
-        class="w-11/12 md:h-48 h-56"
+        class="w-11/12 md:h-40 h-36"
         // change the swiper bullets color to the same of the arrows
         style={{ '--swiper-pagination-color': '#3b82f6' }}
       >
         {UserData.pkmexperience.map((item) => (
           <swiper-slide key={item.id} className="">
             <h2 className="text-lg font-normal font-switzer"> {item.title} </h2>
-            <p className="md:text-center text-xs md:mt-2 font-light font-switzer">{item.desc}</p>
+            <p className="text-justify md:text-center text-xs mt-0 md:mt-2 font-light font-switzer">{item.desc}</p>
           </swiper-slide>
         ))}
       </swiper-container>
