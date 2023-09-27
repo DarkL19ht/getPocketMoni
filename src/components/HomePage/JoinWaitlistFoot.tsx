@@ -1,32 +1,111 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Button from '../Button';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import ButtonWithIcon from '../ButtonWithIcon';
 import { BsFillBellFill } from 'react-icons/bs';
+import Alert from '@/app/components/ui/Alert';
+import TextField from '../TextField';
+import { VALIDATE_EMAIL } from '@/utils/helper';
+
+type Inputs = {
+  email: string;
+};
+
+const initialState = {
+  data: {
+    data: {},
+    message: '',
+  },
+  isSuccess: false,
+  isLoading: false,
+};
 
 const JoinWaitlistFoot = () => {
+  const [state, setState] = useState(initialState);
+  const { data, isSuccess, isLoading } = state;
+
+  const { handleSubmit, reset, control } = useForm<Inputs>({
+    mode: 'all',
+    defaultValues: {
+      email: '',
+    },
+  });
+
+  const onSubmit: SubmitHandler<Inputs> = async (values) => {
+    try {
+      setState((prev) => ({ ...prev, isLoading: true }));
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+      reset();
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        isSuccess: true,
+        data,
+      }));
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        isSuccess: false,
+        data: {
+          data: {},
+          message: 'Error: Please contact support@etranzact.com',
+        },
+      }));
+    }
+  };
+
+  useEffect(() => {
+    if (data) {
+      setTimeout(() => {
+        setState(initialState);
+      }, 4000);
+    }
+  }, [data]);
+
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-32 md:mb-0 -mt-24 mb-40 w-full md:pl-20">
+    <div className="container mx-auto md:flex md:justify-between md:mt-32 md:mb-0 mb-72 w-full md:pl-20">
       <section className=" md:w-1/2 md:mb-0 mb-24">
         <div className="flex md:items-center items-center justify-center h-screen">
           <div className="-mt-32">
             <p className="font-switzer font-light text-3xl">Join our</p>
             <h2 className="font-switzer font-bold text-8xl"> Waitlist </h2>
-            <div className="md:flex gap-3 mt-10">
-              <input
-                type="email"
-                name="waitlist"
-                id=""
-                placeholder="Enter your email to get notified when we launch"
-                className="px-3 py-2 bg-white md:w-96 w-full mb-3 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
-                style={{ height: '50px', borderRadius: '10px' }}
-              />
-              <ButtonWithIcon
-                className="bg-navy-600 text-white w-full md:w-40"
-                icon={<BsFillBellFill />}
-              >
-                Join Waitlist
-              </ButtonWithIcon>
+            <div className=" mt-10">
+              {data?.message && (
+                <Alert message={data?.message} type={isSuccess ? 'success' : 'error'} />
+              )}
+              <form className="md:flex gap-3" onSubmit={handleSubmit(onSubmit)}>
+                <TextField
+                  control={control}
+                  name="email"
+                  rules={{
+                    required: {
+                      value: true,
+                      message: 'Email address is required',
+                    },
+                    pattern: VALIDATE_EMAIL,
+                  }}
+                  className=""
+                />
+                <ButtonWithIcon
+                  isLoading={isLoading}
+                  loadingText={'Please wait'}
+                  type="submit"
+                  className="bg-navy-600 text-white w-full md:w-40"
+                  icon={<BsFillBellFill />}
+                >
+                  Join Waitlist
+                </ButtonWithIcon>
+              </form>
             </div>
           </div>
         </div>

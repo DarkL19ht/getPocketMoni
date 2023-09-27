@@ -63,11 +63,7 @@ const BecomeAgent = () => {
         </div>
         <div className="flex items-center justify-center md:justify-start">
           <Link href="/">
-            <ButtonWithIcon
-              className="bg-navy-400 text-white w-40"
-              hoverEffect="hover:bg-red-300"
-              icon={<BsFillBellFill />}
-            >
+            <ButtonWithIcon className="bg-navy-400 text-white w-40" icon={<BsFillBellFill />}>
               Join Waitlist
             </ButtonWithIcon>
           </Link>

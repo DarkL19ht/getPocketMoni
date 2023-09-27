@@ -1,9 +1,9 @@
 import { google } from 'googleapis';
-import { NextResponse } from 'next/server'
- 
+import { NextResponse } from 'next/server';
+
 export async function POST(req: Request) {
-  const res = await req.json()
-   try {
+  const res = await req.json();
+  try {
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.GOOGLE_CLIENT_EMAIL,
@@ -27,8 +27,10 @@ export async function POST(req: Request) {
       },
     });
 
-    return NextResponse.json({ message: "Successfully Processed",data: response.data },{status:200})
-
+    return NextResponse.json(
+      { message: 'Thank you for subscribing to our waitlist', data: response.data },
+      { status: 200 }
+    );
   } catch (error) {
     console.log(error);
   }

@@ -3,9 +3,9 @@ import Countdown from '@/hooks/useTimer';
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto text-center h-48 pt-9">
+    <div className="container mx-auto text-center h-48 pt-9 ">
       <div className="flex justify-center items-center gap-2 md:gap-3">
-        <button className="font-itim bg-yellow md:pt-3 md:pb-3 md:pr-4 md:pl-4 p-2 rounded-lg cursor-none">
+        <button className="font-itim bg-yellow-600 md:pt-3 md:pb-3 md:pr-4 md:pl-4 p-2 rounded-lg cursor-none">
           Coming Soon!
         </button>
         <div>

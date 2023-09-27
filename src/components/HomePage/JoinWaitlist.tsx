@@ -1,28 +1,47 @@
 'use client'; // This is a client component
 import Image from 'next/image';
-import React, { useState } from 'react';
-import Button from './../Button';
+import React, { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ButtonWithIcon from '../ButtonWithIcon';
 import { BsFillBellFill, BsFillPersonFill } from 'react-icons/bs';
 import { LiaGreaterThanSolid } from 'react-icons/lia';
 import { PiBank } from 'react-icons/pi';
+import Alert from '@/app/components/ui/Alert';
+import TextField from '../TextField';
+import { VALIDATE_EMAIL } from '@/utils/helper';
 
 type Inputs = {
   email: string;
 };
 
+const initialState = {
+  data: {
+    data: {},
+    message: '',
+  },
+  isSuccess: false,
+  isLoading: false,
+};
+
 const JoinWaitlist = () => {
   const [showModal, setShowModal] = useState(false);
+  const [state, setState] = useState(initialState);
+  const { data, isSuccess, isLoading } = state;
 
   const handleClick = () => {
-    // Toggle the modal state when a clickable region is clicked
     setShowModal(!showModal);
   };
-  const { handleSubmit, register, reset } = useForm<Inputs>();
+
+  const { handleSubmit, reset, control } = useForm<Inputs>({
+    mode: 'all',
+    defaultValues: {
+      email: '',
+    },
+  });
 
   const onSubmit: SubmitHandler<Inputs> = async (values) => {
     try {
+      setState((prev) => ({ ...prev, isLoading: true }));
       const response = await fetch('/api/register', {
         method: 'POST',
         headers: {
@@ -32,11 +51,23 @@ const JoinWaitlist = () => {
       });
 
       const data = await response.json();
-      console.log('subitted Response', data);
-
       reset();
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        isSuccess: true,
+        data,
+      }));
     } catch (error) {
-      console.error('Error:', error);
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        isSuccess: false,
+        data: {
+          data: {},
+          message: 'Error: Please contact support@etranzact.com',
+        },
+      }));
     }
   };
 
@@ -48,53 +79,16 @@ const JoinWaitlist = () => {
       setIsFocused(false);
     }, 100);
   };
+
+  useEffect(() => {
+    if (data) {
+      setTimeout(() => {
+        setState(initialState);
+      }, 4000);
+    }
+  }, [data]);
   return (
     <div className="container mx-auto md:flex justify-between w-full md:pt-44 ">
-      {/* FOR MOBILE SCREEN START HERE */}
-      <div className="md:hidden mt-16">
-        <div className="md:flex gap-3">
-          <form action="" onSubmit={handleSubmit(onSubmit)}>
-            <input
-              type="email"
-              name="waitlist"
-              id=""
-              placeholder="Enter your email to get notified when we launch"
-              className="px-3 py-2 bg-white w-full mb-5 border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
-              style={{ height: '50px', borderRadius: '10px' }}
-            />
-            <ButtonWithIcon
-              type="submit"
-              className="bg-navy-400 text-white w-full"
-              hoverEffect="hover:bg-red-300"
-              icon={<BsFillBellFill />}
-            >
-              Join Waitlist
-            </ButtonWithIcon>
-            {/* <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-full" /> */}
-          </form>
-        </div>
-        <div className="flex mt-10 -ml-16">
-          <Image
-            src="/mobile.svg"
-            alt="Mobile"
-            className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
-            width={200}
-            height={2}
-            priority
-          />
-          <div>
-            <Image
-              src="/POS-SMALL.svg"
-              alt="Mobile"
-              className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
-              width={130}
-              height={2}
-              priority
-            />
-          </div>
-        </div>
-      </div>
-      {/* FOR MOBILE SCREEN ENDS HERE */}
       <Image
         src="/mobile.svg"
         alt="Mobile"
@@ -164,29 +158,62 @@ const JoinWaitlist = () => {
           </div>
         </div>
       )}
-      <div className="hidden md:block w-2/4">
+      <div className="md:w-2/4 md:mt-0 mt-16">
         <div className="text-center">
+          {data?.message && (
+            <Alert message={data?.message} type={isSuccess ? 'success' : 'error'} />
+          )}
           <form className="md:flex gap-3" onSubmit={handleSubmit(onSubmit)}>
-            <input
-              type="email"
-              {...register('email')}
+            <TextField
+              control={control}
               name="email"
-              id=""
-              placeholder="Enter your email to get notified when we launch"
-              className="px-3 py-2 w-full bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block rounded-md sm:text-sm focus:ring-1"
-              style={{ height: '50px', borderRadius: '10px' }}
+              rules={{
+                required: {
+                  value: true,
+                  message: 'Email address is required',
+                },
+                pattern: VALIDATE_EMAIL,
+              }}
+              className=""
             />
             <ButtonWithIcon
+              // disabled={!formState.isValid}
+              isLoading={isLoading}
+              loadingText={'Please wait'}
               type="submit"
-              className="bg-navy-400 text-white w-40"
-              hoverEffect="hover:bg-red-300"
+              className="bg-navy-400 text-white md:w-40 w-full"
               icon={<BsFillBellFill />}
             >
               Join Waitlist
             </ButtonWithIcon>
             {/* <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-40" /> */}
           </form>
-          <div className="md:mt-10 ">
+          <div className="md:hidden">
+            <div className="flex mt-10 -ml-16">
+              <Image
+                src="/mobile.svg"
+                alt="Mobile"
+                className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
+                width={200}
+                height={2}
+                priority
+              />
+              <div>
+                <Image
+                  src="/POS-SMALL.svg"
+                  alt="Mobile"
+                  className={`relative mx-auto inset-0 ${
+                    isFocused ? ' bg-navy-100 opacity-50' : ''
+                  }`}
+                  width={130}
+                  height={2}
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden md:block md:mt-10 ">
             <Image
               src="/bg-wait.svg"
               alt="dial code"
@@ -196,7 +223,7 @@ const JoinWaitlist = () => {
               priority
             />
           </div>
-          <div className="md:mt-10 -mt-6">
+          <div className="hidden md:block md:mt-10 -mt-6">
             <div className="flex">
               <Image src="/arrowleft.svg" alt="Mobile" width={100} height={1} priority />
               <ButtonWithIcon
