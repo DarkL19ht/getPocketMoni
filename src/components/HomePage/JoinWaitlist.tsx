@@ -199,13 +199,20 @@ const JoinWaitlist = () => {
           <div className="md:mt-10 -mt-6">
             <div className="flex">
               <Image src="/arrowleft.svg" alt="Mobile" width={100} height={1} priority />
-              <Button
+              <ButtonWithIcon
+                type="submit"
+                // onClick={handleButtonClick
+                className="bg-black text-white w-full"
+              >
+                Click to see the magic
+              </ButtonWithIcon>
+              {/* <Button
                 // onClick={handleButtonClick}
                 label="Click to see the magic"
                 style="bg-black"
                 text="text-white"
                 width="w-full"
-              />
+              /> */}
               <Image src="/arrow-up.svg" alt="Mobile" width={100} height={50} priority />
             </div>
           </div>
