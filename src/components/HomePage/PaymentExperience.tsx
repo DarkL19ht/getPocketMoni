@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 const PaymentExperience = () => {
   useEffect(() => {
-    AOS.init({ duration: 3000, delay: 100, disable: 'phone' });
+    AOS.init({ duration: 3000, disable: 'phone' });
   }, []);
 
   return (

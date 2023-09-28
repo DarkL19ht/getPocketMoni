@@ -138,12 +138,11 @@ const Review = () => {
                   </p>
                   <div className="flex mt-12 gap-3">
                     <p className="bg-navy-200 text-white w-[50px] h-[50px] rounded-full grid place-items-center">
-                      {' '}
-                      {item.name.charAt(0)}{' '}
+                      {item.name.charAt(0)}
                     </p>
                     <section>
                       <p> {item.name} </p>
-                      <div className="text-yellow flex">
+                      <div className="text-yellow-600 flex">
                         <AiFillStar />
                         <AiFillStar />
                         <AiFillStar />
