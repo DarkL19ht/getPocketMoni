@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="w-full -mt-96 md:h-96 bg-navy-600 text-white md:text-justify text-center">
       <div className="md:flex md:justify-between p-16 font-switzer relative">
-        <div className="absolute inset-0 z-0 -mt-10">
+        <div className="absolute -mt-28 -ml-14">
           <Image
             src="/bg-wait.svg"
             alt="dial code"
@@ -23,7 +23,7 @@ const Footer = () => {
           <Image
             src="/logoEtr.svg"
             alt="Mobile"
-            className="mb-4"
+            className="mb-4 ml-9 md:ml-0"
             width={200}
             height={10}
             priority
