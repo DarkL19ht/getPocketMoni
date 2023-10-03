@@ -9,6 +9,8 @@ import { PiBank } from 'react-icons/pi';
 import Alert from '@/app/components/ui/Alert';
 import TextField from '../TextField';
 import { VALIDATE_EMAIL } from '@/utils/helper';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 type Inputs = {
   email: string;
