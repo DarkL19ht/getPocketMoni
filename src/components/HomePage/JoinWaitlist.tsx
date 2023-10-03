@@ -11,6 +11,7 @@ import TextField from '../TextField';
 import { VALIDATE_EMAIL } from '@/utils/helper';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import MobileDialog from './MobileDialog';
 
 type Inputs = {
   email: string;
@@ -131,7 +132,7 @@ const JoinWaitlist = () => {
               />
               <div className="mr-4">
                 <h2 className="text-[8px] font-bold">To PocketMoni</h2>
-                <p className="text-[6px]">Best Way to sed money </p>
+                <p className="text-[6px]">Best Way to send money </p>
               </div>
               <span className="text-[5px] flex items-center justify-center">
                 <LiaGreaterThanSolid />
@@ -141,7 +142,7 @@ const JoinWaitlist = () => {
               <BsFillPersonFill />
               <div className="mr-4">
                 <h2 className="text-[8px] font-bold">To Sub Wallet</h2>
-                <p className="text-[6px]">Best Way to sed money </p>
+                <p className="text-[6px]">Best Way to send money </p>
               </div>
               <span className="text-[5px] flex items-center justify-center">
                 <LiaGreaterThanSolid />
@@ -151,7 +152,7 @@ const JoinWaitlist = () => {
               <PiBank />
               <div className="mr-4">
                 <h2 className="text-[8px] font-bold">To Other Banks</h2>
-                <p className="text-[6px]">Best Way to sed money </p>
+                <p className="text-[6px]">Best Way to send money </p>
               </div>
               <span className="text-[5px] flex items-center justify-center">
                 <LiaGreaterThanSolid />
@@ -213,8 +214,11 @@ const JoinWaitlist = () => {
                 />
               </div>
             </div>
+            <div className="-mt-24 mb-20">
+              <MobileDialog />
+              {/* <button className="bg-navy-100 text-navy-200 pt-3 pb-3 pr-4 pl-4 rounded-full">Try Demo</button> */}
+            </div>
           </div>
-
           <div className="hidden md:block md:mt-10 ">
             <Image
               src="/bg-wait.svg"
@@ -235,13 +239,6 @@ const JoinWaitlist = () => {
               >
                 Click to see the magic
               </ButtonWithIcon>
-              {/* <Button
-                // onClick={handleButtonClick}
-                label="Click to see the magic"
-                style="bg-black"
-                text="text-white"
-                width="w-full"
-              /> */}
               <Image src="/arrow-up.svg" alt="Mobile" width={100} height={50} priority />
             </div>
           </div>

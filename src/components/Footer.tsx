@@ -32,16 +32,16 @@ const Footer = () => {
             <p>Want to connect with us? </p>
             <p>Find us on social media.</p>
             <div className="flex space-x-5 mt-6 mb-10">
-              <Link href="/" className="bg-white text-navy-600 rounded p-3 text-[21px]">
+              <Link href="/" className="bg-[#FFFFFF0F] text-white rounded p-3 text-[21px]">
                 <ImFacebook />
               </Link>
-              <Link href="/" className="bg-white text-navy-600 rounded p-3 text-[21px]">
+              <Link href="/" className="bg-[#FFFFFF0F] text-white rounded p-3 text-[21px]">
                 <RiTwitterXFill />
               </Link>
-              <Link href="/" className="bg-white text-navy-600 rounded p-3 text-[21px]">
+              <Link href="/" className="bg-[#FFFFFF0F] text-white rounded p-3 text-[21px]">
                 <RiInstagramLine />
               </Link>
-              <Link href="/" className="bg-white text-navy-600 rounded p-3 text-[21px]">
+              <Link href="/" className="bg-[#FFFFFF0F] text-white rounded p-3 text-[21px]">
                 <RiLinkedinBoxFill />
               </Link>
             </div>

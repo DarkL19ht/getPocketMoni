@@ -2,9 +2,9 @@
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import imageOne from '../../../assets/images/img1.png';
-import imageTwo from '../../../assets/images/image 178.png';
-import Modal from './Modal';
+import imageOne from '../../assets/images/img1.png';
+import imageTwo from '../../assets/images/image 178.png';
+import Modal from './PKMExperienceModal';
 
 // Import Swiper styles
 import 'swiper/css';
