@@ -1,21 +1,41 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import AgentGroup from '../../assets/images/agent-group.png';
 import ButtonWithIcon from '../ButtonWithIcon';
 import { BsFillBellFill } from 'react-icons/bs';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const BecomeAgent = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 0,
+      anchorPlacement: 'top-bottom',
+    });
+  }, []);
+
   return (
     <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20">
       <section className="hidden md:block md:w-1/2 ">
-        <Image src={AgentGroup} alt="Group Agent Picture" />
+        <Image
+          src={AgentGroup}
+          alt="Group Agent Picture"
+          width={450}
+          height={100}
+          data-aos="fade-right"
+        />
       </section>
       <section className="md:w-1/2 text-center md:text-left">
-        <h3 className="md:text-6xl text-4xl leading-10 font-switzer font-normal">
+        <h3
+          className="md:text-6xl text-4xl leading-10 font-switzer font-normal"
+          data-aos="fade-down"
+        >
           Become an <span className="text-navy-300">agent</span>
         </h3>
-        <p className="md:mt-14 mt-8 font-light md:text-xl text-lg">
+        <p className="md:mt-14 mt-8 font-light md:text-xl text-lg" data-aos="fade-down">
           PocketMoni enables wealth creation. We have created an eco-system which ensures a decent
           income for our agents to run profitable businesses.
         </p>
@@ -27,8 +47,9 @@ const BecomeAgent = () => {
             width={30}
             height={10}
             priority
+            data-aos="fade-down"
           />
-          <p className="text-sm font-light mt-10">
+          <p className="text-sm font-light mt-10" data-aos="fade-left">
             <span className="font-bold"> Earn quick cash</span> PocketMoni empowers its agents to
             make extra income by profiling and activation on the POS scheme.
           </p>
@@ -41,8 +62,9 @@ const BecomeAgent = () => {
             width={30}
             height={10}
             priority
+            data-aos="fade-down"
           />
-          <p className="text-sm font-light mt-10">
+          <p className="text-sm font-light mt-10" data-aos="fade-left">
             <span className="font-bold"> Agent Support</span> Guaranteed 24/7 support for all agent
             inquiries and dispute resolutions.
           </p>
@@ -55,8 +77,9 @@ const BecomeAgent = () => {
             width={30}
             height={10}
             priority
+            data-aos="fade-down"
           />
-          <p className="text-sm font-light mt-10">
+          <p className="text-sm font-light mt-10" data-aos="fade-left">
             <span className="font-bold">Flexible Pricing</span> We offer competitive rates and
             provide exclusive pricing to super agent networks.
           </p>

@@ -11,8 +11,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useEffect, useState } from 'react';
 
 export default function PocketmoniXperience() {
+  const [width, setWidth] = useState('');
   //style for horizontally flipped image
   const flipHorizontalStyle = {
     transform: 'scaleX(-1)',
@@ -20,7 +22,11 @@ export default function PocketmoniXperience() {
   };
 
   //Quadratic curves
-  const screenWidth = window.innerWidth + 15;
+  useEffect(() => {
+    const screenWidth = window.innerWidth + 15;
+    setWidth(screenWidth);
+  }, []);
+  let screenWidth = width;
   // Control points calculation for a curve spanning the width of the screen
   const controlPointXTop = screenWidth / 2; // X coordinate of the control point
   const controlPointXBottom = screenWidth / 2; // X coordinate of the control point
