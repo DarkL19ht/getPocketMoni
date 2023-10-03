@@ -76,9 +76,9 @@ const JoinWaitlistFoot = () => {
     <div className="container mx-auto md:flex md:justify-between md:mt-32 md:mb-0 mb-72 w-full md:pl-20">
       <section className=" md:w-1/2 md:mb-0 mb-24">
         <div className="flex md:items-center items-center justify-center h-screen">
-          <div className="-mt-32">
-            <p className="font-switzer font-light text-3xl">Join our</p>
-            <h2 className="font-switzer font-bold text-8xl"> Waitlist </h2>
+          <div className="md:-mt-96 -mt-32">
+            <p className="font-switzer font-light text-3xl text-[#28335A]">Join our</p>
+            <h2 className="font-switzer font-bold text-8xl text-[#28335A]"> Waitlist </h2>
             <div className=" mt-10">
               {data?.message && (
                 <Alert message={data?.message} type={isSuccess ? 'success' : 'error'} />

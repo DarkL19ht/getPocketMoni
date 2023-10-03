@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { RiInstagramLine, RiLinkedinBoxFill, RiTiktokLine, RiTwitterXFill } from 'react-icons/ri';
+import { RiInstagramLine, RiLinkedinBoxFill, RiTwitterXFill } from 'react-icons/ri';
 import { ImFacebook } from 'react-icons/im';
 
 const Footer = () => {

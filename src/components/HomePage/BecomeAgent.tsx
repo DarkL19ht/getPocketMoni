@@ -18,12 +18,12 @@ const BecomeAgent = () => {
   }, []);
 
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-40 md:pl-20">
+    <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-20 md:pl-20">
       <section className="hidden md:block md:w-1/2 ">
         <Image
           src={AgentGroup}
           alt="Group Agent Picture"
-          width={450}
+          width={400}
           height={100}
           data-aos="fade-right"
         />
@@ -35,11 +35,11 @@ const BecomeAgent = () => {
         >
           Become an <span className="text-navy-300">agent</span>
         </h3>
-        <p className="md:mt-14 mt-8 font-light md:text-xl text-lg" data-aos="fade-down">
+        <p className="md:mt-10 mt-8 font-light md:text-xl text-lg" data-aos="fade-down">
           PocketMoni enables wealth creation. We have created an eco-system which ensures a decent
           income for our agents to run profitable businesses.
         </p>
-        <div className="flex gap-3 md:mt-10">
+        <div className="flex gap-3">
           <Image
             src="/Checkboxtick.svg"
             alt="Mobile"

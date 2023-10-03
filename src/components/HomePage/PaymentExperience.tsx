@@ -10,27 +10,29 @@ const PaymentExperience = () => {
   }, []);
 
   return (
-    <div className="container mx-auto md:flex md:justify-between md:mt-16 md:mb-64 md:pl-20 overflow-hidden sm:overflow-visible">
+    <div className="container mx-auto md:flex md:justify-between md:-mt-16 md:mb-64 md:pl-20 overflow-hidden sm:overflow-visible">
       <section className="md:w-2/6 md:mt-48">
-        <h3 className="font-bold font-switzer text-5xl md:text-7xl text-navy-300 text-center md:text-left">
-          Easy
-        </h3>
-        <h3 className="font-bold font-switzer text-5xl md:text-7xl text-center md:text-left">
-          Payment Experience
-        </h3>
-        <p className="text-xl font-light pt-5 hidden md:block">
-          Create solutions to drive financial inclusion across the country and beyond
-        </p>
-        <Image
-          src="/soon2.svg"
-          alt="Mobile"
-          className="mt-4 hidden md:block"
-          width={120}
-          height={100}
-          priority
-        />
+        <div>
+          <h3 className="font-bold font-switzer text-5xl md:text-7xl text-navy-300 text-center md:text-left">
+            Easy
+          </h3>
+          <h3 className="font-bold font-switzer text-4xl md:text-7xl text-center md:text-left">
+            Payment Experience
+          </h3>
+          <p className="text-xl font-light pt-5 hidden md:block">
+            Create solutions to drive financial inclusion across the country and beyond
+          </p>
+          <Image
+            src="/soon2.svg"
+            alt="Mobile"
+            className="mt-4 hidden md:block"
+            width={120}
+            height={100}
+            priority
+          />
+        </div>
       </section>
-      <section className="md:w-4/6 -mt-32 md:mt-0 flex items-center justify-center h-screen">
+      <section className="md:w-4/6 md:mt-28 flex items-center justify-center mb-60 md:mb-0">
         <div className="relative">
           {/* First Card */}
           <div
