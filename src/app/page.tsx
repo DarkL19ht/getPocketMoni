@@ -11,7 +11,7 @@ import PocketmoniXperience from '@/components/HomePage/PKMExperience';
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <HeroSection />
       <JoinWaitlist />
       <TransAgent />

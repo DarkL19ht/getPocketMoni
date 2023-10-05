@@ -116,10 +116,10 @@ export default function MobileDialog() {
                               className="flex justify-between mb-2"
                               style={{ paddingTop: '12px' }}
                             >
-                              <p className="text-[12px] font-bold">Send Money</p>{' '}
+                              <p className="text-[13px] font-bold">Send Money</p>{' '}
                               <span
                                 onClick={handleClick}
-                                className=" text-navy-400 text-[11px] p-[1px]  cursor-pointer rounded"
+                                className="text-navy-400 text-[13px] pr-1 pl-1  bg-mob cursor-pointer rounded"
                               >
                                 x
                               </span>

@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="w-full -mt-96 md:h-96 bg-navy-600 text-white md:text-justify text-center">
       <div className="md:flex md:justify-between p-16 font-switzer relative">
-        <div className="absolute -mt-28 -ml-14">
+        <div className="absolute -mt-[155px] -ml-14">
           <Image
             src="/bg-wait.svg"
             alt="dial code"

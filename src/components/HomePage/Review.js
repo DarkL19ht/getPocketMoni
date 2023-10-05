@@ -40,7 +40,7 @@ const Review = () => {
     });
   }, []);
   return (
-    <div className="container mx-auto text-center mt-24 md:mt-0 ">
+    <div className="container mx-auto text-center mt-24 md:mt-0">
       <h3 className="font-bold font-switzer md:text-[65px] text-4xl">
         See What Our <span className="text-navy-300">Users Are Saying</span>
       </h3>
@@ -72,7 +72,7 @@ const Review = () => {
       </div>
       <div className="md:hidden">
         <div className="flex items-center justify-center mt-10 gap-2">
-          {UserData.usersImages.slice(0,9).map((item) => (
+          {UserData.usersImages.slice(0, 8).map((item) => (
             <Image
               key={item.id}
               src={item.img}
@@ -84,7 +84,7 @@ const Review = () => {
           ))}
         </div>
         <div className="flex items-center justify-center gap-2">
-          {UserData.usersImages.slice(0,8).map((item) => (
+          {UserData.usersImages.slice(0, 7).map((item) => (
             <Image
               key={item.id}
               src={item.img}
@@ -131,23 +131,29 @@ const Review = () => {
           >
             {UserData.testimonials.map((item) => (
               <swiper-slide key={item.id} class="h-auto">
-                <div className="border border-grey w-64 h-72 p-8">
-                  <p>
-                    <span className="text-navy-300 font-extrabold">“</span>
-                    {item.msg} <span className="text-navy-300 font-extrabold">”</span>
-                  </p>
-                  <div className="flex mt-12 gap-3">
-                    <p className="bg-navy-200 text-white w-[50px] h-[50px] rounded-full grid place-items-center">
-                      {item.name.charAt(0)}
+                <div className="border border-grey w-64 h-[330px] p-8 flex flex-col">
+                  <div className="div1">
+                    <p className="text-[14px] leading-8">
+                      <span className="text-navy-300 font-extrabold">“</span>
+                      {item.msg} <span className="text-navy-300 font-extrabold">”</span>
                     </p>
-                    <section>
-                      <p> {item.name} </p>
-                      <div className="text-yellow-600 flex">
-                        <AiFillStar />
-                        <AiFillStar />
-                        <AiFillStar />
-                      </div>
-                    </section>
+                  </div>
+                  <div className="flex flex-col flex-grow justify-end">
+                    <div className="flex mt-5 gap-3">
+                      <p className="bg-navy-200 text-white w-[50px] h-[50px] rounded-full grid place-items-center">
+                        {item.name.charAt(0)}
+                      </p>
+                      <section className='mt-2'>
+                        <p className="text-[12px]"> {item.name} </p>
+                        <div className="text-yellow-600 flex">
+                          <AiFillStar />
+                          <AiFillStar />
+                          <AiFillStar />
+                          <AiFillStar />
+                          <AiFillStar />
+                        </div>
+                      </section>
+                    </div>
                   </div>
                 </div>
               </swiper-slide>
