@@ -91,7 +91,7 @@ const JoinWaitlist = () => {
     }
   }, [data]);
   return (
-    <div className="container mx-auto md:flex justify-between w-full md:pt-44 ">
+    <div className="container mx-auto md:flex justify-between w-full md:pt-36 ">
       <Image
         src="/mobile.svg"
         alt="Mobile"
@@ -110,7 +110,7 @@ const JoinWaitlist = () => {
       /> */}
       {showModal && (
         <div className="modal-over">
-          <div className="modal-content -mt-44 w-[160px] h-[160px] shadow-lg">
+          <div className="modal-content -mt-44 w-[160px] h-[160px] shadow-2xl">
             {/* Content for your modal */}
             <div className="flex justify-between mb-2" style={{ paddingTop: '12px' }}>
               <p className="text-[12px] font-bold">Send Money</p>{' '}
@@ -132,27 +132,27 @@ const JoinWaitlist = () => {
               />
               <div className="mr-4">
                 <h2 className="text-[8px] font-bold">To PocketMoni</h2>
-                <p className="text-[6px]">Best Way to send money </p>
+                <p className="text-[5.5px]">Best Way to send money </p>
               </div>
               <span className="text-[5px] flex items-center justify-center">
                 <LiaGreaterThanSolid />
               </span>
             </div>
-            <div className="flex gap-5 pt-4 pb-2">
+            <div className="flex gap-5 pt-3 pb-2">
               <BsFillPersonFill />
               <div className="mr-4">
                 <h2 className="text-[8px] font-bold">To Sub Wallet</h2>
-                <p className="text-[6px]">Best Way to send money </p>
+                <p className="text-[5.5px]">Best Way to send money </p>
               </div>
               <span className="text-[5px] flex items-center justify-center">
                 <LiaGreaterThanSolid />
               </span>
             </div>
-            <div className="flex gap-5 pt-2 bg-mob rounded pb-1">
+            <div className="flex gap-5 pt-3 bg-mob rounded pb-1">
               <PiBank />
               <div className="mr-4">
                 <h2 className="text-[8px] font-bold">To Other Banks</h2>
-                <p className="text-[6px]">Best Way to send money </p>
+                <p className="text-[5.5px]">Best Way to send money </p>
               </div>
               <span className="text-[5px] flex items-center justify-center">
                 <LiaGreaterThanSolid />

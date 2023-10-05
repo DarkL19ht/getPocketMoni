@@ -41,10 +41,10 @@ const Review = () => {
   }, []);
   return (
     <div className="container mx-auto text-center mt-24 md:mt-0 ">
-      <h3 className="font-bold font-switzer md:text-6xl text-4xl ">
+      <h3 className="font-bold font-switzer md:text-[65px] text-4xl">
         See What Our <span className="text-navy-300">Users Are Saying</span>
       </h3>
-      <div className="hidden md:block">
+      <div className="hidden md:block mt-[32px] mb-20">
         <div className="flex items-center justify-center mt-10 gap-2">
           {UserData.usersImages.map((item) => (
             <Image

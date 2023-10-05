@@ -49,7 +49,9 @@ const Modal = () => {
         {UserData.pkmexperience.map((item) => (
           <swiper-slide key={item.id} className="">
             <h2 className="text-lg font-normal font-switzer"> {item.title} </h2>
-            <p className="text-justify md:text-center text-xs mt-0 md:mt-2 font-light font-switzer">{item.desc}</p>
+            <p className="text-justify md:text-center text-xs mt-0 md:mt-2 font-light font-switzer">
+              {item.desc}
+            </p>
           </swiper-slide>
         ))}
       </swiper-container>

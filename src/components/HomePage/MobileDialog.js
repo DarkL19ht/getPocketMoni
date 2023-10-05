@@ -20,7 +20,6 @@ export default function MobileDialog() {
 
   const handleClick = () => {
     setShowModal(!showModal);
-    // alert('God is good');
   };
 
   return (
@@ -67,12 +66,18 @@ export default function MobileDialog() {
                         className="bg-navy-100 inline-flex h-[50px] w-[220px] items-center rounded-full"
                       >
                         {enabled ? (
-                          <span className=" translate-x-28 w-[100px] h-[40px] bg-white text-navy-200 flex items-center justify-center rounded-full">
-                            POS
+                          <span className=" translate-x-1 flex items-center justify-center">
+                            <span className=" bg-navy-100 p-2 rounded-full">Mobile App</span>
+                            <span className="bg-white text-navy-200 w-[100px] h-[40px] rounded-full p-2">
+                              POS
+                            </span>
                           </span>
                         ) : (
-                          <span className=" translate-x-1 w-[104px] h-[40px] bg-white text-navy-200 flex items-center justify-center rounded-full">
-                            Mobile App
+                          <span className=" translate-x-1 flex items-center justify-center rounded-full gap-5">
+                            <span className="w-[120px] h-[40px] bg-white text-navy-200 rounded-full p-2">
+                              Mobile App
+                            </span>
+                            <span className="bg-navy-100">POS</span>
                           </span>
                         )}
                       </Switch>
@@ -95,7 +100,8 @@ export default function MobileDialog() {
                         <Image
                           src="/mobile.svg"
                           alt="Mobile"
-                        //   className={`${isOpen ? '' : 'relative'}`}
+                          //   className={`${isOpen ? '' : 'relative'}`}
+                          className=""
                           width={400}
                           height={2}
                           priority
@@ -103,8 +109,59 @@ export default function MobileDialog() {
                         />
                       </div>
                       {showModal && (
-                        <div className="modal-over">
-                          <h2>Hello 4rm here</h2>
+                        <div className="absolute -mt-80 ml-[75px]">
+                          <div className="modal-content w-[195px] h-[200px] shadow-2xl">
+                            {/* Content for your modal */}
+                            <div
+                              className="flex justify-between mb-2"
+                              style={{ paddingTop: '12px' }}
+                            >
+                              <p className="text-[12px] font-bold">Send Money</p>{' '}
+                              <span
+                                onClick={handleClick}
+                                className=" text-navy-400 text-[11px] p-[1px]  cursor-pointer rounded"
+                              >
+                                x
+                              </span>
+                            </div>
+                            <div className="flex gap-5 pt-4 bg-mob rounded pb-1">
+                              <Image
+                                src="/pkmsmall.svg"
+                                alt="Mobile"
+                                // className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
+                                width={15}
+                                height={1}
+                                priority
+                              />
+                              <div className="mr-4">
+                                <h2 className="text-[8px] font-bold">To PocketMoni</h2>
+                                <p className="text-[6px]">Best Way to send money </p>
+                              </div>
+                              <span className="text-[5px] flex items-center justify-center">
+                                <LiaGreaterThanSolid />
+                              </span>
+                            </div>
+                            <div className="flex gap-5 pt-5 pb-2">
+                              <BsFillPersonFill />
+                              <div className="mr-4">
+                                <h2 className="text-[8px] font-bold">To Sub Wallet</h2>
+                                <p className="text-[6px]">Best Way to send money </p>
+                              </div>
+                              <span className="text-[5px] flex items-center justify-center">
+                                <LiaGreaterThanSolid />
+                              </span>
+                            </div>
+                            <div className="flex gap-5 pt-5 bg-mob rounded pb-1">
+                              <PiBank />
+                              <div className="mr-4">
+                                <h2 className="text-[8px] font-bold">To Other Banks</h2>
+                                <p className="text-[6px]">Best Way to send money </p>
+                              </div>
+                              <span className="text-[5px] flex items-center justify-center">
+                                <LiaGreaterThanSolid />
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       )}
                     </div>

@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import AgentGroup from '../../assets/images/agent-group.png';
 import ButtonWithIcon from '../ButtonWithIcon';
 import { BsFillBellFill } from 'react-icons/bs';
 import Link from 'next/link';
@@ -21,7 +20,7 @@ const BecomeAgent = () => {
     <div className="container mx-auto md:flex md:justify-between md:mt-24 w-full md:mb-20 md:pl-20">
       <section className="hidden md:block md:w-1/2 ">
         <Image
-          src={AgentGroup}
+          src="/images/agent-group.png"
           alt="Group Agent Picture"
           width={400}
           height={100}
@@ -93,7 +92,7 @@ const BecomeAgent = () => {
         </div>
       </section>
       <section className="md:hidden md:w-1/2 mt-10">
-        <Image src={AgentGroup} alt="Group Agent Picture" />
+        <Image src="/images/agent-group.png" alt="Group Agent Picture" width={400} height={100} />
       </section>
     </div>
   );

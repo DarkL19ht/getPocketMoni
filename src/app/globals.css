@@ -185,22 +185,6 @@ body {
   left: 0;
 }
 
-.card-two {
-  /* font-size: 164px; */
-  width: 320px;
-  height: 310px;
-  border: 2px solid #a7dfff;
-  padding: 1rem;
-  background: #d8f1ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  transform-origin: 10% 60%;
-  top: 4rem;
-  left: 4rem;
-}
-
 .card-container {
   overflow: hidden;
   display: flex;
@@ -224,11 +208,8 @@ body {
   position: absolute;
   margin-top: 165px;
   margin-left: -40px;
-  /* top: 610px;
-  left: 80px; */
   width: 400px;
   height: 400px;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -2,8 +2,9 @@
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import imageOne from '../../assets/images/img1.png';
-import imageTwo from '../../assets/images/image 178.png';
+import imageOne from '../../assets/images/image1.png';
+import imageTwo from '../../assets/images/image2.png';
+import imageThree from '../../assets/images/image3.png';
 import Modal from './PKMExperienceModal';
 
 // Import Swiper styles
@@ -39,7 +40,7 @@ export default function PocketmoniXperience() {
       className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
       style={{ overflow: 'hidden' }}
     >
-      <div className="h-full w-full text-5xl font-normal text-center mt-0 -mb-16">
+      <div className="h-full w-full text-5xl md:text-[65px] font-normal text-center mt-0 -mb-10">
         The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
       <svg
@@ -66,13 +67,31 @@ export default function PocketmoniXperience() {
         style={{ marginBottom: -80, zIndex: 0 }}
       >
         <SwiperSlide className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" className="sliderImages" />
+          <Image
+            src="/images/image1.png"
+            alt="image1"
+            className="sliderImages"
+            width={400}
+            height={100}
+          />
         </SwiperSlide>
         <SwiperSlide className="w-[16rem] h-3/6 overflow-hidden flex items-end">
-          <Image src={imageTwo} alt="image1" className="sliderImages" />
+          <Image
+            src="/images/image2.png"
+            alt="image1"
+            className="sliderImages"
+            width={400}
+            height={100}
+          />
         </SwiperSlide>
         <SwiperSlide style={flipHorizontalStyle} className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" className="sliderImages" />
+          <Image
+            src="/images/image3.png"
+            alt="image1"
+            className="sliderImages"
+            width={400}
+            height={100}
+          />
         </SwiperSlide>
         <SwiperSlide className="w-[16rem] h-3/6">
           <Image src={imageOne} alt="image1" className="sliderImages" />
