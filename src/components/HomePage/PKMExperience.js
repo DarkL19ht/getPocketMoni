@@ -59,7 +59,7 @@ export default function PocketmoniXperience() {
       <Swiper
         className="bg-white w-full h-[200px] md:h-3/6 z-0"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={5}
+        spaceBetween={7}
         slidesPerView={3}
         // navigation
         // pagination={{ clickable: true }}
@@ -117,7 +117,7 @@ export default function PocketmoniXperience() {
         />
       </svg>
       <div
-        className="bg-white mx-auto text-center p-2 shadow-black -mt-44 m:-mt-56 border-b-0 modal"
+        className="bg-white mx-auto text-center p-2 shadow-black -mt-44 md:-mt-56 border-b-0 modal"
         style={{
           position: 'relative',
           zIndex: 4,

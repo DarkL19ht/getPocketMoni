@@ -27,6 +27,9 @@ import img26 from '../../public/images/26.png';
 import img27 from '../../public/images/27.png';
 import img28 from '../../public/images/28.png';
 import img29 from '../../public/images/29.png';
+import imgOne from '../../public/images/image1.png';
+import imgTwo from '../../public/images/image2.png';
+import imgThree from '../../public/images/image3.png';
 
 const UserData = {
   usersImages: [
@@ -155,42 +158,49 @@ const UserData = {
       msg: 'This app has been a great help to me when it comes to digital money transfer, Bill payment, Data/Airtime topup and lots more',
       name: 'Uche Happiness',
       star: '*****',
+      bg: 'bg-navy-600',
     },
     {
       id: 2,
       msg: 'Very easy to use and the transaction speed is second to none. Would recommend this app to everyone',
       name: 'Basey Isaac',
       star: '******',
+      bg: 'bg-navy-200',
     },
     {
       id: 3,
       msg: 'The best application for any form of transaction in Nigeria. . The transfer speed is much faster than bank applications, and other wallets in Nigeria.',
       name: 'Christo Ugoc',
       star: '*******',
+      bg: 'bg-yellow-600',
     },
     {
       id: 4,
       msg: 'With this app I’ve been able to process payments at a faster pace. It has met and surpassed my expectations with a high security system attached to it.',
       name: 'Njoku Francis',
       star: '*****',
+      bg: 'bg-green-200',
     },
     {
       id: 5,
       msg: 'Instant transfer in seconds. Best means of transferring cash to others Banks and wallets in Nigeria. The best amongst the rest..',
       name: 'Paul Ogunnoiki',
       star: '*****',
+      bg: 'bg-navy-600',
     },
     {
-      id: 5,
+      id: 6,
       msg: 'Convenient app. And also a very good card funding option. Great!',
       name: 'Funmi Adetoun',
       star: '*****',
+      bg: 'bg-navy-400',
     },
     {
-      id: 5,
+      id: 7,
       msg: 'Great app. Sending money with PocketMoni is faster than my mobile banking app.',
       name: 'Abiola Gbode',
       star: '*****',
+      bg: 'bg-black',
     },
   ],
   accordionData: [
@@ -271,21 +281,25 @@ const UserData = {
   pkmexperience: [
     {
       id: 1,
+      img: imgOne,
       title: 'Accessible',
       desc: 'PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
     },
     {
       id: 2,
+      img: imgTwo,
       title: 'Safe & Secure',
       desc: 'We follow the strictest international security guidelines to protect your money.  Additionally, you get access to our live customer support!',
     },
     {
       id: 3,
+      img: imgThree,
       title: 'Easy Payment',
       desc: 'You can send or receive money from friends and family, automate your bills payment & much more across multiple channels. All transactions are processed instantly!',
     },
     {
       id: 4,
+      img: imgOne,
       title: 'Safe & Secure',
       desc: '  PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
     },

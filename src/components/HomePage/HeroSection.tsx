@@ -9,13 +9,13 @@ const HeroSection = () => {
           Coming Soon!
         </button>
         <div>
-          <Countdown targetDate="10/10/2023" />
+          <Countdown targetDate="11/06/2023" />
         </div>
       </div>
-      <p className="font-switzer font-bold text-5xl md:text-[75px] md:-mt-3 mb-[30px]">
+      <p className="font-switzer text-[45px] leading-[50px] md:text-[75px] md:leading-[80px] md:-mt-3 mb-20px md:mb-[30px]">
         Send Money and Pay Bills Easily
       </p>
-      <p className="text-sm font-light md:leading-9 text-center mt-4 md:text-lg">
+      <p className="text-sm font-light md:leading-[40px] text-center mt-4 md:text-[20px]">
         Pocketmoni provides you access to send and receive money instantly, pay bills conveniently
         wherever you are.
       </p>

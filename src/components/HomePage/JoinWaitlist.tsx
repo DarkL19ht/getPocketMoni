@@ -192,12 +192,12 @@ const JoinWaitlist = () => {
             {/* <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-40" /> */}
           </form>
           <div className="md:hidden">
-            <div className="flex mt-10 -ml-16">
+            <div className="flex mt-10 -ml-10">
               <Image
                 src="/mobile.svg"
                 alt="Mobile"
                 className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
-                width={200}
+                width={250}
                 height={2}
                 priority
               />
@@ -208,13 +208,13 @@ const JoinWaitlist = () => {
                   className={`relative mx-auto inset-0 ${
                     isFocused ? ' bg-navy-100 opacity-50' : ''
                   }`}
-                  width={130}
+                  width={160}
                   height={2}
                   priority
                 />
               </div>
             </div>
-            <div className="-mt-24 mb-20">
+            <div className="-mt-32 mb-20">
               <MobileDialog />
               {/* <button className="bg-navy-100 text-navy-200 pt-3 pb-3 pr-4 pl-4 rounded-full">Try Demo</button> */}
             </div>

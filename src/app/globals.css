@@ -225,9 +225,13 @@ body {
   width: 30%;
 }
 
+.sliderImages1 {
+  height: 300px;
+  width: 400px;
+}
 .sliderImages {
   height: 300px;
-  width: 500px;
+  width: 900px;
 }
 
 @media only screen and (max-width: 768px) {
