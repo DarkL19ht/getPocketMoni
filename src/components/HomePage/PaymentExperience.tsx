@@ -119,7 +119,7 @@ const Card3 = ({ delay }: DelayProps) => {
         </p>
         <div>
           <Image
-            src="/purchased.svg"
+            src="/PURCHASED.svg"
             alt="Mobile"
             className="mt-4"
             width={415}
