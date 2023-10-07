@@ -1,5 +1,5 @@
-import PageTitle from '@/components/PrivacyPolicy/PageTitle';
-import Body from '@/components/PrivacyPolicy/Body';
+import PageTitle from '@/app/components/screens/PrivacyPolicy/PageTitle';
+import Body from '@/app/components/screens/PrivacyPolicy/Body';
 
 const PrivacyPolicy = () => {
   return (

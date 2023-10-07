@@ -3,9 +3,10 @@
 import Image from 'next/image';
 // components/Navbar.js
 import { useState } from 'react';
+import Link from 'next/link';
 import Button from './Button';
 import ButtonWithIcon from './ButtonWithIcon';
-import privacySections from '@/app/privacyPolicy/data';
+import privacySections from '@/utils/PrivacyPolicyData';
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,8 +31,9 @@ function Navbar() {
     <nav className="bg-white p-4" id={_id}>
       <div className="container mx-auto flex justify-between items-center relative">
         <div className="flex justify-between items-center">
-          <Image src="/logo.svg" alt="PocketMoni Logo" width={120} height={50} priority />
-
+          <Link href="/">
+            <Image src="/logo.svg" alt="PocketMoni Logo" width={120} height={50} priority />
+          </Link>
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-4 pl-6">
             {/* ... Menu items ... */}

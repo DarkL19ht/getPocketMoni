@@ -93,15 +93,6 @@ export default function PocketmoniXperience() {
             height={100}
           />
         </SwiperSlide>
-        <SwiperSlide className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" className="sliderImages" />
-        </SwiperSlide>
-        <SwiperSlide style={flipHorizontalStyle} className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" className="sliderImages" />
-        </SwiperSlide>
-        <SwiperSlide className="w-[16rem] h-3/6">
-          <Image src={imageOne} alt="image1" className="sliderImages" />
-        </SwiperSlide>
       </Swiper>
       <svg
         width={screenWidth}

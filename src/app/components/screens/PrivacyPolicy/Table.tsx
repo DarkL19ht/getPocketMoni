@@ -1,8 +1,4 @@
-interface TableData {
-  id: number;
-  type: string;
-  desc: string;
-}
+import { TableData } from '@/utils/tableInterface';
 
 const Table = ({ data }: any) => {
   return (
@@ -14,7 +10,7 @@ const Table = ({ data }: any) => {
       {data.tableData.map((item: TableData, index: number) => (
         <div key={index} className="flex justify-between text-left md:text-justify w-full mb-10">
           <p className="">{item.type}</p>
-          <p className=" w-[60%]">{item.desc}</p>
+          <p className="w-[60%]">{item.desc}</p>
         </div>
       ))}
     </div>

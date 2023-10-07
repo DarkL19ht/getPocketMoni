@@ -67,7 +67,7 @@ const Footer = () => {
         <section className="pb-6">
           <h3 className="font-bold text-[21px]">Legal</h3>
           <div className="flex flex-col gap-5 mt-2 md:mt-4 font-light text-[14px]">
-            <Link href="">Privacy Policy</Link>
+            <Link href="/privacypolicy">Privacy Policy</Link>
             <Link href="">Terms and Condition</Link>
           </div>
         </section>
