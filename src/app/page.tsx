@@ -6,8 +6,8 @@ import Review from '@/components/HomePage/Review';
 import BecomeAgent from '@/components/HomePage/BecomeAgent';
 import FAQ from '@/components/HomePage/FAQ';
 import JoinWaitlistFoot from '@/components/HomePage/JoinWaitlistFoot';
-import Footer from '@/components/Footer';
 import PocketmoniXperience from '@/components/HomePage/userExperience/PKMExperience';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (

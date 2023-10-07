@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Button from './Button';
 import ButtonWithIcon from './ButtonWithIcon';
+import privacySections from '@/app/privacyPolicy/data';
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,8 +24,10 @@ function Navbar() {
     setDropdownOpen1(!dropdownOpen1);
   };
 
+  let _id = privacySections[0].title.replace(/ /g, '');
+
   return (
-    <nav className="bg-white p-4">
+    <nav className="bg-white p-4" id={_id}>
       <div className="container mx-auto flex justify-between items-center relative">
         <div className="flex justify-between items-center">
           <Image src="/logo.svg" alt="PocketMoni Logo" width={120} height={50} priority />
