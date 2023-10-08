@@ -11,7 +11,7 @@ const PageTitle = () => {
     setActive(_id);
   };
   return (
-    <div className="fixed">
+    <div className="">
       {privacySections.map((data, index) => {
         let _id = data.title.replace(/ /g, '');
         return (

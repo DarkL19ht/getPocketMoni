@@ -20,6 +20,7 @@ const swiperParams = {
     },
   },
   pagination: false,
+  loop: true,
 };
 
 const Review = () => {

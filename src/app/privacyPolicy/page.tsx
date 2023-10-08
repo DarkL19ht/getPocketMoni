@@ -1,5 +1,6 @@
 import PageTitle from '@/app/components/screens/PrivacyPolicy/PageTitle';
 import Body from '@/app/components/screens/PrivacyPolicy/Body';
+import Footer from '@/components/Footer';
 
 const PrivacyPolicy = () => {
   return (
@@ -14,6 +15,9 @@ const PrivacyPolicy = () => {
           <PageTitle />
         </div>
         <Body />
+      </div>
+      <div className="mt-[450px]">
+        <Footer />
       </div>
     </>
   );
