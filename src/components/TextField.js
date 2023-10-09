@@ -43,7 +43,7 @@ export default function TextField({
 
   return (
     <>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col md:w-[400px]">
         <input
           placeholder="Enter your email to get notified when we launch"
           type={type}
