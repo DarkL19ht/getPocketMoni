@@ -35,7 +35,7 @@ const BecomeAgent = () => {
           Become an <span className="text-navy-300">agent</span>
         </h3>
         <p
-          className="md:mt-[18px] mt-8 font-light md:text-[18px] leading-[40px] text-lg"
+          className="md:mt-[18px] mt-8 font-light md:text-[18px] md:leading-[40px] text-[15px] leading-[24px]"
           data-aos="fade-down"
         >
           PocketMoni enables wealth creation. We have created an eco-system which ensures a decent
@@ -94,7 +94,7 @@ const BecomeAgent = () => {
           </Link>
         </div>
       </section>
-      <section className="md:hidden md:w-1/2 mt-10">
+      <section className="md:hidden md:w-1/2 mt-14">
         <Image
           src="/images/agent-group.png"
           alt="Group Agent Picture"

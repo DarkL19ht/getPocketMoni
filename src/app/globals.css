@@ -234,18 +234,6 @@ body {
   width: 900px;
 }
 
-@media only screen and (max-width: 768px) {
-  .modal {
-    width: 77.5%;
-    height: 20%;
-  }
-
-  .sliderImages {
-    height: 200px;
-    width: 400px;
-  }
-}
-
 /* checking here */
 
 .box {
@@ -258,4 +246,96 @@ body {
 }
 .box.show {
   transform: translateX(0);
+}
+
+/* GSAP TEST */
+
+.cards {
+  height: 500px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center; */
+}
+
+.card {
+  position: absolute;
+  width: 511px;
+  height: 511px;
+  background: #f1f1f1;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  border-radius: 7px;
+  margin-bottom: 50px;
+}
+
+.card-1 {
+  left: 0;
+  top: 0;
+}
+
+.card-2 {
+  left: 64px;
+  top: 96px;
+}
+
+.card-3 {
+  left: 128px;
+  top: 192px;
+}
+
+/* .card h2 {
+  font-size: 80px;
+  font-weight: 900;
+  font-stretch: condensed;
+  color: #ff98a2;
+  text-transform: uppercase;
+} */
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    width: 77.5%;
+    height: 20%;
+  }
+
+  .sliderImages {
+    height: 200px;
+    width: 400px;
+  }
+
+  .cards {
+    height: 500px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  .card {
+    position: absolute;
+    width: 335px;
+    height: 355px;
+    background: #f1f1f1;
+    border-radius: 7px;
+    margin-bottom: 50px;
+  }
+  .card-1 {
+    left: 0;
+    top: 0;
+  }
+
+  .card-2 {
+    left: 0;
+    top: 96px;
+  }
+
+  .card-3 {
+    left: 0;
+    top: 180px;
+  }
 }

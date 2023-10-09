@@ -34,52 +34,26 @@ const AccordionItem = ({ title, description, open, toggle }: AccordionProps) => 
         {description.map((item) => {
           return (
             <div key={item.id}>
-              <div className="bg-white px-[50px] pb-[20px] text-justify">{item.answer}</div>
+              <div className="bg-white px-[50px] pb-[20px] text-justify">
+                <p>{item.answer} </p>
+              </div>
               {item.answer1 && item.answer2 && (
                 <section>
                   <div className="bg-white px-[50px] pb-[20px] text-justify flex gap-2">
-                    <Image
-                      src="/Checkbox.svg"
-                      alt="Mobile"
-                      width={30}
-                      height={10}
-                      priority
-                      data-aos="fade-down"
-                    />
-                    <p data-aos="fade-left"> {item.answer1} </p>
+                    <Image src="/Checkbox.svg" alt="Mobile" width={30} height={10} priority />
+                    <p> {item.answer1} </p>
                   </div>
                   <div className="bg-white px-[50px] pb-[20px] text-justify flex gap-2">
-                    <Image
-                      src="/Checkbox.svg"
-                      alt="Mobile"
-                      width={30}
-                      height={10}
-                      priority
-                      data-aos="fade-down"
-                    />
-                    <p data-aos="fade-left"> {item.answer2}</p>
+                    <Image src="/Checkbox.svg" alt="Mobile" width={30} height={10} priority />
+                    <p> {item.answer2}</p>
                   </div>
                   <div className="bg-white px-[50px] pb-[20px] text-justify flex gap-2">
-                    <Image
-                      src="/Checkbox.svg"
-                      alt="Mobile"
-                      width={30}
-                      height={10}
-                      priority
-                      data-aos="fade-down"
-                    />
-                    <p data-aos="fade-left">{item.answer3}</p>
+                    <Image src="/Checkbox.svg" alt="Mobile" width={30} height={10} priority />
+                    <p>{item.answer3}</p>
                   </div>
                   <div className="bg-white px-[50px] pb-[20px] text-justify flex gap-2">
-                    <Image
-                      src="/Checkbox.svg"
-                      alt="Mobile"
-                      width={30}
-                      height={10}
-                      priority
-                      data-aos="fade-down"
-                    />
-                    <p data-aos="fade-left">{item.answer4}</p>
+                    <Image src="/Checkbox.svg" alt="Mobile" width={30} height={10} priority />
+                    <p>{item.answer4}</p>
                   </div>
                 </section>
               )}

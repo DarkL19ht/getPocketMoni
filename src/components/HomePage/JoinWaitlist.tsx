@@ -91,7 +91,7 @@ const JoinWaitlist = () => {
     }
   }, [data]);
   return (
-    <div className=" mx-auto md:flex justify-between md:pt-40 ">
+    <div className="container mx-auto md:flex justify-between md:pt-40 ">
       <Image
         src="/mobile.svg"
         alt="Mobile"
