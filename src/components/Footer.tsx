@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
         <section className="mt-6 pb-6 md:mt-0 items-center justify-center">
           <Image
-            src="/logoEtr.svg"
+            src="/logofooter.svg"
             alt="Mobile"
             className="mb-4 ml-9 md:ml-0"
             width={200}

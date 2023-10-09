@@ -41,7 +41,7 @@ export default function PocketmoniXperience() {
       style={{ overflow: 'hidden' }}
     >
       <div className="h-full w-full text-5xl md:text-[65px] font-normal text-center mt-0 -mb-10">
-        The <span className="text-navy-300 ">Pocketmoni</span> Experience
+        The <span className="text-navy-300 ">PocketMoni</span> Experience
       </div>
       <svg
         width={screenWidth}

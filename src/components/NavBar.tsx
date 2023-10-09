@@ -79,7 +79,7 @@ function Navbar() {
                 }`}
               >
                 <li>
-                  <Link href="/ourstory" className="block py-2">
+                  <Link href="/" className="block py-2">
                     Our Story
                   </Link>
                 </li>
@@ -188,7 +188,7 @@ function Navbar() {
         </div>
         <div className="hidden md:block space-x-4">
           <div className="flex gap-3">
-            <Link href="/getpocketmoni">
+            <Link href="/">
               <ButtonWithIcon
                 className="bg-navy-600 text-white w-40"
                 hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
