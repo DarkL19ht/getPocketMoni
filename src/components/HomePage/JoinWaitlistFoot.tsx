@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ButtonWithIcon from '../ButtonWithIcon';
-import { BsFillBellFill } from 'react-icons/bs';
 import Alert from '@/app/components/ui/Alert';
 import TextField from '../TextField';
 import { VALIDATE_EMAIL } from '@/utils/helper';
@@ -106,7 +105,7 @@ const JoinWaitlistFoot = () => {
                   loadingText={'Please wait'}
                   type="submit"
                   className="bg-navy-600 text-white w-full md:w-40"
-                  icon={<BsFillBellFill />}
+                  icon
                 >
                   Join Waitlist
                 </ButtonWithIcon>
