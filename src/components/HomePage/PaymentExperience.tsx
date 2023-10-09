@@ -26,7 +26,7 @@ const Card1 = ({ delay }: DelayProps) => {
 
   return (
     <motion.div variants={cardVariants} initial="hidden" animate="visible">
-      <div className=" top-0 left-0 w-[350px] h-[365px] md:w-[511px] md:h-[511px] bg-navy-800 border border-navy-700 md:p-12 p-6 rounded-lg shadow-lg z-10 card-fly-bottom">
+      <div className=" top-0 left-0 w-[335px] h-[355px] md:w-[511px] md:h-[511px] bg-navy-800 border border-navy-700 md:p-12 p-6 rounded-lg shadow-lg z-10 card-fly-bottom">
         <h3 className="text-[42px] md:text-[48px] leading-10 font-switzer font-light">
           <span className="text-navy-300">Send </span>Money
         </h3>
@@ -67,7 +67,7 @@ const Card2 = ({ delay }: DelayProps) => {
 
   return (
     <motion.div variants={cardVariants} initial="hidden" animate="visible">
-      <div className="absolute md:top-24 md:left-16 top-24 w-[350px] h-[365px] md:w-[511px] md:h-[511px] bg-navy-800 border border-navy-700 md:p-12 p-4 rounded-lg shadow-lg z-20 card-fly-bottom">
+      <div className="absolute md:top-24 md:left-16 top-24 w-[335px] h-[355px] md:w-[511px] md:h-[511px] bg-navy-800 border border-navy-700 md:p-12 p-4 rounded-lg shadow-lg z-20 card-fly-bottom">
         <h3 className="text-[30px] md:text-[48px] leading-10 font-switzer font-light">
           <span className="text-navy-300">Withdraw </span>Money
         </h3>
@@ -109,7 +109,7 @@ const Card3 = ({ delay }: DelayProps) => {
 
   return (
     <motion.div variants={cardVariants} initial="hidden" animate="visible">
-      <div className="absolute md:top-48 md:left-32 top-48 w-[350px] h-[365px] md:w-[511px] md:h-[511px] md:p-12 p-4 bg-navy-800 border border-navy-700 rounded-lg shadow-lg z-30 card-fly-bottom">
+      <div className="absolute md:top-48 md:left-32 top-48 w-[335px] h-[355px] md:w-[511px] md:h-[511px] md:p-12 p-4 bg-navy-800 border border-navy-700 rounded-lg shadow-lg z-30 card-fly-bottom">
         <h3 className="text-[30px] md:text-[48px] leading-10 font-switzer font-light">
           <span className="text-navy-300">Pay </span>Bills
         </h3>

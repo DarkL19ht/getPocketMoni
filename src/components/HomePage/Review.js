@@ -72,7 +72,7 @@ const Review = () => {
         </div>
       </div>
       <div className="md:hidden">
-        <div className="flex items-center justify-center mt-10 gap-2">
+        <div className="flex items-center justify-center mt-10 gap-[2px] ">
           {UserData.usersImages.slice(0, 8).map((item) => (
             <Image
               key={item.id}
@@ -84,7 +84,7 @@ const Review = () => {
             />
           ))}
         </div>
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-[2px]">
           {UserData.usersImages.slice(0, 7).map((item) => (
             <Image
               key={item.id}
@@ -132,9 +132,9 @@ const Review = () => {
           >
             {UserData.testimonials.map((item) => (
               <swiper-slide key={item.id} class="h-auto">
-                <div className="border border-grey w-64 h-[330px] p-8 flex flex-col">
+                <div className="border border-grey rounded-lg w-64 h-[330px] p-8 flex flex-col">
                   <div className="div1">
-                    <p className="text-[14px] leading-8">
+                    <p className="text-[14px] leading-8 text-left">
                       <span className="text-navy-300 font-extrabold">“</span>
                       {item.msg} <span className="text-navy-300 font-extrabold">”</span>
                     </p>
@@ -146,9 +146,16 @@ const Review = () => {
                       >
                         {item.name.charAt(0)}
                       </p>
-                      <section className="mt-2">
-                        <p className="text-[12px]"> {item.name} </p>
-                        <div className="text-yellow-600 flex">
+                      <section className="mt-2 flex flex-col">
+                        <p className="text-[12px] text-left"> {item.name} </p>
+                        <div className="text-yellow-600 flex mt-1">
+                          <Image
+                            src="/images/playstore.png"
+                            alt="play store link"
+                            width={16}
+                            height={16}
+                            className='mr-2'
+                          />
                           <AiFillStar />
                           <AiFillStar />
                           <AiFillStar />

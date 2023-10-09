@@ -206,9 +206,9 @@ body {
 
 .modal-over {
   position: absolute;
-  margin-top: 165px;
-  margin-left: -40px;
-  width: 400px;
+  margin-top: 170px;
+  margin-left: -8px;
+  width: 430px;
   height: 400px;
   display: flex;
   justify-content: center;

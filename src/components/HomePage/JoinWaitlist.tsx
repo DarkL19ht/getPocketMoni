@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ButtonWithIcon from '../ButtonWithIcon';
-import { BsFillBellFill, BsFillPersonFill } from 'react-icons/bs';
+import { BsFillPersonFill } from 'react-icons/bs';
 import { LiaGreaterThanSolid } from 'react-icons/lia';
 import { PiBank } from 'react-icons/pi';
 import Alert from '@/app/components/ui/Alert';
@@ -91,11 +91,11 @@ const JoinWaitlist = () => {
     }
   }, [data]);
   return (
-    <div className="container mx-auto md:flex justify-between w-full md:pt-36 ">
+    <div className=" mx-auto md:flex justify-between md:pt-40 ">
       <Image
         src="/mobile.svg"
         alt="Mobile"
-        className={`hidden md:block relative mx-auto inset-0 w-1/4 card-fly-left ${
+        className={`hidden md:block relative mx-auto inset-0 w-1/4 -mr-[40px] card-fly-left ${
           isFocused ? ' bg-navy-100 opacity-50' : ''
         }`}
         width={600}
@@ -161,12 +161,15 @@ const JoinWaitlist = () => {
           </div>
         </div>
       )}
-      <div className="md:w-2/4 md:mt-0 mt-16">
-        <div className="text-center">
+      <div className=" md:w-2/4 md:mt-0 mt-10 mb-3 mr-6 ml-6">
+        <div className="container text-center">
           {data?.message && (
             <Alert message={data?.message} type={isSuccess ? 'success' : 'error'} />
           )}
-          <form className="md:flex gap-3" onSubmit={handleSubmit(onSubmit)}>
+          <form
+            className=" md:flex md:gap-14 md:items-start md:justify-start items-center justify-center"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <TextField
               control={control}
               name="email"
@@ -177,30 +180,35 @@ const JoinWaitlist = () => {
                 },
                 pattern: VALIDATE_EMAIL,
               }}
-              className=""
+              className="md:ml-10"
             />
             <ButtonWithIcon
               // disabled={!formState.isValid}
               isLoading={isLoading}
               loadingText={'Please wait'}
               type="submit"
-              className="bg-navy-400 text-white md:w-40 w-full"
-              icon={<BsFillBellFill />}
+              className="bg-navy-400 text-white md:w-[160px] w-full"
+              icon
             >
               Join Waitlist
             </ButtonWithIcon>
             {/* <Button label="Join Waitlist" style="bg-navy-600" text="text-white" width="w-40" /> */}
           </form>
-          <div className="md:hidden">
+          <div className="md:hidden container">
             <div className="flex mt-10 -ml-10">
-              <Image
-                src="/mobile.svg"
-                alt="Mobile"
-                className={`relative mx-auto inset-0 ${isFocused ? ' bg-navy-100 opacity-50' : ''}`}
-                width={250}
-                height={2}
-                priority
-              />
+              <div>
+                <Image
+                  src="/mobile.svg"
+                  alt="Mobile"
+                  className={`relative mx-auto inset-0 ${
+                    isFocused ? ' bg-navy-100 opacity-50' : ''
+                  }`}
+                  width={215}
+                  height={2}
+                  priority
+                />
+              </div>
+
               <div>
                 <Image
                   src="/POS-SMALL.svg"
@@ -208,35 +216,31 @@ const JoinWaitlist = () => {
                   className={`relative mx-auto inset-0 ${
                     isFocused ? ' bg-navy-100 opacity-50' : ''
                   }`}
-                  width={160}
+                  width={140}
                   height={2}
                   priority
                 />
               </div>
             </div>
-            <div className="-mt-32 mb-20">
+            <div className="-mt-24 mb-20">
               <MobileDialog />
               {/* <button className="bg-navy-100 text-navy-200 pt-3 pb-3 pr-4 pl-4 rounded-full">Try Demo</button> */}
             </div>
           </div>
-          <div className="hidden md:block md:mt-10 ">
+          <div className="hidden md:block md:mt-10">
             <Image
               src="/bg-wait.svg"
               alt="dial code"
-              className=" inset-0 z-0 card-fly-bottom"
-              width={600}
+              className="z-0 card-fly-bottom"
+              width={1200}
               height={200}
               priority
             />
           </div>
           <div className="hidden md:block md:mt-10 -mt-6">
-            <div className="flex">
+            <div className="flex justify-center items-center">
               <Image src="/arrowleft.svg" alt="Mobile" width={100} height={1} priority />
-              <ButtonWithIcon
-                type="submit"
-                // onClick={handleButtonClick
-                className="bg-black text-white w-full"
-              >
+              <ButtonWithIcon type="submit" icon2 className="bg-black text-white w-[188px]">
                 Click to see the magic
               </ButtonWithIcon>
               <Image src="/arrow-up.svg" alt="Mobile" width={100} height={50} priority />

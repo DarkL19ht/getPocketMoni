@@ -1,11 +1,13 @@
 import React, { ReactNode } from 'react';
 import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 import clsx from 'clsx';
+import Image from 'next/image';
 
 interface ButtonProps {
   onClick?: () => void;
   hoverEffect?: string;
-  icon?: ReactNode;
+  icon?: boolean;
+  icon2?: boolean;
   children?: ReactNode;
   className?: string;
   isLoading?: boolean;
@@ -19,12 +21,13 @@ const ButtonWithIcon: React.FC<ButtonProps> = ({
   loadingText,
   hoverEffect = 'hover:bg-blue-500',
   icon,
+  icon2,
   className = '',
   type,
   ...rest
 }) => {
   const classNames = clsx(
-    'h-12 rounded-lg text-sm flex gap-3 items-center justify-center',
+    'h-12 rounded-lg text-[14px] flex gap-3 items-center justify-center',
     hoverEffect,
     className
   );
@@ -42,7 +45,13 @@ const ButtonWithIcon: React.FC<ButtonProps> = ({
       ) : (
         <>
           {rest.children}
-          {icon && <span className="text-gold">{icon}</span>}
+          {icon ? (
+            <Image src="/profileicon.svg" alt="Group Agent Picture" width={20} height={20} />
+          ) : icon2 ? (
+            <Image src="/images/1icone.png" alt="click" width={16} height={16} />
+          ) : (
+            <span className="text-gold">{icon}</span>
+          )}
         </>
       )}
     </button>
