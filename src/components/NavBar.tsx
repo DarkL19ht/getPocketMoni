@@ -79,9 +79,9 @@ function Navbar() {
                 }`}
               >
                 <li>
-                  <a href="#" className="block py-2 w-10">
+                  <Link href="/ourstory" className="block py-2">
                     Our Story
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="block py-2">
@@ -188,12 +188,14 @@ function Navbar() {
         </div>
         <div className="hidden md:block space-x-4">
           <div className="flex gap-3">
-            <ButtonWithIcon
-              className="bg-navy-600 text-white w-40"
-              hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
-            >
-              Get PocketMoni
-            </ButtonWithIcon>
+            <Link href="/getpocketmoni">
+              <ButtonWithIcon
+                className="bg-navy-600 text-white w-40"
+                hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
+              >
+                Get PocketMoni
+              </ButtonWithIcon>
+            </Link>
             <ButtonWithIcon
               className="bg-navy-100 w-40 text-navy-200"
               hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
