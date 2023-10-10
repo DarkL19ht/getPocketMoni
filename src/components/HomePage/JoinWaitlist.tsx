@@ -95,7 +95,7 @@ const JoinWaitlist = () => {
       <Image
         src="/mobile.svg"
         alt="Mobile"
-        className={`hidden md:block relative mx-auto inset-0 w-1/4 -mr-[40px] card-fly-left ${
+        className={`hidden md:block relative mx-auto inset-0 w-1/4 -mr-[66px] card-fly-left ${
           isFocused ? ' bg-navy-100 opacity-50' : ''
         }`}
         width={600}
