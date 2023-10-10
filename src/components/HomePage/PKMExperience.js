@@ -40,7 +40,7 @@ export default function PocketmoniXperience() {
       className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
       style={{ overflow: 'hidden' }}
     >
-      <div className="h-full w-full text-5xl md:text-[65px] font-normal text-center mt-0 -mb-10">
+      <div className="h-full w-full text-5xl md:text-[65px] font-normal text-center mt-0 -mb-10 tracking-tighter">
         The <span className="text-navy-300 ">PocketMoni</span> Experience
       </div>
       <svg

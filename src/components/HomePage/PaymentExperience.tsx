@@ -86,8 +86,11 @@ const PaymentExperience = () => {
         <h3 className="font-bold font-switzer text-5xl md:text-[115px] md:leading-[118px] text-center md:text-left">
           Payment Experience
         </h3>
-        <p className="font-light pt-[37px] hidden md:text-[24px] md:block md:pb-9">
-          Create solutions to drive financial inclusion across the country and beyond
+        <p className="font-light text-[#161718] pt-[37px] hidden md:text-[24px] md:block">
+          Create solutions to drive financial inclusion
+        </p>
+        <p className="font-light text-[#161718] hidden md:text-[24px] md:block md:pb-9">
+          across the country and beyond
         </p>
         <Image
           src="/soon2.svg"
@@ -142,7 +145,7 @@ const PaymentExperience = () => {
             </div>
           </div>
           <div className="card card-3 bg-navy-800 border border-navy-700 rounded-lg shadow-lg z-30">
-            <div>
+            <div className="p-6">
               <h3 className="text-[30px] md:text-[48px] leading-10 font-switzer font-light">
                 <span className="text-navy-300">Pay </span>Bills
               </h3>

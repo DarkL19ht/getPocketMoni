@@ -45,8 +45,11 @@ const Review = () => {
   }, []);
   return (
     <div className="container mx-auto text-center mt-24 md:mt-0">
-      <h3 className="font-bold font-switzer md:text-[65px] text-4xl">
-        See What Our <span className="text-navy-300">Users Are Saying</span>
+      <h3 className="font-bold  font-switzer md:text-[65px] text-4xl tracking-tighter">
+        See What Our <span className="text-navy-300">Users</span>
+      </h3>
+      <h3 className="font-bold font-switzer md:text-[65px] pt-5 text-4xl">
+        <span className="text-navy-300">Are Saying</span>
       </h3>
       <div className="hidden md:block mt-[32px] mb-20">
         <div className="flex items-center justify-center mt-10 gap-2">
@@ -117,7 +120,7 @@ const Review = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-4 h-6"
             >
               <path
                 strokeLinecap="round"
@@ -135,7 +138,7 @@ const Review = () => {
           >
             {UserData.testimonials.map((item) => (
               <swiper-slide key={item.id} class="h-auto">
-                <div className="border border-grey rounded-lg md:w-64 md:h-[330px] w-120px h-full md:p-8 p-2 w-150px flex flex-col mr-2">
+                <div className="border border-grey rounded-lg md:w-64 md:h-[330px] w-120px h-full md:p-8 p-2 w-150px flex flex-col mr-2 hover:shadow-2xl">
                   <div className="div1">
                     <p className="md:text-[14px] text-[12px] md:leading-8 leading-[22px] text-left">
                       <span className="text-navy-300 font-extrabold">“</span>
@@ -177,7 +180,7 @@ const Review = () => {
             onClick={() => {
               swiperRef.current.swiper.slideNext();
             }}
-            className="text-navy-200 font-extrabold"
+            className="text-navy-200 font-extrabold hover:border hover:rounded-full hover:w-[40px] hover:h-[40px] hover:p-2 hover:border-gray2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +188,7 @@ const Review = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-4 h-6"
             >
               <path
                 strokeLinecap="round"

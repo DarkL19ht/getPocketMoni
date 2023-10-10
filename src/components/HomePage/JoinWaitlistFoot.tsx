@@ -76,13 +76,8 @@ const JoinWaitlistFoot = () => {
       <section className=" md:w-1/2 md:mb-0 mb-24">
         <div className="flex md:items-center items-center justify-center h-screen">
           <div className="md:-mt-96 -mt-32">
-            <p className="font-switzer font-light text-3xl md:text-[65px] text-[#28335A]">
-              Join our
-            </p>
-            <h2 className="font-switzer font-bold text-8xl md:text-[140px] text-[#28335A]">
-              {' '}
-              Waitlist{' '}
-            </h2>
+            <p className="font-switzer font-light text-3xl md:text-[65px]">Join our</p>
+            <h2 className="font-switzer font-bold text-8xl md:text-[140px]">Waitlist</h2>
             <div className=" mt-10">
               {data?.message && (
                 <Alert message={data?.message} type={isSuccess ? 'success' : 'error'} />
@@ -98,13 +93,13 @@ const JoinWaitlistFoot = () => {
                     },
                     pattern: VALIDATE_EMAIL,
                   }}
-                  className=""
+                  className="md:h-[60px]"
                 />
                 <ButtonWithIcon
                   isLoading={isLoading}
                   loadingText={'Please wait'}
                   type="submit"
-                  className="bg-navy-600 text-white w-full md:w-40"
+                  className="bg-navy-400 text-white w-full md:w-40 md:h-[60px]"
                   icon
                 >
                   Join Waitlist

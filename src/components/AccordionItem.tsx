@@ -23,8 +23,8 @@ interface AccordionProps {
 
 const AccordionItem = ({ title, description, open, toggle }: AccordionProps) => {
   return (
-    <div className="pt-[10px]">
-      <div className="border-t border-gray2"></div>
+    <div className={`pt-[10px] hover:text-navy-300 ${!open && 'hover:shadow-xl'}`}>
+      <div className="border-t border-gray2 hover:border-0"></div>
       <div className="py-[32px] px-[50px] flex justify-between cursor-pointer" onClick={toggle}>
         <p className="text-xl font-light text-left"> {title} </p>
         <div className="text-[30px]">{open ? <BiMinus /> : <BsPlus />}</div>
@@ -33,7 +33,7 @@ const AccordionItem = ({ title, description, open, toggle }: AccordionProps) => 
         {/* <div className="bg-white px-[50px] pb-[20px] text-justify">{description}</div> */}
         {description.map((item) => {
           return (
-            <div key={item.id}>
+            <div key={item.id} className={`${open ? 'text-black' : ''}`}>
               <div className="bg-white px-[50px] pb-[20px] text-justify">
                 <p>{item.answer} </p>
               </div>
@@ -57,15 +57,11 @@ const AccordionItem = ({ title, description, open, toggle }: AccordionProps) => 
                   </div>
                 </section>
               )}
-
-              {/* <div className="bg-white px-[50px] pb-[20px] text-justify">{item.answer2}</div>
-              <div className="bg-white px-[50px] pb-[20px] text-justify">{item.answer3}</div>
-              <div className="bg-white px-[50px] pb-[20px] text-justify">{item.answer4}</div> */}
             </div>
           );
         })}
       </Collapse>
-      <div className="border-b border-gray2"></div>
+      {/* <div className="border-b border-gray2"></div> */}
     </div>
   );
 };

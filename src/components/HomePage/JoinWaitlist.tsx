@@ -91,7 +91,7 @@ const JoinWaitlist = () => {
     }
   }, [data]);
   return (
-    <div className="container mx-auto md:flex justify-between md:pt-40 ">
+    <div className="container mx-auto md:flex justify-between md:pt-36 ">
       <Image
         src="/mobile.svg"
         alt="Mobile"
@@ -180,14 +180,14 @@ const JoinWaitlist = () => {
                 },
                 pattern: VALIDATE_EMAIL,
               }}
-              className="md:ml-10"
+              className="md:ml-10 md:h-[60px]"
             />
             <ButtonWithIcon
               // disabled={!formState.isValid}
               isLoading={isLoading}
               loadingText={'Please wait'}
               type="submit"
-              className="bg-navy-400 text-white md:w-[160px] w-full"
+              className="bg-navy-400 text-white md:w-[160px] w-full md:h-[60px]"
               icon
             >
               Join Waitlist
@@ -227,7 +227,7 @@ const JoinWaitlist = () => {
               {/* <button className="bg-navy-100 text-navy-200 pt-3 pb-3 pr-4 pl-4 rounded-full">Try Demo</button> */}
             </div>
           </div>
-          <div className="hidden md:block md:mt-10">
+          <div className="hidden md:block md:mt-8">
             <Image
               src="/bg-wait.svg"
               alt="dial code"
@@ -237,7 +237,7 @@ const JoinWaitlist = () => {
               priority
             />
           </div>
-          <div className="hidden md:block md:mt-10 -mt-6">
+          <div className="hidden md:block md:mt-7 -mt-6">
             <div className="flex justify-center items-center">
               <Image src="/arrowleft.svg" alt="Mobile" width={100} height={1} priority />
               <ButtonWithIcon type="submit" icon2 className="bg-black text-white w-[188px]">

@@ -19,25 +19,13 @@ const BecomeAgent = () => {
   return (
     <div className="container mx-auto md:flex md:justify-between md:mt-32 w-full md:mb-20 md:pl-20">
       <section className="hidden md:block md:w-1/2 ">
-        <Image
-          src="/images/agent-group.png"
-          alt="Group Agent Picture"
-          width={400}
-          height={100}
-          data-aos="fade-right"
-        />
+        <Image src="/images/agentts.png" alt="Group Agent Picture" width={450} height={450} />
       </section>
       <section className="md:w-1/2 text-center md:text-left md:p-0 p-5">
-        <h3
-          className="md:text-[55px] text-4xl leading-10 font-switzer font-normal"
-          data-aos="fade-down"
-        >
+        <h3 className="md:text-[55px] text-4xl leading-10 font-switzer font-bold tracking-tighter">
           Become an <span className="text-navy-300">agent</span>
         </h3>
-        <p
-          className="md:mt-[18px] mt-8 font-light md:text-[18px] md:leading-[40px] text-[15px] leading-[24px]"
-          data-aos="fade-down"
-        >
+        <p className="md:mt-7 mt-8 font-light md:text-[18px] md:leading-[40px] text-[15px] leading-[24px]">
           PocketMoni enables wealth creation. We have created an eco-system which ensures a decent
           income for our agents to run profitable businesses.
         </p>
@@ -49,9 +37,8 @@ const BecomeAgent = () => {
             width={30}
             height={10}
             priority
-            data-aos="fade-down"
           />
-          <p className="text-[14px] leading-[24px] font-light mt-10" data-aos="fade-left">
+          <p className="text-[14px] leading-[24px] font-light mt-7">
             <span className="font-bold"> Earn quick cash</span> PocketMoni empowers its agents to
             make extra income by profiling and activation on the POS scheme.
           </p>
@@ -64,9 +51,8 @@ const BecomeAgent = () => {
             width={30}
             height={10}
             priority
-            data-aos="fade-down"
           />
-          <p className="text-[14px] leading-[24px] font-light mt-[26px]" data-aos="fade-left">
+          <p className="text-[14px] leading-[24px] font-light mt-[26px]">
             <span className="font-bold"> Agent Support</span> Guaranteed 24/7 support for all agent
             inquiries and dispute resolutions.
           </p>
@@ -79,9 +65,8 @@ const BecomeAgent = () => {
             width={30}
             height={10}
             priority
-            data-aos="fade-down"
           />
-          <p className="text-[14px] leading-[24px] font-light mt-[26px]" data-aos="fade-left">
+          <p className="text-[14px] leading-[24px] font-light mt-[26px]">
             <span className="font-bold">Flexible Pricing</span> We offer competitive rates and
             provide exclusive pricing to super agent networks.
           </p>
@@ -96,7 +81,7 @@ const BecomeAgent = () => {
       </section>
       <section className="md:hidden md:w-1/2 mt-14">
         <Image
-          src="/images/agent-group.png"
+          src="/images/agentts.png"
           alt="Group Agent Picture"
           width={400}
           height={100}

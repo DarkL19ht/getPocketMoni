@@ -78,8 +78,8 @@ function Navbar() {
                   dropdownOpen ? 'block' : 'hidden'
                 }`}
               >
-                <li>
-                  <Link href="/" className="block py-2">
+                <li className="">
+                  <Link href="/" className="block py-2 ">
                     Our Story
                   </Link>
                 </li>
@@ -94,7 +94,7 @@ function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="block py-2">
+                  <a href="#" className="block pb-5 pt-1">
                     Press
                   </a>
                 </li>
@@ -190,7 +190,7 @@ function Navbar() {
           <div className="flex gap-3">
             <Link href="/">
               <ButtonWithIcon
-                className="bg-navy-600 text-white w-40"
+                className="bg-navy-400 text-white w-40"
                 hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
               >
                 Get PocketMoni
@@ -210,7 +210,7 @@ function Navbar() {
         {mobileMenuOpen && (
           <div className="">
             <div className="space-x-4 absolute top-10 left-0 pt-8 pb-8 pr-2 pl-2 bg-white shadow-2xl">
-              <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
+              <Button label="Get PocketMoni" style="bg-navy-400" text="text-white" width="w-40" />
               <Button
                 label=" Become an Agent"
                 style="bg-navy-100"
