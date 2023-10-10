@@ -28,7 +28,11 @@ export default function PocketmoniXperience() {
   const [width, setWidth] = useState('');
   const swiperRef = useRef(null);
   const [swiperProgress, setSwiperProgress] = useState(0);
+  
+  
 
+
+  
   useEffect(() => {
     // Assign it to swiper element
     Object.assign(swiperRef?.current, swiperParams);
@@ -37,9 +41,10 @@ export default function PocketmoniXperience() {
     swiperRef.current.initialize();
 
     // Progress listener
+    const screenWidth = window.innerWidth + 15;
+      setWidth(screenWidth);
+
     swiperRef.current.addEventListener('progress', (e) => {
-      const screenWidth = window.innerWidth + 15;
-    setWidth(screenWidth);
       const [swiper, progress] = e.detail;
       setSwiperProgress(progress);
     });
@@ -56,41 +61,40 @@ export default function PocketmoniXperience() {
       className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
       style={{ overflow: 'hidden' }}
     >
-      <div className="h-full w-full text-5xl font-normal text-center mt-0 -mb-16">
+      <div className="h-full w-full text-5xl font-normal text-center mt-0 mb-16">
         The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
-      <svg
-        width={screenWidth}
-        height="200"
-        style={{ marginBottom: -118, marginLeft: -10, position: 'relative', zIndex: 2 }}
-        className="z-10 mb-2 "
-      >
-        <path
-          d={`M10 80 Q${controlPointXBottom} ${controlPointYBottom} ${endPointX} 80`}
-          fill="white"
-          stroke="white"
-          strokeWidth="25"
-        />
-      </svg>
+      
+       
+      
+      
       <swiper-container
         init="false"
         ref={swiperRef}
         className="bg-white w-full h-[200px] md:h-3/6 z-0"
         // change the swiper bullets color to the same of the arrows
-        style={{ '--swiper-pagination-color': '#3b82f6', marginBottom: -80, zIndex: 0  }}
+        style={{ '--swiper-pagination-color': '#3b82f6', marginBottom: "10%", zIndex: 0, height:  "400px"  }}
       >
-        {Images.map((item, index) => (
-          <swiper-slide key={index}  className="w-[16rem] h-3/6">
-            <Image src={item} alt="image1" className="sliderImages" />
+        {UserData.pkmexperience.map((item, index) => (
+          <swiper-slide key={index}  className="w-[16rem] h-full swiper-1" controller-control=".swiper-2">
+            <Image src={item.img} alt="image1" className="sliderImages" style={{height: "100%", width: "100%"}}/>
+             
+          <div key={item.id} className="z-50 -mt-[85%] ml-6 w" style={{zIndex: 50}}>
+            <h2 className="md:text-[32px] text-[20px] font-switzer"> {item.title} </h2>
+            <p className="text-justify md:text-center md:text-base text-[12px] md:leading-7 mt-0 md:mt-2 font-switzer">
+              {item.desc}
+            </p>
+          </div>
           </swiper-slide>
         ))}
+        
       </swiper-container>
       <div
         className="flex justify-between w-3/6 mx-auto -mt-7"
         style={{ position: 'relative', zIndex: 6 }}
       >
         <button
-          onClick={() => {
+          onClick={() => {           
             swiperRef.current.swiper.slidePrev();
           }}
           className="fill-slate-400 text-grey font-extrabold text-5xl md:mr-16"
@@ -113,6 +117,7 @@ export default function PocketmoniXperience() {
         <button
           onClick={() => {
             swiperRef.current.swiper.slideNext();
+
           }}
           className="fill-slate-400 text-grey font-extrabold"
         >
@@ -132,30 +137,8 @@ export default function PocketmoniXperience() {
           </svg>
         </button>
       </div>
-    <svg
-        width={screenWidth}
-        height="200"
-        style={{ marginLeft: -15, position: 'relative', zIndex: 2 }}
-        className="mt-2"
-      >
-        <path
-          d={`M10 80 Q${controlPointXTop} ${controlPointYTop} ${endPointX} 80`}
-          fill="white"
-          stroke="white"
-          strokeWidth="15"
-        />
-      </svg>
-      <div
-        className="bg-white mx-auto text-center p-2 shadow-black -mt-44 m:-mt-56 border-b-0 modal"
-        style={{
-          position: 'relative',
-          zIndex: 4,
-          // width: '30%',
-          boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-        }}
-      >
-        <Modal />
-      </div>
+    
+     
     </main>
   );
 };
