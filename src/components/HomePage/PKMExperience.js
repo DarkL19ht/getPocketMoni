@@ -1,46 +1,62 @@
 'use client';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import UserData from '@/utils/UserData';
+import { useRef, useEffect, useState } from 'react';
+import { register } from 'swiper/element/bundle';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import imageOne from '../../assets/images/image1.png';
-import imageTwo from '../../assets/images/image2.png';
-import imageThree from '../../assets/images/image3.png';
-import Modal from './PKMExperienceModal';
+import Modal from "./PKMExperienceModal"
+import Images from "../../utils/sliderImages.ts"
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import { useEffect, useState } from 'react';
+// register Swiper custom elements
+register();
+
+// Object swiper with parameters
+const swiperParams = {
+  slidesPerView: 3,
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+    },
+    1028: {
+      slidesPerView: 3,
+    },
+  },
+  pagination: true,
+  spaceBetween: 5,
+};
 
 export default function PocketmoniXperience() {
   const [width, setWidth] = useState('');
-  //style for horizontally flipped image
-  const flipHorizontalStyle = {
-    transform: 'scaleX(-1)',
-    display: 'inline-block', // Ensures the div only takes the necessary width
-  };
+  const swiperRef = useRef(null);
+  const [swiperProgress, setSwiperProgress] = useState(0);
 
-  //Quadratic curves
   useEffect(() => {
-    const screenWidth = window.innerWidth + 15;
+    // Assign it to swiper element
+    Object.assign(swiperRef?.current, swiperParams);
+
+    // Initialize swiper
+    swiperRef.current.initialize();
+
+    // Progress listener
+    swiperRef.current.addEventListener('progress', (e) => {
+      const screenWidth = window.innerWidth + 15;
     setWidth(screenWidth);
+      const [swiper, progress] = e.detail;
+      setSwiperProgress(progress);
+    });
   }, []);
-  let screenWidth = width;
+   let screenWidth = width;
   // Control points calculation for a curve spanning the width of the screen
   const controlPointXTop = screenWidth / 2; // X coordinate of the control point
   const controlPointXBottom = screenWidth / 2; // X coordinate of the control point
   const controlPointYTop = 25; // Y coordinate of the control point
   const controlPointYBottom = 120; // Y coordinate of the control point
   const endPointX = screenWidth; // X coordinate of the end point
-
   return (
     <main
       className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
       style={{ overflow: 'hidden' }}
     >
-      <div className="h-full w-full text-5xl md:text-[65px] font-normal text-center mt-0 -mb-10">
+      <div className="h-full w-full text-5xl font-normal text-center mt-0 -mb-16">
         The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
       <svg
@@ -56,45 +72,67 @@ export default function PocketmoniXperience() {
           strokeWidth="25"
         />
       </svg>
-      <Swiper
+      <swiper-container
+        init="false"
+        ref={swiperRef}
         className="bg-white w-full h-[200px] md:h-3/6 z-0"
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={7}
-        slidesPerView={3}
-        // navigation
-        // pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
-        style={{ marginBottom: -80, zIndex: 0 }}
+        // change the swiper bullets color to the same of the arrows
+        style={{ '--swiper-pagination-color': '#3b82f6', marginBottom: -80, zIndex: 0  }}
       >
-        <SwiperSlide className="w-[16rem] h-3/6">
-          <Image
-            src="/images/image1.png"
-            alt="image1"
-            className="sliderImages"
-            width={400}
-            height={100}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="w-[16rem] h-3/6 overflow-hidden flex items-end">
-          <Image
-            src="/images/image2.png"
-            alt="image1"
-            className="sliderImages"
-            width={400}
-            height={100}
-          />
-        </SwiperSlide>
-        <SwiperSlide style={flipHorizontalStyle} className="w-[16rem] h-3/6">
-          <Image
-            src="/images/image3.png"
-            alt="image1"
-            className="sliderImages"
-            width={400}
-            height={100}
-          />
-        </SwiperSlide>
-      </Swiper>
-      <svg
+        {Images.map((item, index) => (
+          <swiper-slide key={index}  className="w-[16rem] h-3/6">
+            <Image src={item} alt="image1" className="sliderImages" />
+          </swiper-slide>
+        ))}
+      </swiper-container>
+      <div
+        className="flex justify-between w-3/6 mx-auto -mt-7"
+        style={{ position: 'relative', zIndex: 6 }}
+      >
+        <button
+          onClick={() => {
+            swiperRef.current.swiper.slidePrev();
+          }}
+          className="fill-slate-400 text-grey font-extrabold text-5xl md:mr-16"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+            />
+          </svg>
+        </button>
+        <button
+          onClick={() => {
+            swiperRef.current.swiper.slideNext();
+          }}
+          className="fill-slate-400 text-grey font-extrabold"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            />
+          </svg>
+        </button>
+      </div>
+    <svg
         width={screenWidth}
         height="200"
         style={{ marginLeft: -15, position: 'relative', zIndex: 2 }}
@@ -108,7 +146,7 @@ export default function PocketmoniXperience() {
         />
       </svg>
       <div
-        className="bg-white mx-auto text-center p-2 shadow-black -mt-44 md:-mt-56 border-b-0 modal"
+        className="bg-white mx-auto text-center p-2 shadow-black -mt-44 m:-mt-56 border-b-0 modal"
         style={{
           position: 'relative',
           zIndex: 4,
@@ -120,4 +158,6 @@ export default function PocketmoniXperience() {
       </div>
     </main>
   );
-}
+};
+
+
