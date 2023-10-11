@@ -21,7 +21,7 @@ const swiperParams = {
     },
   },
   pagination: false,
-  spaceBetween: 5,
+  spaceBetween: 10,
 };
 
 export default function PocketmoniXperience() {
@@ -56,6 +56,9 @@ export default function PocketmoniXperience() {
   const controlPointYTop = 25; // Y coordinate of the control point
   const controlPointYBottom = 120; // Y coordinate of the control point
   const endPointX = screenWidth; // X coordinate of the end point
+
+  
+
   return (
     <main
       className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
@@ -65,28 +68,48 @@ export default function PocketmoniXperience() {
         The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
       
-       
+       <div className=' w-full flex justify-between align-middle z-50 relative' >
+          <div className='h-96 bg-white opacity-80 w-2/6 blur-xl'>
+
+          </div>
+          <div className='h-96 bg-white opacity-80 w-2/6 blur-xl'>
+
+          </div>
+        </div>
       
       
       <swiper-container
         init="false"
         ref={swiperRef}
-        className="bg-white w-[200%] h-[200px] md:h-3/6 z-0"
+        className="bg-white w-[200%] h-[200px] md:h-3/6 z-0 -mt-[50%]"
         // change the swiper bullets color to the same of the arrows
-        style={{ '--swiper-pagination-color': '#3b82f6', marginBottom: "10%", zIndex: 0, height:  "400px", overflow: "hidden"  }}
+        style={{ '--swiper-pagination-color': '#3b82f6', marginBottom: "2.5%", zIndex: 0, height:  "400px", overflow: "hidden", marginTop: "-30%"  }}
       >
-        {UserData.pkmexperience.map((item, index) => (
-          <swiper-slide key={index}  className="w-[16rem] h-full swiper-1" controller-control=".swiper-2">
-            <Image src={item.img} alt="image1" className="sliderImages" style={{height: "90%", width: "100%"}}/>
-             
-          <div key={item.id} className="z-50 -mt-[70%] ml-6 w-[300px]" style={{zIndex: 50}}>
-            <h2 className="md:text-[42px] text-[20px] font-switzer font-extrabold text-white "> {item.title} </h2>
+        {UserData.pkmexperience.map((item, index) => {
+          let _id = item.title.replace(/ /g, '');
+          return(
+          <swiper-slide key={index} id={_id} className="w-[16rem] h-full swiper-1" controller-control=".swiper-2" style={{}}>
+            <Image src={item.img} alt="image1" className="sliderImages bg-blend-darken" style={{height: "90%", width: "100%"}}/>
+             { index % 2 == 0 ? (
+          <div key={item.id}  className="z-10 -mt-[80%] ml-6 w-[300px]" style={{zIndex: 10}}>
+           
+            <h2 className="md:text-[30px] text-[20px] font-switzer font-extrabold text-white "> {item.title} </h2>
             <p className="text-left md:text-left md:text-[12px] text-[12px] md:leading-7 mt-0 md:mt-2 font-switzer text-white">
               {item.desc}
             </p>
           </div>
+          ) : (
+            <div key={item.id}  className="z-10 -mt-[35%] ml-20 w-[300px]" style={{zIndex: 10}}>
+           
+            <h2 className="md:text-[30px] text-[20px] font-switzer font-extrabold text-white "> {item.title} </h2>
+            <p className="text-left md:text-left md:text-[12px] text-[12px] md:leading-7 mt-0 md:mt-2 font-switzer text-white">
+              {item.desc}
+            </p>
+          </div>
+          )
+            }
           </swiper-slide>
-        ))}
+        )})}
         
       </swiper-container>
       <div
