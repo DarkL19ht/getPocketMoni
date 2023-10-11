@@ -74,7 +74,7 @@ function Navbar() {
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 pr-28 pl-6 space-y-2 bg-white text-black shadow-lg  ${
+                className={`absolute left-0 mt-2 w-[150px] pl-6 space-y-2 bg-white text-black shadow-lg  ${
                   dropdownOpen ? 'block' : 'hidden'
                 }`}
               >
@@ -144,24 +144,19 @@ function Navbar() {
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 space-y-2 bg-white text-black shadow-lg ${
+                className={`absolute left-0 mt-2 w-[150px] pl-6 pt-3 pb-3 space-y-2 bg-white text-black shadow-lg ${
                   dropdownOpen1 ? 'block' : 'hidden'
                 }`}
               >
                 <li>
-                  <a href="#" className="block px-4 py-2">
-                    Home
-                  </a>
+                  <Link href="/privacypolicy" className="block py-2 ">
+                    Privacy Policy
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2">
-                    Home
-                  </a>
+                  <Link href="/" className="block py-2 ">
+                    Terms
+                  </Link>
                 </li>
               </ul>
             </li>

@@ -13,7 +13,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="">
-        <p className="font-switzer font-normal text-[45px] leading-[50px] md:text-[75px] md:leading-[80px] md:-mt-3 mb-20px md:mb-[30px]">
+        <p className="font-switzer tracking-[-3%] font-normal text-[45px] leading-[50px] md:text-[75px] md:leading-[80px] md:-mt-3 mb-20px md:mb-[30px]">
           Send Money and Pay Bills Easily
         </p>
         <p className="text-[17px] font-light md:leading-[40px] text-center mt-8 md:text-[20px] md:-mt-4">
