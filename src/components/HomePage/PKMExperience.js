@@ -14,7 +14,7 @@ const swiperParams = {
   slidesPerView: 1,
   breakpoints: {
     640: {
-      slidesPerView: 2,
+      slidesPerView: 3,
     },
     1028: {
       slidesPerView: 3,
@@ -22,6 +22,7 @@ const swiperParams = {
   },
   pagination: false,
   spaceBetween: 10,
+  loop: false,
 };
 
 export default function PocketmoniXperience() {
@@ -55,31 +56,34 @@ export default function PocketmoniXperience() {
 
   return (
     <main
-      className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
+      className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0 "
       style={{ overflow: 'hidden' }}
     >
       <div className="h-full w-full text-5xl font-normal text-center mt-0 mb-36 md:mb-72 lg:mb-16">
         The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
 
-      <div className=" w-full hidden lg:flex justify-between align-middle z-50 relative">
-        <div className="h-96 bg-white opacity-80 w-2/6 blur-xl"></div>
-        <div className="h-96 bg-white opacity-80 w-2/6 blur-xl"></div>
+      <div className=" w-full hidden lg:flex justify-between align-middle ">
+        <div className="h-96 bg-white opacity-80 w-[25.5%] z-50 relative"></div>
+        {/* <div className="h-[362px] mt-1 ml-[0.3%] bg-navy-200 opacity-80 w-[45.8%] z-50 relative"></div> */}
+        <div className="h-96 bg-white opacity-80 w-[27.2%] z-50 relative"></div>
       </div>
 
       <swiper-container
         init="false"
         ref={swiperRef}
-        className="bg-white w-[200%] h-[200px] md:h-3/6 z-0 -mt-[50%] swiper-container"
+        className="bg-white w-[200%] h-[200px] md:h-3/6 z-0  swiper-container"
         id="swipercontainer"
         // change the swiper bullets color to the same of the arrows
         style={{
           '--swiper-pagination-color': '#3b82f6',
           marginBottom: '2.5%',
-          zIndex: 0,
+          zIndex: 10,
           height: '400px',
+          width: '140%',
           overflow: 'hidden',
           marginTop: '-30%',
+          marginLeft: '-21%',
         }}
       >
         {UserData.pkmexperience.map((item, index) => {
@@ -95,30 +99,34 @@ export default function PocketmoniXperience() {
               <Image
                 src={item.img}
                 alt="image1"
-                className="sliderImages bg-blend-darken"
+                className="sliderImages bg-blend-darken bg-gradient-to-r from-cyan-500 to-blue-500 relative z-0"
                 style={{ height: '90%', width: '100%' }}
               />
-              {index % 2 == 0 ? (
-                <div key={item.id} className="z-10 -mt-[80%] ml-6 w-[300px]" style={{ zIndex: 10 }}>
-                  <h2 className="md:text-[30px] text-[20px] font-switzer font-extrabold text-white ">
+              {index % 2 !== 0 ? (
+                <div
+                  key={item.id}
+                  className="z-50 -mt-[55%] ml-6 w-[200px] md:w-[300px] relative "
+                  
+                >
+                  <h2 className="md:text-[40px] text-[20px] font-switzer font-black tracking-[-3%] leading-[30px] text-white ">
                     {' '}
                     {item.title}{' '}
                   </h2>
-                  <p className="text-left md:text-left md:text-[12px] text-[12px] md:leading-7 mt-0 md:mt-2 font-switzer text-white">
+                  <p className="text-left md:text-left md:text-[12px] text-[12px] md:leading-[20px] tracking-[-3%] mt-0 md:mt-2 font-[500px] text-white">
                     {item.desc}
                   </p>
                 </div>
               ) : (
                 <div
                   key={item.id}
-                  className="z-10 -mt-[35%] ml-20 w-[300px]"
-                  style={{ zIndex: 10 }}
+                  className="z-20 -mt-[22%] mx-auto w-[200px] md:w-[300px]"
+                  style={{ zIndex: 20 }}
                 >
-                  <h2 className="md:text-[30px] text-[20px] font-switzer font-extrabold text-white ">
+                  <h2 className="text-center md:text-[40px] text-[20px] font-switzer font-black tracking-[-3%] leading-[28px] text-white relative z-50">
                     {' '}
                     {item.title}{' '}
                   </h2>
-                  <p className="text-left md:text-left md:text-[12px] text-[12px] md:leading-7 mt-0 md:mt-2 font-switzer text-white">
+                  <p className="text-left md:text-center md:text-[12px] text-[12px] md:leading-[20px] tracking-[-3%] mt-0 md:mt-2 font-[500px] text-white">
                     {item.desc}
                   </p>
                 </div>

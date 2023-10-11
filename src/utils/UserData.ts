@@ -281,27 +281,34 @@ const UserData = {
   pkmexperience: [
     {
       id: 1,
+      img: imgThree,
+      title: 'Easy Payment',
+      desc: 'You can send or receive money from friends and family, automate your bills payment & much more across multiple channels. All transactions are processed instantly!',
+    },
+
+    {
+      id: 2,
       img: imgOne,
       title: 'Accessible',
       desc: 'PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
     },
     {
-      id: 2,
+      id: 3,
       img: imgTwo,
       title: 'Safe & Secure',
       desc: 'We follow the strictest international security guidelines to protect your money.  Additionally, you get access to our live customer support!',
     },
     {
-      id: 3,
+      id: 4,
       img: imgThree,
       title: 'Easy Payment',
       desc: 'You can send or receive money from friends and family, automate your bills payment & much more across multiple channels. All transactions are processed instantly!',
     },
     {
-      id: 4,
+      id: 5,
       img: imgOne,
-      title: 'Safe & Secure',
-      desc: '  PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
+      title: 'Accessible',
+      desc: 'PocketMoni helps you make payments for services convinently via multiple channels, all at your fingertips. Send Money Instant funds transfer to PocketMoni users and all banks in Nigeria',
     },
   ],
 };
