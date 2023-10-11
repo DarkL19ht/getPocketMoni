@@ -11,10 +11,10 @@ register();
 
 // Object swiper with parameters
 const swiperParams = {
-  slidesPerView: 3,
+  slidesPerView: 1,
   breakpoints: {
     640: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
     1028: {
       slidesPerView: 3,
@@ -58,11 +58,11 @@ export default function PocketmoniXperience() {
       className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
       style={{ overflow: 'hidden' }}
     >
-      <div className="h-full w-full text-5xl font-normal text-center mt-0 mb-16">
+      <div className="h-full w-full text-5xl font-normal text-center mt-0 mb-36 md:mb-72 lg:mb-16">
         The <span className="text-navy-300 ">Pocketmoni</span> Experience
       </div>
 
-      <div className=" w-full flex justify-between align-middle z-50 relative">
+      <div className=" w-full hidden lg:flex justify-between align-middle z-50 relative">
         <div className="h-96 bg-white opacity-80 w-2/6 blur-xl"></div>
         <div className="h-96 bg-white opacity-80 w-2/6 blur-xl"></div>
       </div>
@@ -70,7 +70,8 @@ export default function PocketmoniXperience() {
       <swiper-container
         init="false"
         ref={swiperRef}
-        className="bg-white w-[200%] h-[200px] md:h-3/6 z-0 -mt-[50%]"
+        className="bg-white w-[200%] h-[200px] md:h-3/6 z-0 -mt-[50%] swiper-container"
+        id="swipercontainer"
         // change the swiper bullets color to the same of the arrows
         style={{
           '--swiper-pagination-color': '#3b82f6',
@@ -127,14 +128,14 @@ export default function PocketmoniXperience() {
         })}
       </swiper-container>
       <div
-        className="flex justify-between w-1/6 mx-auto -mt-7"
+        className="flex justify-between w-3/6 md:w-2/6 lg:w-1/6 mx-auto -mt-7"
         style={{ position: 'relative', zIndex: 6 }}
       >
         <button
           onClick={() => {
             swiperRef.current.swiper.slidePrev();
           }}
-          className="fill-slate-400 text-navy-200 font-extrabold text-5xl w-10 h-10 p-2 hover:rounded-full hover:border"
+          className="fill-slate-400 text-navy-200 font-extrabold text-5xl w-10 h-10 p-2 hover:rounded-full border-grey hover:border"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +152,7 @@ export default function PocketmoniXperience() {
             />
           </svg>
         </button>
-        <div className=" w-16 flex justify-between align-middle pt-3">
+        <div className="w-16 flex justify-between align-middle mx-0 pt-3">
           <div className="h-3 bg-white w-3 rounded-full border-2 border-navy-400"></div>
           <div className="h-3 bg-navy-200 w-3 rounded-full"></div>
           <div className="h-3 bg-navy-200 w-3 rounded-full"></div>
@@ -160,7 +161,7 @@ export default function PocketmoniXperience() {
           onClick={() => {
             swiperRef.current.swiper.slideNext();
           }}
-          className="fill-slate-400 text-navy-200 font-extrabold w-10 h-10 p-2 hover:rounded-full hover:border"
+          className="fill-slate-400 text-navy-200 font-extrabold w-10 h-10 p-2 hover:rounded-full border-grey hover:border"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
