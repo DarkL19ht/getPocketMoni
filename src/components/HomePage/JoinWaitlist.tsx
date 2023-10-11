@@ -180,7 +180,7 @@ const JoinWaitlist = () => {
                 },
                 pattern: VALIDATE_EMAIL,
               }}
-              className="md:ml-10 md:h-[60px]"
+              className="md:ml-10 md:h-[60px] rounded-lg"
             />
             <ButtonWithIcon
               // disabled={!formState.isValid}
@@ -211,12 +211,12 @@ const JoinWaitlist = () => {
 
               <div>
                 <Image
-                  src="/POS-SMALL.svg"
+                  src="/POSS.svg"
                   alt="Mobile"
                   className={`relative mx-auto inset-0 ${
                     isFocused ? ' bg-navy-100 opacity-50' : ''
                   }`}
-                  width={140}
+                  width={124}
                   height={2}
                   priority
                 />
@@ -248,14 +248,16 @@ const JoinWaitlist = () => {
           </div>
         </div>
       </div>
-      <Image
-        src="/POS.svg"
-        alt="Mobile"
-        className="hidden md:block w-1/4 card-fly-right"
-        width={500}
-        height={2}
-        priority
-      />
+      <div>
+        <Image
+          src="/POSS.svg"
+          alt="Mobile"
+          className="hidden md:block w-[68%] card-fly-right"
+          width={400}
+          height={2}
+          priority
+        />
+      </div>
     </div>
   );
 };

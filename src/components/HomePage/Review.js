@@ -12,9 +12,6 @@ register();
 const swiperParams = {
   slidesPerView: 1,
   breakpoints: {
-    300: {
-      slidesPerView: 2,
-    },
     640: {
       slidesPerView: 2,
     },
@@ -48,7 +45,7 @@ const Review = () => {
       <h3 className="font-bold  font-switzer md:text-[65px] text-4xl tracking-tighter">
         See What Our <span className="text-navy-300">Users</span>
       </h3>
-      <h3 className="font-bold font-switzer md:text-[65px] pt-5 text-4xl">
+      <h3 className="font-bold font-switzer md:text-[65px] pt-7 text-4xl">
         <span className="text-navy-300">Are Saying</span>
       </h3>
       <div className="hidden md:block mt-[32px] mb-20">
@@ -78,7 +75,7 @@ const Review = () => {
         </div>
       </div>
       <div className="md:hidden">
-        <div className="flex items-center justify-center mt-10 gap-[2px] ">
+        <div className="flex items-center justify-center mt-10 gap-2">
           {UserData.usersImages.slice(0, 8).map((item) => (
             <Image
               key={item.id}
@@ -90,7 +87,7 @@ const Review = () => {
             />
           ))}
         </div>
-        <div className="flex items-center justify-center gap-[2px]">
+        <div className="flex items-center justify-center gap-2">
           {UserData.usersImages.slice(0, 7).map((item) => (
             <Image
               key={item.id}
@@ -104,15 +101,15 @@ const Review = () => {
         </div>
       </div>
       {/* testimonials */}
-      <div className="flex items-center justify-center mt-20 md:mt-20 mb-24 p-3">
-        <div className="flex items-center justify-center w-full sm:w-5/6 xl:w-full max-w-5xl">
+      <div className="flex items-center justify-center mt-20 md:mt-20 mb-24">
+        <div className="flex items-center justify-center w-4/5 sm:w-5/6 xl:w-full max-w-5xl">
           {/* Prev slide button */}
           <button
             onClick={() => {
               swiperRef.current.swiper.slidePrev();
             }}
             // className={`${swiperProgress == 0 ? 'fill-navy-200 text-navy-200 font-extrabold text-5xl md:mr-20' : 'fill-navy-600'}`}
-            className=" fill-navy-200 text-navy-200 font-extrabold text-5xl md:mr-16"
+            className="fill-navy-200 text-navy-200 font-extrabold text-5xl md:mr-16"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -138,9 +135,9 @@ const Review = () => {
           >
             {UserData.testimonials.map((item) => (
               <swiper-slide key={item.id} class="h-auto">
-                <div className="border border-grey rounded-lg md:w-64 md:h-[330px] w-120px h-full md:p-8 p-2 w-150px flex flex-col mr-2 hover:shadow-2xl">
+                <div className="border border-grey w-64 h-[330px] p-8 flex flex-col">
                   <div className="div1">
-                    <p className="md:text-[14px] text-[12px] md:leading-8 leading-[22px] text-left">
+                    <p className="text-[14px] leading-8">
                       <span className="text-navy-300 font-extrabold">“</span>
                       {item.msg} <span className="text-navy-300 font-extrabold">”</span>
                     </p>
@@ -153,7 +150,7 @@ const Review = () => {
                         {item.name.charAt(0)}
                       </p>
                       <section className="mt-2 flex flex-col">
-                        <p className="md:text-[12px] text-[8px] text-left"> {item.name} </p>
+                        <p className="text-[12px] text-left"> {item.name} </p>
                         <div className="text-yellow-600 flex mt-1">
                           <Image
                             src="/images/playstore.png"
@@ -180,7 +177,7 @@ const Review = () => {
             onClick={() => {
               swiperRef.current.swiper.slideNext();
             }}
-            className="text-navy-200 font-extrabold hover:border hover:rounded-full hover:w-[40px] hover:h-[40px] hover:p-2 hover:border-gray2"
+            className="ext-navy-200 font-extrabold hover:border hover:rounded-full hover:w-[40px] hover:h-[40px] hover:p-2 hover:border-gray2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

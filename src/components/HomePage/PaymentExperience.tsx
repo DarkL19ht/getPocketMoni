@@ -78,13 +78,19 @@ const PaymentExperience = () => {
     // });
   }, []);
   return (
-    <div className="mx-auto md:flex md:justify-between md:mt-10 w-full md:mb-96 md:px-24">
+    <div className="mx-auto md:flex md:justify-between md:mt-10 w-full -mb-24 md:mb-96 md:px-24">
       <section className=" md:w-1/2 md:mt-24">
-        <h3 className="font-bold font-switzer text-[45px] leading-[55px] md:text-[115px] md:leading-[118px] text-navy-300 text-center md:text-left">
+        <h3 className=" hidden md:block font-bold font-switzer text-[45px] leading-[55px] md:text-[115px] md:leading-[118px] text-navy-300 text-center md:text-left">
           Easy
         </h3>
-        <h3 className="font-bold font-switzer text-5xl md:text-[115px] md:leading-[118px] text-center md:text-left">
+        <h3 className=" hidden md:block font-bold font-switzer text-5xl md:text-[115px] md:leading-[118px] text-center md:text-left">
           Payment Experience
+        </h3>
+        <h3 className="md:hidden font-bold font-switzer text-[45px] leading-[55px] text-center md:text-left">
+          <span className="text-navy-300">Easy </span>Payment
+        </h3>
+        <h3 className="md:hidden font-bold font-switzer text-[45px] leading-[55px] text-center md:text-left">
+          Experience
         </h3>
         <p className="font-light text-[#161718] pt-[37px] hidden md:text-[24px] md:block">
           Create solutions to drive financial inclusion
@@ -106,14 +112,14 @@ const PaymentExperience = () => {
           <div className="card card-1 bg-navy-800 border border-navy-700 md:p-12 p-6 rounded-lg z-10 shadow-lg">
             <div>
               <h3 className="text-[42px] md:text-[48px] leading-10 font-switzer font-light">
-                <span className="text-navy-300">Send </span>Money
+                <span className="text-navy-300 tracking-tighter">Send </span>Money
               </h3>
               <p className="font-switzer font-light text-[16px] leading-6 mt-5">
                 Instant funds transfer to PocketMoni users and all banks in Nigeria
               </p>
               <div>
                 <Image
-                  src="/sendMoney.svg"
+                  src="/sendm.png"
                   alt="Mobile"
                   className="mt-4"
                   width={415}
@@ -125,8 +131,8 @@ const PaymentExperience = () => {
           </div>
           <div className="card card-2 bg-navy-800 border border-navy-700 md:p-12 p-4 rounded-lg shadow-lg z-20 ">
             <div>
-              <h3 className="text-[30px] md:text-[48px] leading-10 font-switzer font-light">
-                <span className="text-navy-300">Withdraw </span>Money
+              <h3 className="text-[36px] md:text-[48px] leading-10 font-switzer font-light">
+                <span className="text-navy-300 tracking-tighter">Withdraw </span>Money
               </h3>
               <p className="font-switzer font-light text-[13px] md:text-[16px] leading-6 md:mt-4">
                 Access our cash out service leveraging on our robust agency network as well as
@@ -134,7 +140,7 @@ const PaymentExperience = () => {
               </p>
               <div>
                 <Image
-                  src="/withdraw.svg"
+                  src="/withdraw2.png"
                   alt="Mobile"
                   className="mt-4"
                   width={415}
@@ -146,8 +152,8 @@ const PaymentExperience = () => {
           </div>
           <div className="card card-3 bg-navy-800 border border-navy-700 rounded-lg shadow-lg z-30">
             <div className="p-6">
-              <h3 className="text-[30px] md:text-[48px] leading-10 font-switzer font-light">
-                <span className="text-navy-300">Pay </span>Bills
+              <h3 className="text-[42px] md:text-[48px] leading-10 font-switzer font-light">
+                <span className="text-navy-300 tracking-tighter">Pay </span>Bills
               </h3>
               <p className="font-switzer font-light text-[13px] md:text-[16px] leading-6 mt-3">
                 With PocketMoni you can buy airtime and make payments for your everyday utility

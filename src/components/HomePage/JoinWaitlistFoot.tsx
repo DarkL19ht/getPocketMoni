@@ -74,7 +74,7 @@ const JoinWaitlistFoot = () => {
   return (
     <div className="container mx-auto md:flex md:justify-between md:mt-32 md:mb-0 mb-[325px] w-full md:pl-20">
       <section className=" md:w-1/2 md:mb-0 mb-24">
-        <div className="flex md:items-center items-center justify-center h-screen">
+        <div className="flex md:items-center items-center justify-center h-screen md:-ml-36">
           <div className="md:-mt-96 -mt-32">
             <p className="font-switzer font-light text-3xl md:text-[65px]">Join our</p>
             <h2 className="font-switzer font-bold text-8xl md:text-[140px]">Waitlist</h2>
