@@ -74,14 +74,14 @@ function Navbar() {
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 pr-28 pl-6 space-y-2 bg-white text-black shadow-lg  ${
+                className={`absolute left-0 mt-2 w-[150px] pl-6 space-y-2 bg-white text-black shadow-lg  ${
                   dropdownOpen ? 'block' : 'hidden'
                 }`}
               >
-                <li>
-                  <a href="#" className="block py-2 w-10">
+                <li className="">
+                  <Link href="/" className="block py-2 ">
                     Our Story
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="block py-2">
@@ -94,7 +94,7 @@ function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="block py-2">
+                  <a href="#" className="block pb-5 pt-1">
                     Press
                   </a>
                 </li>
@@ -144,24 +144,19 @@ function Navbar() {
               </a>
               {/* Dropdown Menu */}
               <ul
-                className={`absolute left-0 mt-2 space-y-2 bg-white text-black shadow-lg ${
+                className={`absolute left-0 mt-2 w-[150px] pl-6 pt-3 pb-3 space-y-2 bg-white text-black shadow-lg ${
                   dropdownOpen1 ? 'block' : 'hidden'
                 }`}
               >
                 <li>
-                  <a href="#" className="block px-4 py-2">
-                    Home
-                  </a>
+                  <Link href="/privacypolicy" className="block py-2 ">
+                    Privacy Policy
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2">
-                    Home
-                  </a>
+                  <Link href="/" className="block py-2 ">
+                    Terms
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -188,12 +183,14 @@ function Navbar() {
         </div>
         <div className="hidden md:block space-x-4">
           <div className="flex gap-3">
-            <ButtonWithIcon
-              className="bg-navy-600 text-white w-40"
-              hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
-            >
-              Get PocketMoni
-            </ButtonWithIcon>
+            <Link href="/">
+              <ButtonWithIcon
+                className="bg-navy-400 text-white w-40"
+                hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
+              >
+                Get PocketMoni
+              </ButtonWithIcon>
+            </Link>
             <ButtonWithIcon
               className="bg-navy-100 w-40 text-navy-200"
               hoverEffect="hover:border-black hover:border-b-4 hover:border-r-4"
@@ -208,7 +205,7 @@ function Navbar() {
         {mobileMenuOpen && (
           <div className="">
             <div className="space-x-4 absolute top-10 left-0 pt-8 pb-8 pr-2 pl-2 bg-white shadow-2xl">
-              <Button label="Get PocketMoni" style="bg-navy-600" text="text-white" width="w-40" />
+              <Button label="Get PocketMoni" style="bg-navy-400" text="text-white" width="w-40" />
               <Button
                 label=" Become an Agent"
                 style="bg-navy-100"

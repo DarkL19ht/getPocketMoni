@@ -12,7 +12,7 @@ const TransAgent = () => {
     });
   }, []);
   return (
-    <div className="container bg-gray py-5 m-3 md:bg-transparent rounded-lg mx-auto md:-mt-[80px] md:mb-0 ">
+    <div className="bg-gray py-5 mt-3 mb-16 mr-6 ml-6 md:bg-transparent rounded-lg mx-auto md:-mt-[80px] md:mb-0">
       <div className="flex justify-evenly text-center">
         <section data-aos="fade-right">
           <h3 className="font-bold text-[25px] md:text-6xl font-switzer">N40B+</h3>

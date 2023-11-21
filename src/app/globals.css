@@ -206,9 +206,9 @@ body {
 
 .modal-over {
   position: absolute;
-  margin-top: 165px;
-  margin-left: -40px;
-  width: 400px;
+  margin-top: 170px;
+  margin-left: -3px;
+  width: 430px;
   height: 400px;
   display: flex;
   justify-content: center;
@@ -279,4 +279,84 @@ body {
 }
 .box.show {
   transform: translateX(0);
+}
+
+/* GSAP TEST */
+
+.cards {
+  height: 500px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center; */
+}
+
+.card {
+  position: absolute;
+  width: 511px;
+  height: 511px;
+  /* background: #f1f1f1; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  border-radius: 7px;
+  margin-bottom: 50px;
+}
+
+.card-1 {
+  left: 0;
+  top: 0;
+}
+
+.card-2 {
+  left: 64px;
+  top: 96px;
+}
+
+.card-3 {
+  left: 128px;
+  top: 192px;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    width: 77.5%;
+    height: 20%;
+  }
+
+  .sliderImages {
+    height: 200px;
+    width: 400px;
+  }
+
+  .cards {
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+    width: 335px;
+    height: 355px;
+    border-radius: 7px;
+    margin-bottom: 50px;
+  }
+  .card-1 {
+    left: 0;
+    top: 0;
+  }
+
+  .card-2 {
+    left: -5px;
+    top: 96px;
+  }
+
+  .card-3 {
+    left: -10px;
+    top: 180px;
+  }
 }

@@ -3,27 +3,18 @@ import UserData from '@/utils/UserData';
 import { useRef, useEffect, useState } from 'react';
 import { register } from 'swiper/element/bundle';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import imageOne from '../../assets/images/image1.png';
+import imageTwo from '../../assets/images/image2.png';
+import imageThree from '../../assets/images/image3.png';
 import Modal from './PKMExperienceModal';
-import Images from '../../utils/sliderImages.ts';
 
-// register Swiper custom elements
-register();
-
-// Object swiper with parameters
-const swiperParams = {
-  slidesPerView: 1,
-  breakpoints: {
-    640: {
-      slidesPerView: 3,
-    },
-    1028: {
-      slidesPerView: 3,
-    },
-  },
-  pagination: false,
-  spaceBetween: 10,
-  loop: false,
-};
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { useEffect, useState } from 'react';
 
 export default function PocketmoniXperience() {
   const [width, setWidth] = useState('');
@@ -31,161 +22,92 @@ export default function PocketmoniXperience() {
   const [swiperProgress, setSwiperProgress] = useState(0);
 
   useEffect(() => {
-    // Assign it to swiper element
-    Object.assign(swiperRef?.current, swiperParams);
-
-    // Initialize swiper
-    swiperRef.current.initialize();
-
-    // Progress listener
     const screenWidth = window.innerWidth + 15;
     setWidth(screenWidth);
-
-    swiperRef.current.addEventListener('progress', (e) => {
-      const [swiper, progress] = e.detail;
-      setSwiperProgress(progress);
-    });
   }, []);
-  let screenWidth = width;
-  // Control points calculation for a curve spanning the width of the screen
-  const controlPointXTop = screenWidth / 2; // X coordinate of the control point
-  const controlPointXBottom = screenWidth / 2; // X coordinate of the control point
-  const controlPointYTop = 25; // Y coordinate of the control point
-  const controlPointYBottom = 120; // Y coordinate of the control point
-  const endPointX = screenWidth; // X coordinate of the end point
 
   return (
     <main
-      className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0 "
+      className="overflow-hidden h-full w-full mx-auto mb-28 mt-60 md:mt-0"
       style={{ overflow: 'hidden' }}
     >
-      <div className="h-full w-full text-5xl font-normal text-center mt-0 mb-36 md:mb-72 lg:mb-16">
-        The <span className="text-navy-300 ">Pocketmoni</span> Experience
+      <div className="h-full font-switzer w-full text-5xl md:text-[65px] font-bold text-center mt-0 -mb-10 tracking-tighter">
+        The <span className="text-navy-300 font-switzer">PocketMoni</span> Experience
       </div>
-
-      <div className=" w-full hidden lg:flex justify-between align-middle ">
-        <div className="h-96 bg-white opacity-80 w-[25.5%] z-50 relative"></div>
-        {/* <div className="h-[362px] mt-1 ml-[0.3%] bg-navy-200 opacity-80 w-[45.8%] z-50 relative"></div> */}
-        <div className="h-96 bg-white opacity-80 w-[27.2%] z-50 relative"></div>
-      </div>
-
-      <swiper-container
-        init="false"
-        ref={swiperRef}
-        className="bg-white w-[200%] h-[200px] md:h-3/6 z-0  swiper-container"
-        id="swipercontainer"
-        // change the swiper bullets color to the same of the arrows
+      <svg
+        width={screenWidth}
+        height="200"
+        style={{ marginBottom: -118, marginLeft: -10, position: 'relative', zIndex: 2 }}
+        className="z-10 mb-2 "
+      >
+        <path
+          d={`M10 80 Q${controlPointXBottom} ${controlPointYBottom} ${endPointX} 80`}
+          fill="white"
+          stroke="white"
+          strokeWidth="25"
+        />
+      </svg>
+      <Swiper
+        className="bg-white w-full h-[200px] md:h-3/6 z-0"
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={7}
+        slidesPerView={3}
+        // navigation
+        // pagination={{ clickable: true }}
+        // scrollbar={{ draggable: true }}
+        style={{ marginBottom: -80, zIndex: 0 }}
+      >
+        <SwiperSlide className="w-[16rem] h-3/6">
+          <Image
+            src="/images/image1.png"
+            alt="image1"
+            className="sliderImages"
+            width={400}
+            height={100}
+          />
+        </SwiperSlide>
+        <SwiperSlide className="w-[16rem] h-3/6 overflow-hidden flex items-end">
+          <Image
+            src="/images/image2.png"
+            alt="image1"
+            className="sliderImages"
+            width={400}
+            height={100}
+          />
+        </SwiperSlide>
+        <SwiperSlide style={flipHorizontalStyle} className="w-[16rem] h-3/6">
+          <Image
+            src="/images/image3.png"
+            alt="image1"
+            className="sliderImages"
+            width={400}
+            height={100}
+          />
+        </SwiperSlide>
+      </Swiper>
+      <svg
+        width={screenWidth}
+        height="200"
+        style={{ marginLeft: -15, position: 'relative', zIndex: 2 }}
+        className="mt-2"
+      >
+        <path
+          d={`M10 80 Q${controlPointXTop} ${controlPointYTop} ${endPointX} 80`}
+          fill="white"
+          stroke="white"
+          strokeWidth="15"
+        />
+      </svg>
+      <div
+        className="bg-white mx-auto text-center p-2 shadow-black -mt-44 md:-mt-56 border-b-0 modal"
         style={{
-          '--swiper-pagination-color': '#3b82f6',
-          marginBottom: '2.5%',
-          zIndex: 10,
-          height: '400px',
-          width: '140%',
-          overflow: 'hidden',
-          marginTop: '-30%',
-          marginLeft: '-21%',
+          position: 'relative',
+          zIndex: 4,
+          // width: '30%',
+          boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
         }}
       >
-        {UserData.pkmexperience.map((item, index) => {
-          let _id = item.title.replace(/ /g, '');
-          return (
-            <swiper-slide
-              key={index}
-              id={_id}
-              className="w-[16rem] h-full swiper-1"
-              controller-control=".swiper-2"
-              style={{}}
-            >
-              <Image
-                src={item.img}
-                alt="image1"
-                className="sliderImages bg-blend-darken bg-gradient-to-r from-cyan-500 to-blue-500 relative z-0"
-                style={{ height: '90%', width: '100%' }}
-              />
-              {index % 2 !== 0 ? (
-                <div
-                  key={item.id}
-                  className="z-50 -mt-[55%] ml-6 w-[200px] md:w-[300px] relative "
-                  
-                >
-                  <h2 className="md:text-[40px] text-[20px] font-switzer font-black tracking-[-3%] leading-[30px] text-white ">
-                    {' '}
-                    {item.title}{' '}
-                  </h2>
-                  <p className="text-left md:text-left md:text-[12px] text-[12px] md:leading-[20px] tracking-[-3%] mt-0 md:mt-2 font-[500px] text-white">
-                    {item.desc}
-                  </p>
-                </div>
-              ) : (
-                <div
-                  key={item.id}
-                  className="z-20 -mt-[22%] mx-auto w-[200px] md:w-[300px]"
-                  style={{ zIndex: 20 }}
-                >
-                  <h2 className="text-center md:text-[40px] text-[20px] font-switzer font-black tracking-[-3%] leading-[28px] text-white relative z-50">
-                    {' '}
-                    {item.title}{' '}
-                  </h2>
-                  <p className="text-left md:text-center md:text-[12px] text-[12px] md:leading-[20px] tracking-[-3%] mt-0 md:mt-2 font-[500px] text-white">
-                    {item.desc}
-                  </p>
-                </div>
-              )}
-            </swiper-slide>
-          );
-        })}
-      </swiper-container>
-      <div
-        className="flex justify-between w-3/6 md:w-2/6 lg:w-1/6 mx-auto -mt-7"
-        style={{ position: 'relative', zIndex: 6 }}
-      >
-        <button
-          onClick={() => {
-            swiperRef.current.swiper.slidePrev();
-          }}
-          className="fill-slate-400 text-navy-200 font-extrabold text-5xl w-10 h-10 p-2 hover:rounded-full border-grey hover:border"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="3.5"
-            stroke="currentColor"
-            class="w-5 h-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-            />
-          </svg>
-        </button>
-        <div className="w-16 flex justify-between align-middle mx-0 pt-3">
-          <div className="h-3 bg-white w-3 rounded-full border-2 border-navy-400"></div>
-          <div className="h-3 bg-navy-200 w-3 rounded-full"></div>
-          <div className="h-3 bg-navy-200 w-3 rounded-full"></div>
-        </div>
-        <button
-          onClick={() => {
-            swiperRef.current.swiper.slideNext();
-          }}
-          className="fill-slate-400 text-navy-200 font-extrabold w-10 h-10 p-2 hover:rounded-full border-grey hover:border"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="3.5"
-            stroke="currentColor"
-            class="w-5 h-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-            />
-          </svg>
-        </button>
+        <Modal />
       </div>
     </main>
   );

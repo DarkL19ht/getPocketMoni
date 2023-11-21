@@ -86,11 +86,11 @@ export default function MobileDialog() {
                   {enabled ? (
                     <div className="ml-10 mb-[66px]">
                       <Image
-                        src="/dialogPOS.png"
+                        src="/POSS.svg"
                         alt="Mobile"
-                        className="relative mx-auto inset-0"
+                        className='relative mx-auto inset-0'
                         width={230}
-                        height={1}
+                        height={2}
                         priority
                       />
                     </div>

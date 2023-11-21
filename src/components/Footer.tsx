@@ -9,11 +9,11 @@ const Footer = () => {
   return (
     <div className="w-full -mt-96 md:h-96 bg-navy-600 text-white md:text-justify text-center">
       <div className="md:flex md:justify-between p-16 font-switzer relative">
-        <div className="absolute -mt-[155px] -ml-14">
+        <div className="absolute -mt-[162px] -ml-14">
           <Image
             src="/bg-wait.svg"
             alt="dial code"
-            className="md:hidden"
+            className="md:hidden z-40"
             width={800}
             height={200}
             priority
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
         <section className="mt-6 pb-6 md:mt-0 items-center justify-center">
           <Image
-            src="/logoEtr.svg"
+            src="/logofooter.svg"
             alt="Mobile"
             className="mb-4 ml-9 md:ml-0"
             width={200}

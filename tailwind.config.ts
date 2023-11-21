@@ -58,6 +58,7 @@ const config: Config = {
         300: '#fff176',
         500: '#ffeb3b',
         600: '#fdd835',
+        700: '#FDC500',
       },
       green: {
         50: '#ecfdf5',

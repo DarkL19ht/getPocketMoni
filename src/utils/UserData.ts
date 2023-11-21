@@ -172,7 +172,7 @@ const UserData = {
       msg: 'The best application for any form of transaction in Nigeria. . The transfer speed is much faster than bank applications, and other wallets in Nigeria.',
       name: 'Christo Ugoc',
       star: '*******',
-      bg: 'bg-yellow-600',
+      bg: 'bg-yellow-700',
     },
     {
       id: 4,

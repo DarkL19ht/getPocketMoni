@@ -23,75 +23,73 @@ interface AccordionProps {
 
 const AccordionItem = ({ title, description, open, toggle }: AccordionProps) => {
   return (
-    <div className="pt-[10px]">
-      <div className="border-t border-gray2"></div>
+    <div className={`pt-[10px] hover:text-navy-300 ${!open && 'hover:shadow-xl'}`}>
+      <div className="border-t border-gray2 hover:border-0"></div>
       <div className="py-[32px] px-[50px] flex justify-between cursor-pointer" onClick={toggle}>
-        <p className="text-xl font-light text-left"> {title} </p>
+        <p className="text-xl font-light text-left md:-ml-10"> {title} </p>
         <div className="text-[30px]">{open ? <BiMinus /> : <BsPlus />}</div>
       </div>
       <Collapse isOpened={open}>
         {/* <div className="bg-white px-[50px] pb-[20px] text-justify">{description}</div> */}
         {description.map((item) => {
           return (
-            <div key={item.id}>
-              <div className="bg-white px-[50px] pb-[20px] text-justify">{item.answer}</div>
+            <div key={item.id} className={`${open ? 'text-black' : ''}`}>
+              <div className="bg-white px-[50px] pb-[20px] text-justify">
+                <p className="md:-ml-10">{item.answer} </p>
+              </div>
               {item.answer1 && item.answer2 && (
                 <section>
                   <div className="bg-white px-[50px] pb-[20px] text-justify flex gap-2">
                     <Image
                       src="/Checkbox.svg"
                       alt="Mobile"
+                      className="md:-ml-10"
                       width={30}
                       height={10}
                       priority
-                      data-aos="fade-down"
                     />
-                    <p data-aos="fade-left"> {item.answer1} </p>
+                    <p> {item.answer1} </p>
                   </div>
                   <div className="bg-white px-[50px] pb-[20px] text-justify flex gap-2">
                     <Image
                       src="/Checkbox.svg"
                       alt="Mobile"
+                      className="md:-ml-10"
                       width={30}
                       height={10}
                       priority
-                      data-aos="fade-down"
                     />
-                    <p data-aos="fade-left"> {item.answer2}</p>
+                    <p> {item.answer2}</p>
                   </div>
                   <div className="bg-white px-[50px] pb-[20px] text-justify flex gap-2">
                     <Image
                       src="/Checkbox.svg"
                       alt="Mobile"
+                      className="md:-ml-10"
                       width={30}
                       height={10}
                       priority
-                      data-aos="fade-down"
                     />
-                    <p data-aos="fade-left">{item.answer3}</p>
+                    <p>{item.answer3}</p>
                   </div>
                   <div className="bg-white px-[50px] pb-[20px] text-justify flex gap-2">
                     <Image
                       src="/Checkbox.svg"
                       alt="Mobile"
+                      className="md:-ml-10"
                       width={30}
                       height={10}
                       priority
-                      data-aos="fade-down"
                     />
-                    <p data-aos="fade-left">{item.answer4}</p>
+                    <p>{item.answer4}</p>
                   </div>
                 </section>
               )}
-
-              {/* <div className="bg-white px-[50px] pb-[20px] text-justify">{item.answer2}</div>
-              <div className="bg-white px-[50px] pb-[20px] text-justify">{item.answer3}</div>
-              <div className="bg-white px-[50px] pb-[20px] text-justify">{item.answer4}</div> */}
             </div>
           );
         })}
       </Collapse>
-      <div className="border-b border-gray2"></div>
+      {/* <div className="border-b border-gray2"></div> */}
     </div>
   );
 };

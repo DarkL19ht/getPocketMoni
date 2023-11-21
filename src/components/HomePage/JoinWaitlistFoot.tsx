@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import ButtonWithIcon from '../ButtonWithIcon';
-import { BsFillBellFill } from 'react-icons/bs';
 import Alert from '@/app/components/ui/Alert';
 import TextField from '../TextField';
 import { VALIDATE_EMAIL } from '@/utils/helper';
@@ -75,15 +74,10 @@ const JoinWaitlistFoot = () => {
   return (
     <div className="container mx-auto md:flex md:justify-between md:mt-32 md:mb-0 mb-[325px] w-full md:pl-20">
       <section className=" md:w-1/2 md:mb-0 mb-24">
-        <div className="flex md:items-center items-center justify-center h-screen">
+        <div className="flex md:items-center items-center justify-center h-screen md:-ml-36">
           <div className="md:-mt-96 -mt-32">
-            <p className="font-switzer font-light text-3xl md:text-[65px] text-[#28335A]">
-              Join our
-            </p>
-            <h2 className="font-switzer font-bold text-8xl md:text-[140px] text-[#28335A]">
-              {' '}
-              Waitlist{' '}
-            </h2>
+            <p className="font-switzer font-light text-3xl md:text-[65px]">Join our</p>
+            <h2 className="font-switzer font-bold text-8xl md:text-[140px]">Waitlist</h2>
             <div className=" mt-10">
               {data?.message && (
                 <Alert message={data?.message} type={isSuccess ? 'success' : 'error'} />
@@ -99,14 +93,14 @@ const JoinWaitlistFoot = () => {
                     },
                     pattern: VALIDATE_EMAIL,
                   }}
-                  className=""
+                  className="md:h-[60px]"
                 />
                 <ButtonWithIcon
                   isLoading={isLoading}
                   loadingText={'Please wait'}
                   type="submit"
-                  className="bg-navy-600 text-white w-full md:w-40"
-                  icon={<BsFillBellFill />}
+                  className="bg-navy-400 text-white w-full md:w-40 md:h-[60px]"
+                  icon
                 >
                   Join Waitlist
                 </ButtonWithIcon>

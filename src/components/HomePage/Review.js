@@ -42,8 +42,11 @@ const Review = () => {
   }, []);
   return (
     <div className="container mx-auto text-center mt-24 md:mt-0">
-      <h3 className="font-bold font-switzer md:text-[65px] text-4xl">
-        See What Our <span className="text-navy-300">Users Are Saying</span>
+      <h3 className="font-bold  font-switzer md:text-[65px] text-4xl tracking-tighter">
+        See What Our <span className="text-navy-300">Users</span>
+      </h3>
+      <h3 className="font-bold font-switzer md:text-[65px] pt-7 text-4xl">
+        <span className="text-navy-300">Are Saying</span>
       </h3>
       <div className="hidden md:block mt-[32px] mb-20">
         <div className="flex items-center justify-center mt-10 gap-2">
@@ -114,7 +117,7 @@ const Review = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-4 h-6"
             >
               <path
                 strokeLinecap="round"
@@ -146,9 +149,16 @@ const Review = () => {
                       >
                         {item.name.charAt(0)}
                       </p>
-                      <section className="mt-2">
-                        <p className="text-[12px]"> {item.name} </p>
-                        <div className="text-yellow-600 flex">
+                      <section className="mt-2 flex flex-col">
+                        <p className="text-[12px] text-left"> {item.name} </p>
+                        <div className="text-yellow-600 flex mt-1">
+                          <Image
+                            src="/images/playstore.png"
+                            alt="play store link"
+                            width={16}
+                            height={16}
+                            className="mr-2"
+                          />
                           <AiFillStar />
                           <AiFillStar />
                           <AiFillStar />
@@ -167,7 +177,7 @@ const Review = () => {
             onClick={() => {
               swiperRef.current.swiper.slideNext();
             }}
-            className="text-navy-200 font-extrabold"
+            className="ext-navy-200 font-extrabold hover:border hover:rounded-full hover:w-[40px] hover:h-[40px] hover:p-2 hover:border-gray2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +185,7 @@ const Review = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-4 h-6"
             >
               <path
                 strokeLinecap="round"

@@ -37,13 +37,13 @@ export default function TextField({
   });
 
   const baseClass = clsx(
-    'input-control border-none rounded bg-gray mb-5 px-3 py-3 w-full',
+    'input-control border-none rounded-lg bg-gray mb-5 px-3 py-3 w-full',
     className
   );
 
   return (
     <>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col md:w-[400px]">
         <input
           placeholder="Enter your email to get notified when we launch"
           type={type}
